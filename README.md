@@ -7,6 +7,7 @@
 
 * Server Side Include (SSI) support but *without* a need for any server-side language. This makes it easy to create modular code e.g a reuseable header/footer.
 * SASS compilation support.
+* Livereload support.
 * An automated way to upload your changes to a staging server.
 
 ## Installation
@@ -31,7 +32,7 @@
 
 ####  Running the development server
 
-* Run `grunt` from the command line from the same directory as this README.
+* Run `grunt` from the command line from the same directory as this README. A small webserver will start and your browser will open at a URL displaying your site. CSS/SASS/JS and HTML files will be watched for changes, and the page refreshed automatically.
 
 
 ## Deploy to a staging server
