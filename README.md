@@ -36,39 +36,32 @@
 
 ## Deploy to a staging server
 
-
 #### Setup per developer computer
 
-The following only needs to be done on every machine you develop on, but only once per machine - not once per project.
+Grunt can upload files via SFTP but **not** to servers that require a password typed in the terminal. Instead we access the server with SSH keys. These instructions configure that access. The following needs to be done on every machine you develop on, but only once per machine - not once per project.
 
-* SSH into playground via terminal
-* Run `cat ~/.ssh/authorized_keys`. 
-
-If you know what you're doing and your public key is already in it, skip this section. Otherwise, if "No such file or directory":
-
-* On Playground run: `mkdir ~/.ssh/ && touch ~/.ssh/authorized_keys && chmod -R 700 ~/.ssh`
 * On your local machine run: `cat ~/.ssh/id_rsa.pub`
 
-If "No such file or directory":
+If `No such file or directory`:
 
-* On your local machine run: `ssh-keygen -t rsa -C "[your torchbox email address]"` (replacing the square bracket placeholder, duh). Hit enter every time you're asked a question. This generates your keys.
+* On your local machine run: `ssh-keygen -t rsa -C "[your email address]"` (replacing the square bracket placeholder, duh). This generates your keys.
 
-Once you've generated keys, or if you've generated them at some point in the past, we need to install them on playground. This requires the "Homebrew" package manager for OSX. 
+Once you've generated keys, or if you've generated them at some point in the past, we now install them on the staging server. This requires the "Homebrew" package manager for OSX. 
 
-(If typing "brew" on your command line indicates the command doesn't exist, you need to install Brew using the instructions here: http://brew.sh/. )
+(If typing `brew` on your command line indicates the command doesn't exist, you need to install Brew using the instructions here: http://brew.sh/. )
 
-* With Brew installed, on local run: `ssh-copy-id [your-ldap-username]@playground`
+* With Brew installed, run: `ssh-copy-id [your ldap username]@[your server]` e.g `ssh-copy-id han@rebelalliance.com`
 
-This will automatically copy your key from your local machine to playground. Double check it works with a simple login test:
+This will automatically copy your key from your local machine to your staging server. Double check it works with a simple login test:
 
-* On local run: `ssh [your-ldap-username]@playground`
+* On local run: `ssh [your ldap username]@[your server]`
 
-Successfull key installation is indicated by it logging you in WITHOUT asking for a password. That was only a test though, so you can exit again.
+Successfull key installation is indicated by it logging you in **without** asking for a password. That was only a test though, so you can exit again with `exit`.
 
 
 #### Setup per project
 
-The following needs to be done for this project specifically
+The following needs to be done for this project specifically.
 
 * Copy the file `staging-config.example.json` (found in the same dir as this README), to `staging-config.json`
 
@@ -83,7 +76,7 @@ Change the contents of the new file:
 #### Deploying
 
 * Run `grunt stage`
-* Your site should now be available at http://your-server/[whatever folder name you gave in staging-config.json]
+* Your site should now be available at http://yourserver.com/[whatever folder name you gave in staging-config.json]
 
 Be warned: this completely replaces the previous version. If you want to deploy it to a new directory, just change the directory name in `staging-config.json` first.
 
