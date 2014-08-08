@@ -11,19 +11,17 @@
 
 ## Installation
 
-### once per developer computer
-
+### Once per developer computer
 
 * Install Node.js: Click on the big "INSTALL" button here http://nodejs.org
 * From your machine's terminal:
-  * Install Grunt: `npm install -g grunt` (may require sudo)
+  * Install Grunt: `npm install -g grunt grunt-cli` (may require sudo)
   * Install SASS: `sudo gem install sass` (may require sudo)
 
+### Once per project
 
-## Installation: once per project
-
-  * Clone this repository somewhere
-  * Install this project's dependencies: Run `npm install` (Do *not* use sudo)
+* Clone this repository somewhere
+* Install this project's dependencies: Within the repository directory, run `npm install` (Do *not* use sudo)
 
 
 ## Developing with it
