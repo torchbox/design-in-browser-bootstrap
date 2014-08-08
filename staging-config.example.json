@@ -1,0 +1,7 @@
+{
+    "host": "myserver.company.com",
+    "username": "josephbloggs",
+    "destinationPath": "/var/www/my-new-site/",
+    "localKeyPath": "/Users/josephbloggs/.ssh/id_rsa",
+    "passphrase": "My Key's Password"
+}
