@@ -77,7 +77,7 @@ Change the contents of the new file:
 #### Deploying
 
 * Run `grunt stage`
-* Your site should now be available at http://yourserver.com/[whatever folder name you gave in staging-config.json]
+* Your site should now be available at http://yourserver.com/`[whatever folder name you gave in staging-config.json]`
 
 Be warned: this completely replaces the previous version. If you want to deploy it to a new directory, just change the directory name in `staging-config.json` first.
 
