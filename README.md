@@ -87,3 +87,8 @@ Be warned: this completely replaces the previous version. If you want to deploy 
 ## Troubleshooting
 
 Grunt copies the contents of `site/src` to `site/build` each time it runs, to ensure all the source files are available to the grunt server, which runs from the `site/build` directory. Any *new* files you create while the server is running won't be available in the `src/build` folder until you stop and restart the grunt server: press Ctrl+C, then type `grunt` again.
+
+
+## Disclaimer
+
+This has been boshed together rather rapidly and is provided as-is.
