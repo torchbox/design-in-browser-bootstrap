@@ -90,10 +90,10 @@ module.exports = function(grunt) {
                 privateKey: '<%= stagingConfig.localKey %>',
                 passphrase: '<%= stagingConfig.passphrase %>'
             },
-            stagingprep: {
+            stagingstart: {
                 command: "umask 002 && rm -rf <%= stagingConfig.destinationPath %> && mkdir <%= stagingConfig.destinationPath %>"
             },
-            stagingchmod:{
+            stagingfinish:{
                 command: "chmod -R 775 <%= stagingConfig.destinationPath %> "
             }
         },
@@ -139,6 +139,6 @@ module.exports = function(grunt) {
         }
         grunt.config.set('stagingConfig', stagingConfig);
         grunt.config.set('stagingConfig.localKey', grunt.file.read(stagingConfig.localKeyPath))
-        grunt.task.run(['copy:build', 'sass', 'ssi', 'sshexec:stagingprep', 'sftp', 'sshexec:stagingchmod'])
+        grunt.task.run(['copy:build', 'sass', 'ssi', 'sshexec:stagingstart', 'sftp', 'sshexec:stagingfinish'])
     });
 };
