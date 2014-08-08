@@ -11,14 +11,14 @@
 
 ## Installation
 
-### Once per developer computer
+#### Once per developer computer
 
 * Install Node.js: Click on the big "INSTALL" button here http://nodejs.org
 * From your machine's terminal:
   * Install Grunt: `npm install -g grunt grunt-cli` (may require sudo)
   * Install SASS: `sudo gem install sass` (may require sudo)
 
-### Once per project
+#### Once per project
 
 * Clone this repository somewhere
 * Install this project's dependencies: Within the repository directory, run `npm install` (Do *not* use sudo)
@@ -29,7 +29,7 @@
 * The files you will want to edit are in `site/src`. A `site/build` folder is created on the fly as part of the server process, but should be ignored.
 
 
-###  Running the development server
+####  Running the development server
 
 * Run `grunt` from the command line from the same directory as this README.
 
@@ -37,7 +37,7 @@
 ## Deploy to a staging server
 
 
-### Setup per developer computer
+#### Setup per developer computer
 
 The following only needs to be done on every machine you develop on, but only once per machine - not once per project.
 
@@ -66,7 +66,7 @@ This will automatically copy your key from your local machine to playground. Dou
 Successfull key installation is indicated by it logging you in WITHOUT asking for a password. That was only a test though, so you can exit again.
 
 
-### Setup per project
+#### Setup per project
 
 The following needs to be done for this project specifically
 
@@ -80,7 +80,7 @@ Change the contents of the new file:
 * If you've password protected your key, `passphrase` should contain the password you used.
 
 
-### Deploying
+#### Deploying
 
 * Run `grunt stage`
 * Your site should now be available at http://your-server/[whatever folder name you gave in staging-config.json]
