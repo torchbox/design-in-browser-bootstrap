@@ -9,8 +9,9 @@
 * SASS compilation support.
 * An automated way to upload your changes to a staging server.
 
+## Installation
 
-## Installation: once per developer computer
+### once per developer computer
 
 
 * Install Node.js: Click on the big "INSTALL" button here http://nodejs.org
