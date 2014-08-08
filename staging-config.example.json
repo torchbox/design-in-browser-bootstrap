@@ -1,7 +1,7 @@
 {
-    "host": "myserver.company.com",
-    "username": "josephbloggs",
-    "destinationPath": "/var/www/my-new-site/",
-    "localKeyPath": "/Users/josephbloggs/.ssh/id_rsa",
-    "passphrase": "My Key's Password"
+    "host": "sanctuarymoon.rebelalliance.com",
+    "username": "hansolo",
+    "destinationPath": "/var/www/nerfherder/",
+    "localKeyPath": "/Users/hansolo/.ssh/id_rsa",
+    "passphrase": "iloveLe1a"
 }
