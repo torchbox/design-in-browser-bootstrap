@@ -2,8 +2,10 @@
 
 (This file is written in Markdown, so is best read here: https://github.com/torchbox/design-in-browser-bootstrap/blob/master/README.md)
 
+This repo provides a very basic environment for designers to get started creating a new web design "in the browser", with real HTML templates, a simple "includes" system and tools like LiveReload to aid rapid development. It eschews the dependencies on complex setups like dynamic server-side languages, which can be a pain to configure for less technical people.
 
-## What it provides
+
+## What's included
 
 * Server Side Include (SSI) support but *without* a need for any server-side language. This makes it easy to create modular code e.g a reuseable header/footer.
 * SASS compilation support.
