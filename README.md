@@ -1,41 +1,44 @@
-Design In The Browser Bootstrap
-===============
+# Design In The Browser Bootstrap
 
-This README is written in Markdown, so is best read here:
-https://github.com/torchbox/design-in-browser-bootstrap/blob/master/README.md
+(This file is written in Markdown, so is best read here: https://github.com/torchbox/design-in-browser-bootstrap/blob/master/README.md)
 
 
-What it provides
-----------------
+## What it provides
 
-* Server Side Include (SSI) support but *without* a need for any serverside language. This makes it easy to create modular code.
+* Server Side Include (SSI) support but *without* a need for any server-side language. This makes it easy to create modular code e.g a reuseable header/footer.
 * SASS compilation support.
 * An automated way to upload your changes to a staging server.
 
 
-Installation
-----------------
+## Installation: once per developer computer
+
 
 * Install Node.js: Click on the big "INSTALL" button here http://nodejs.org
-* Install Grunt: `npm install -g grunt` (may require sudo)
-* Install SASS: `sudo gem install sass` (may require sudo)
-* Install this project's dependencies: Run `npm install` (Do *not* use sudo)
+* From your machine's terminal:
+  * Install Grunt: `npm install -g grunt` (may require sudo)
+  * Install SASS: `sudo gem install sass` (may require sudo)
 
 
-Development
-----------------
+## Installation: once per project
+
+  * Clone this repository somewhere
+  * Install this project's dependencies: Run `npm install` (Do *not* use sudo)
+
+
+## Developing with it
 
 * The files you will want to edit are in `site/src`. A `site/build` folder is created on the fly as part of the server process, but should be ignored.
 
 
-Running the development server
-----------------
+###  Running the development server
 
 * Run `grunt` from the command line from the same directory as this README.
 
 
-Preparing to deploy to a staging server (Once ever per developer computer)
-----------------
+## Deploy to a staging server
+
+
+### Setup per developer computer
 
 The following only needs to be done on every machine you develop on, but only once per machine - not once per project.
 
@@ -64,8 +67,7 @@ This will automatically copy your key from your local machine to playground. Dou
 Successfull key installation is indicated by it logging you in WITHOUT asking for a password. That was only a test though, so you can exit again.
 
 
-Preparing to deploy to a staging server (For each project)
-----------------
+### Setup per project
 
 The following needs to be done for this project specifically
 
@@ -79,8 +81,7 @@ Change the contents of the new file:
 * If you've password protected your key, `passphrase` should contain the password you used.
 
 
-Deploying to staging
-----------------
+### Deploying
 
 * Run `grunt stage`
 * Your site should now be available at http://your-server/[whatever folder name you gave in staging-config.json]
@@ -88,7 +89,6 @@ Deploying to staging
 Be warned: this completely replaces the previous version. If you want to deploy it to a new directory, just change the directory name in `staging-config.json` first.
 
 
-Troubleshooting
-----------------
+## Troubleshooting
 
 Grunt copies the contents of `site/src` to `site/build` each time it runs, to ensure all the source files are available to the grunt server, which runs from the `site/build` directory. Any *new* files you create while the server is running won't be available in the `src/build` folder until you stop and restart the grunt server.
