@@ -2,7 +2,7 @@
 
 (This file is written in Markdown, so is best read here: https://github.com/torchbox/design-in-browser-bootstrap/blob/master/README.md)
 
-This project provides a basic webserver and develompent environment for designers to get started creating designs "in the browser", with real HTML templates, a simple "includes" system and tools like LiveReload to aid rapid development. It eschews the dependencies on complex setups like dynamic server-side languages, which can be a pain to configure for less technical people.
+This project provides a basic webserver and development environment for designers to get started creating designs "in the browser", with real HTML templates, a simple "includes" system and tools like LiveReload to aid rapid development. It eschews the dependencies on complex setups like dynamic server-side languages, which can be a pain to configure for less technical people.
 
 
 ## What's included
