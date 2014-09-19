@@ -26,6 +26,7 @@ This project provides a basic webserver and development environment for designer
 
 * Clone this repository somewhere
 * Install this project's dependencies: Within the repository directory, run `npm install` (Do *not* use sudo)
+* Run `grunt`, which will open a welcome page providing further instructions.
 
 
 ## Developing with it
