@@ -11,6 +11,7 @@ This project provides a basic webserver and development environment for designer
 * SASS compilation support.
 * Livereload support.
 * An automated way to upload your changes to a staging server.
+* Automated version numbering and Git tagging.
 
 ## Installation
 
@@ -82,6 +83,15 @@ Change the contents of the new file:
 * Your site should now be available at `http://yourserver.com/[whatever folder name you gave in staging-config.json]`
 
 Be warned: this completely replaces the previous version. If you want to deploy it to a new directory, just change the directory name in `staging-config.json` first.
+
+
+## Version numbering
+
+Run `grunt tag`, to automatically increment the version number of the designs, and create a new tag in your git repository, using that  number.
+
+Version numbers changed with this command can be incremented as "major" e.g 1.0.0 to 2.0.0, "minor" e.g 1.0.0 to 1.1.0 or "patch" e.g 1.0.0 to 1.0.1. 
+
+Specify what kind of degree of change you want using the syntax: `grunt tag:major`, `grunt tag:minor` or `grunt tag:patch`.
 
 
 ## Troubleshooting
