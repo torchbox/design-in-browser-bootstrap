@@ -115,6 +115,23 @@ module.exports = function(grunt) {
                 }
             }
         }
+
+        // Increment an official version number in Git
+        bump: {
+            options: {
+                files: ['package.json'],
+                commit: true,
+                commitMessage: 'Release v%VERSION%',
+                commitFiles: ['package.json'],
+                createTag: true,
+                tagName: 'v%VERSION%',
+                tagMessage: 'Version %VERSION%',
+                push: true,
+                pushTo: 'origin',
+                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+                updateConfigs: ['pkg']
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -124,11 +141,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-ssh');
+    grunt.loadNpmTasks('grunt-bump');
   
+    // $ grunt
     grunt.registerTask('default', 'Runs a local development server and opens the site in a new browser page/tab', 
         ['copy:build', 'sass', 'connect', 'open:dev', 'ssi', 'watch']
     );
 
+    // $ grunt stage
     grunt.registerTask('stage', 'Uploads site to staging server', function(){
         var settingsFile = "staging-config.json"
         if(!grunt.file.exists(settingsFile)){
@@ -141,4 +161,13 @@ module.exports = function(grunt) {
         grunt.config.set('stagingConfig.localKey', grunt.file.read(stagingConfig.localKeyPath))
         grunt.task.run(['copy:build', 'sass', 'ssi', 'sshexec:stagingstart', 'sftp', 'sshexec:stagingfinish'])
     });
+
+    // $ grunt tag:[major|minor|patch]
+    grunt.registerTask('tag', 'Commits the current codebase to Git as a versioned tag.', function(target){
+        if(typeof target == "undefined"){
+            grunt.log.error('You must specify a version increment: major, minor or patch e.g tag:minor')
+            return false
+        }
+        grunt.task.run(['bump:' + target]);
+    })
 };
