@@ -39,7 +39,7 @@ This project provides a basic webserver and development environment for designer
 * Run `grunt` from the command line from the same directory as this README. A small webserver will start and your browser will open at a URL displaying your site. CSS/SASS/JS and HTML files will be watched for changes, and the page refreshed automatically.
 
 
-## Deploy to a staging server
+## Deploying to a staging server
 
 #### Setup per developer computer
 
