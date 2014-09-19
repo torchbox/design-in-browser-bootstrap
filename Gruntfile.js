@@ -10,7 +10,8 @@ module.exports = function(grunt) {
             server: {
                 options: {
                     port: 9001,
-                    livereload: true
+                    livereload: true,
+                    base: 'site/build'
                 }
             }
         },
@@ -18,7 +19,7 @@ module.exports = function(grunt) {
         // opens a browser window to the site
         open: {
             dev: {
-                path: 'http://localhost:<%= connect.server.options.port %>/site/build/'
+                path: 'http://localhost:<%= connect.server.options.port %>'
             }
         },
 

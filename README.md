@@ -19,8 +19,8 @@ This project provides a basic webserver and development environment for designer
 
 * Install Node.js: Click on the big "INSTALL" button here http://nodejs.org
 * From your machine's terminal:
-  * Install Grunt: `npm install -g grunt grunt-cli` (may require sudo)
-  * Install SASS: `sudo gem install sass` (may require sudo)
+  * Install Grunt: `sudo npm install -g grunt grunt-cli`
+  * Install SASS: `sudo gem install sass`
 
 #### Once per project
 
