@@ -114,7 +114,7 @@ module.exports = function(grunt) {
                     "./": ["site/build/**/*"]
                 }
             }
-        }
+        },
 
         // Increment an official version number in Git
         bump: {
@@ -142,7 +142,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-ssh');
     grunt.loadNpmTasks('grunt-bump');
-  
+    
     // $ grunt
     grunt.registerTask('default', 'Runs a local development server and opens the site in a new browser page/tab', 
         ['copy:build', 'sass', 'connect', 'open:dev', 'ssi', 'watch']

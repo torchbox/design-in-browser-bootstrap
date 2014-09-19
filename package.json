@@ -12,6 +12,6 @@
     "grunt-ssi": "^0.2.1",
     "grunt-contrib-sass": "^0.7.3",
     "grunt-ssh": "^0.11.2",
-    "grunt-bump": "0.0.15",
+    "grunt-bump": "0.0.15"
   }
 }
