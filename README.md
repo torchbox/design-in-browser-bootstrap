@@ -89,7 +89,7 @@ Be warned: this completely replaces the previous version. If you want to deploy 
 
 Run `grunt tag`, to automatically increment the version number of the designs, and create a new tag in your git repository, using that  number.
 
-Version numbers changed with this command can be incremented as "major" e.g 1.0.0 to 2.0.0, "minor" e.g 1.0.0 to 1.1.0 or "patch" e.g 1.0.0 to 1.0.1. 
+Versions can be incremented as "major" e.g 1.0.0 to 2.0.0, "minor" e.g 1.0.0 to 1.1.0 or "patch" e.g 1.0.0 to 1.0.1. 
 
 Specify what kind of degree of change you want using the syntax: `grunt tag:major`, `grunt tag:minor` or `grunt tag:patch`.
 
