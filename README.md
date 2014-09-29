@@ -11,7 +11,7 @@ This project provides a basic webserver and development environment for designer
 * SASS compilation support.
 * Livereload support.
 * An automated way to upload your changes to a staging server.
-* Automated version numbering and Git tagging.
+* Automated Git tag version numbering
 
 ## Installation
 
