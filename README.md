@@ -88,7 +88,9 @@ Be warned: this completely replaces the previous version. If you want to deploy 
 
 ## Version numbering
 
-Run `grunt tag`, to automatically increment the version number of the designs, and create a new tag in your git repository, using that  number.
+This feature is **not** a system to provide readily browsable versions of your designs. Rather it's a simple interface to `git tag`, and a way of incrementing your `package.json` version number (the de facto way of giving your project an official version number)
+
+Run `grunt tag`, to automatically increment the version number in `package.json`, and create a new tag in your git repository, using that  number.
 
 Versions can be incremented as "major" e.g 1.0.0 to 2.0.0, "minor" e.g 1.0.0 to 1.1.0 or "patch" e.g 1.0.0 to 1.0.1. 
 
