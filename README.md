@@ -55,7 +55,10 @@ Once you've generated keys, or if you've generated them at some point in the pas
 
 (If typing `brew` on your command line indicates the command doesn't exist, you need to install Brew using the instructions here: http://brew.sh/. )
 
-* With Brew installed, run: `ssh-copy-id [your ldap username]@[your server]` e.g `ssh-copy-id han@rebelalliance.com`
+With Brew installed, run:
+
+* `brew install ssh-copy-id`
+* `ssh-copy-id [your ldap username]@[your server]` e.g `ssh-copy-id han@rebelalliance.com`
 
 This will automatically copy your key from your local machine to your staging server. Double check it works with a simple login test:
 
