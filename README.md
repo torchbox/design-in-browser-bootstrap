@@ -76,7 +76,7 @@ The following needs to be done for this project specifically.
 Change the contents of the new file: 
 
 * The `username` should be the one you usually use to connect to the staging server. 
-* `destinationPath` is the path on the server. e.g  `/var/www/my-new-site/`. This path must end with a slash.
+* `destinationPath` is the path on the server where you want everything to go. e.g  `/var/www/my-new-site/`. This path must end with a slash. The folder you choose does *not* need to exist already.
 * `localKeyPath` is the path to the *private* half of the key you created above. If in doubt, on OSX it should read: `/Users/[your osx username]/.ssh/id_rsa`
 * If you've password protected your key, `passphrase` should contain the password you used.
 
