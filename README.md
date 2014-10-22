@@ -58,7 +58,9 @@ Once you've generated keys, or if you've generated them at some point in the pas
 With Brew installed, run:
 
 * `brew install ssh-copy-id`
-* `ssh-copy-id [your ldap username]@[your server]` e.g `ssh-copy-id han@rebelalliance.com`
+* `ssh-copy-id -i ~/.ssh/id_rsa [your ldap username]@[your server]` e.g `ssh-copy-id -i ~/.ssh/id_rsa han@rebelalliance.com`
+
+(if you're sufficiently versed in CLI to create a key *not* called "id_rsa", obviously ssh-copy-id that other key instead)
 
 This will automatically copy your key from your local machine to your staging server. Double check it works with a simple login test:
 
