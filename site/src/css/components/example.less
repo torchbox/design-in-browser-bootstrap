@@ -1,0 +1,24 @@
+/**
+ * Author(s): Your name here
+ *
+ * EXAMPLE COMPONENT
+ */
+
+ @import 'variables.less';
+ @import 'core-mixins.less';
+ @import 'site-mixins.less';
+
+.welcome-message {
+    padding: 1em;
+    margin: 1em;
+    background: @colorTertiary;
+    h1 {
+        .sizeXL();
+    }
+    a {
+        color: @colorLink;
+        &:hover {
+            color: @colorLinkHover;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "DesignInTheBrowserBootstrap",
+  "version": "0.0.1",
+  "author": "Torchbox Ltd",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-open": "latest",
+    "grunt-ssi": "^0.2.1",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-ssh": "^0.11.2",
+    "grunt-bump": "0.0.15"
+  }
+}
