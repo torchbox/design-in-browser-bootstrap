@@ -51,6 +51,39 @@ module.exports = function(grunt) {
             }
         },
 
+        // compiles less
+        less: {
+            dist: {
+                options: {
+                    paths: ['site/src/css'] // For import directories
+                },
+                // Will compile all LESS files to CSS
+                files: [
+                  {
+                    expand: true,
+                    cwd: 'site/src/css',
+                    src: ['*.less'],
+                    dest: 'site/build/css/',
+                    ext: '.css'
+                  },
+                 {
+                    expand: true,
+                    cwd: 'site/src/css/components',
+                    src: ['*.less'],
+                    dest: 'site/build/css/components',
+                    ext: '.css'
+                  },
+                 {
+                    expand: true,
+                    cwd: 'site/src/css/templates',
+                    src: ['*.less'],
+                    dest: 'site/build/css/templates',
+                    ext: '.css'
+                  }
+                ]
+            },
+        },
+
         // Copies the contents of src into build
         copy: {
             js:{
@@ -81,6 +114,10 @@ module.exports = function(grunt) {
             sass: {
                 files: 'site/src/**/*.scss',
                 tasks: ['sass']
+            },
+            less: {
+                files: 'site/src/**/*.less',
+                tasks: ['less']
             }
         },
 
@@ -143,10 +180,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-ssh');
     grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-contrib-less');
     
     // $ grunt
     grunt.registerTask('default', 'Runs a local development server and opens the site in a new browser page/tab', 
-        ['copy:build', 'sass', 'connect', 'open:dev', 'ssi', 'watch']
+        ['copy:build', 'sass', 'connect', 'open:dev', 'ssi', 'less', 'watch']
     );
 
     // $ grunt stage
@@ -160,7 +198,7 @@ module.exports = function(grunt) {
         }
         grunt.config.set('stagingConfig', stagingConfig);
         grunt.config.set('stagingConfig.localKey', grunt.file.read(stagingConfig.localKeyPath))
-        grunt.task.run(['copy:build', 'sass', 'ssi', 'sshexec:stagingstart', 'sftp', 'sshexec:stagingfinish'])
+        grunt.task.run(['copy:build', 'sass', 'ssi', 'sshexec:stagingstart', 'sftp', 'sshexec:stagingfinish', 'less'])
     });
 
     // $ grunt tag:[major|minor|patch]
@@ -170,5 +208,6 @@ module.exports = function(grunt) {
             return false
         }
         grunt.task.run(['bump:' + target]);
-    })
+    });
+
 };

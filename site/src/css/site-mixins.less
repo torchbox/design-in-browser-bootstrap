@@ -1,0 +1,51 @@
+/**
+ * Author(s): Your name
+ *
+ * SITE MIXINS
+ *
+ * Includes all mixins that are shared across the site, 
+ * both parametric (function) mixins and standard mixins.
+ *
+ */
+
+@import 'variables.less';
+@import 'core-mixins.less';
+
+/**
+ * $CONTENTS
+ */
+
+/**
+ * CONTENTS............You’re reading it!
+ * RETINA IMAGES.......So you and just specify the standard image the rest is magic
+ * REM FONT SIZE SUPPORT.........Provides back up for browser that don't support REM
+ */
+
+
+
+/* $RETINA IMAGES */
+// OVERIDDEN - JM: From gist: https://gist.github.com/brandonb927/3874012 */
+.image-2x(@image, @width, @height, @repeat: no-repeat) {
+    @filename  : ~`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[1]`;
+    @extension : ~`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[2]`;
+    background-image: ~`"url(@{filename}.@{extension})"`;
+    background-repeat: @repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+        /* on retina, use image that's scaled by 2 */
+        background-image: ~`"url(@{filename}@2x.@{extension})"`;
+        background-size: @width @height;
+    }
+}
+
+/* $REM FONT SIZE SUPPORT */
+.font-size(@sizeValue) {
+    @remValue: @sizeValue;
+    @pxValue: (@sizeValue * 10);
+    font-size: ~"@{pxValue}px"; 
+    font-size: ~"@{remValue}rem";
+}

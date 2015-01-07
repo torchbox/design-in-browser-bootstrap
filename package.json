@@ -6,7 +6,7 @@
     "grunt": "~0.4.0",
     "grunt-contrib-connect": "latest",
     "grunt-contrib-watch": "latest",
-    "grunt-contrib-less": "latest",
+    "grunt-contrib-less": "^1.0.0",
     "grunt-contrib-copy": "^0.5.0",
     "grunt-open": "latest",
     "grunt-ssi": "^0.2.1",

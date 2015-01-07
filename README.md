@@ -9,6 +9,7 @@ This project provides a basic webserver and development environment for designer
 
 * Server Side Include (SSI) support but *without* a need for any server-side language. This makes it easy to create modular code e.g a reuseable header/footer.
 * SASS compilation support.
+* LESS compilation support.
 * Livereload support.
 * An automated way to upload your changes to a staging server.
 * Automated Git tag version numbering
