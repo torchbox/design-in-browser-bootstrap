@@ -23,7 +23,6 @@ This project provides a basic webserver and development environment for designer
   * Install Grunt: `sudo npm install -g grunt grunt-cli`
   * Install SASS: `sudo gem install sass`
 
-
 #### Once per project
 
 * Clone this repository somewhere
