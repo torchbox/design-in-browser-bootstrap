@@ -43,8 +43,7 @@ This project provides a basic webserver and development environment for designer
 
 #### Image optimisation
 
-If you are handing over the code before you do this run the `grunt imageOptimise` commend which will compress GIFs, PNGs and JPGs.
-You don't need to do this if deploying to staging.
+An image compression/optimisation feature is included, available by running `grunt imageOptimise`. It will optimise any GIF, PNG or JP(E)G images in the `img` folder. This task is not run automatically, or repeatedly on a 'watch' as it can be time consuming. It's suggested you only run this prior to delivering new images or changed images to a client/colleague.
 
 ## Deploying to a staging server
 
