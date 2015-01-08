@@ -9,6 +9,8 @@ This project provides a basic webserver and development environment for designer
 
 * Server Side Include (SSI) support but *without* a need for any server-side language. This makes it easy to create modular code e.g a reuseable header/footer.
 * SASS compilation support.
+* LESS compilation support.
+* Image optimisation support via `grunt imageOptimise` command.
 * Livereload support.
 * An automated way to upload your changes to a staging server.
 * Automated Git tag version numbering
@@ -31,13 +33,18 @@ This project provides a basic webserver and development environment for designer
 
 ## Developing with it
 
+* You should check the CSS folder and remove the files LESS or SASS file depend on which your team has decided to use.
 * The files you will want to edit are in `site/src`. A `site/build` folder is created on the fly as part of the server process, but should be ignored.
 
 
 ####  Running the development server
 
-* Run `grunt` from the command line from the same directory as this README. A small webserver will start and your browser will open at a URL displaying your site. CSS/SASS/JS and HTML files will be watched for changes, and the page refreshed automatically.
+* Run `grunt` from the command line from the same directory as this README. A small webserver will start and your browser will open at a URL displaying your site. CSS/SASS/LESS/JS and HTML files will be watched for changes, and the page refreshed automatically.
 
+#### Image optimisation
+
+If you are handing over the code before you do this run the `grunt imageOptimise` commend which will compress GIFs, PNGs and JPGs.
+You don't need to do this if deploying to staging.
 
 ## Deploying to a staging server
 
