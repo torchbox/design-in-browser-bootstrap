@@ -9,8 +9,7 @@
 
  @import 'normalize.less';
  @import 'variables.less';
- @import 'core-mixins.less';
- @import 'site-mixins.less';
+ @import 'mixins.less';
 
 /**
  * CONTENTS
@@ -24,11 +23,10 @@
 
 html {
     font-size: @sizeBase;
-    font-family: @fontArial;
 }
 
-body {
-    .sizeS();
+main {
+    font-size: @sizeS;
 }
 
 

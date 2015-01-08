@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports = function(grunt) {
+
+    var mozjpeg = require('imagemin-mozjpeg');
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         stagingConfig: {},
@@ -82,6 +85,22 @@ module.exports = function(grunt) {
                   }
                 ]
             },
+        },
+
+        // Compresses images
+        imagemin: {                          // Task
+            dist: {                         // Another target
+              options: {                       // Target options
+                optimizationLevel: 3,
+                use: [mozjpeg()]
+              },              
+              files: [{
+                expand: true,                  // Enable dynamic expansion
+                cwd: 'site/src/img',                   // Src matches are relative to this path
+                src: ['**/*.{png,jpg,jpeg,gif}'],   // Actual patterns to match
+                dest: 'site/build/img'                  // Destination path prefix
+              }]
+            }
         },
 
         // Copies the contents of src into build
@@ -181,11 +200,15 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ssh');
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     
     // $ grunt
     grunt.registerTask('default', 'Runs a local development server and opens the site in a new browser page/tab', 
-        ['copy:build', 'sass', 'connect', 'open:dev', 'ssi', 'less', 'watch']
+        ['copy:build', 'sass', 'less', 'connect', 'open:dev', 'ssi', 'watch']
     );
+
+    // $ grunt imageOptimise
+    grunt.registerTask('imageOptimise', ['imagemin']);
 
     // $ grunt stage
     grunt.registerTask('stage', 'Uploads site to staging server', function(){
@@ -198,7 +221,7 @@ module.exports = function(grunt) {
         }
         grunt.config.set('stagingConfig', stagingConfig);
         grunt.config.set('stagingConfig.localKey', grunt.file.read(stagingConfig.localKeyPath))
-        grunt.task.run(['copy:build', 'sass', 'ssi', 'sshexec:stagingstart', 'sftp', 'sshexec:stagingfinish', 'less'])
+        grunt.task.run(['copy:build', 'sass', 'less', 'ssi', 'imageOptimise', 'sshexec:stagingstart', 'sftp', 'sshexec:stagingfinish'])
     });
 
     // $ grunt tag:[major|minor|patch]
