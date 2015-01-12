@@ -110,7 +110,30 @@ Specify what kind of degree of change you want using the syntax: `grunt tag:majo
 
 ## Troubleshooting
 
+### Installation
+Node has a habit of getting it's directory permissions confused on OSX, resulting in errors like: 
+
+```
+npm WARN package.json globalwitness@0.0.1 No repository field.
+npm ERR! Error: EACCES, mkdir '/Users/Dave/.npm/depd/1.0.0'
+npm ERR!  { [Error: EACCES, mkdir '/Users/Dave/.npm/depd/1.0.0']
+npm ERR!   errno: 3,
+npm ERR!   code: 'EACCES',
+npm ERR!   path: '/Users/Dave/.npm/depd/1.0.0',
+npm ERR!   parent: 'connect' }
+npm ERR! 
+npm ERR! Please try running this command again as root/Administrator.
+
+```
+
+The key here is `npm ERR! Error: EACCES` and the solution is explained here:
+https://github.com/npm/npm/wiki/Troubleshooting#permission-error
+
+### Files not appearing on site
+
 Grunt copies the contents of `site/src` to `site/build` each time it runs, to ensure all the source files are available to the grunt server, which runs from the `site/build` directory. Any *new* files you create while the server is running won't be available in the `src/build` folder until you stop and restart the grunt server: press Ctrl+C, then type `grunt` again.
+
+
 
 
 ## License
