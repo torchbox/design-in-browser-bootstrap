@@ -111,7 +111,7 @@ Specify what kind of degree of change you want using the syntax: `grunt tag:majo
 ## Troubleshooting
 
 ### Installation
-Node has a habit of getting it's directory permissions confused on OSX, resulting in errors like: 
+Node has a habit of getting its directory permissions confused on OSX, resulting in errors like: 
 
 ```
 npm WARN package.json globalwitness@0.0.1 No repository field.
