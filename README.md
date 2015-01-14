@@ -91,6 +91,8 @@ Change the contents of the new file:
 
 #### Deploying
 
+(NB: you do NOT need to create the directory on the remote server. This will be done for you automatically).
+
 * Run `grunt stage`
 * Your site should now be available at `http://yourserver.com/[whatever folder name you gave in staging-config.json]`
 
