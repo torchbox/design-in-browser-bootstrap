@@ -62,73 +62,73 @@ module.exports = function(grunt) {
                 },
                 // Will compile all LESS files to CSS
                 files: [
-                  {
-                    expand: true,
-                    cwd: 'site/src/css',
-                    src: ['*.less'],
-                    dest: 'site/build/css/',
-                    ext: '.css'
-                  },
-                 {
-                    expand: true,
-                    cwd: 'site/src/css/components',
-                    src: ['*.less'],
-                    dest: 'site/build/css/components',
-                    ext: '.css'
-                  },
-                 {
-                    expand: true,
-                    cwd: 'site/src/css/templates',
-                    src: ['*.less'],
-                    dest: 'site/build/css/templates',
-                    ext: '.css'
-                  }
+                    {
+                        expand: true,
+                        cwd: 'site/src/css',
+                        src: ['*.less'],
+                        dest: 'site/build/css/',
+                        ext: '.css'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'site/src/css/components',
+                        src: ['*.less'],
+                        dest: 'site/build/css/components',
+                        ext: '.css'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'site/src/css/templates',
+                        src: ['*.less'],
+                        dest: 'site/build/css/templates',
+                        ext: '.css'
+                    }
                 ]
             },
         },
 
         // Compresses images
-        imagemin: {                          // Task
+        imagemin: {
             dist: {                         // Another target
-              options: {                       // Target options
-                optimizationLevel: 3,
-                use: [mozjpeg()]
-              },              
-              files: [{
-                expand: true,                  // Enable dynamic expansion
-                cwd: 'site/src/img',                   // Src matches are relative to this path
-                src: ['**/*.{png,jpg,jpeg,gif}'],   // Actual patterns to match
-                dest: 'site/build/img'                  // Destination path prefix
-              }]
+                options: {                       // Target options
+                    optimizationLevel: 3,
+                    use: [mozjpeg()]
+                },              
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: 'site/src/img',                   // Src matches are relative to this path
+                    src: ['**/*.{png,jpg,jpeg,gif}'],   // Actual patterns to match
+                    dest: 'site/build/img'                  // Destination path prefix
+                }]
             }
         },
 
         // Copies the contents of src into build
-        copy: {
-            js:{
-                expand: true,
-                cwd: 'site/src', 
-                src: ['js/**/*'], 
-                dest: 'site/build/'
-            },
+        sync: {
             build: {
-                expand: true,
-                cwd: 'site/src', 
-                src: ['**'], 
-                dest: 'site/build/'
+                files: [{
+                    cwd: 'site/src',
+                    src: [
+                        '**', /* Include everything */
+                        '!**/*.html', /* exclude html files */
+                        '!**/*.scss' /* exclude sass files */
+                    ],
+                    dest: 'site/build/',
+                }],
+                verbose: true // Display log messages when copying files 
             }
         },
 
         // Observe the js/html/css/sass files for changes and execute the tasks
         watch: {
-            options: { livereload: true },
-            html: {
+            options: { livereload: true, spawn: false, debounceDelay: 250, },
+            sync: {
+                files: 'site/src/**/*',
+                tasks: ['sync']
+            },
+            ssi: {
                 files: 'site/src/**/*.html',
                 tasks: ['ssi']
-            },
-            scripts: {
-                files: 'site/src/**/*.js',
-                tasks: ['copy:js']
             },
             sass: {
                 files: 'site/src/**/*.scss',
@@ -195,7 +195,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-ssi');
-    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-sync');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-ssh');
     grunt.loadNpmTasks('grunt-bump');
