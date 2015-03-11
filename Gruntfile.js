@@ -204,7 +204,7 @@ module.exports = function(grunt) {
     
     // $ grunt
     grunt.registerTask('default', 'Runs a local development server and opens the site in a new browser page/tab', 
-        ['copy:build', 'sass', 'less', 'connect', 'open:dev', 'ssi', 'watch']
+        ['sync', 'sass', 'less', 'connect', 'open:dev', 'ssi', 'watch']
     );
 
     // $ grunt imageOptimise
