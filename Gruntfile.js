@@ -221,7 +221,7 @@ module.exports = function(grunt) {
         }
         grunt.config.set('stagingConfig', stagingConfig);
         grunt.config.set('stagingConfig.localKey', grunt.file.read(stagingConfig.localKeyPath))
-        grunt.task.run(['copy:build', 'sass', 'less', 'ssi', 'imageOptimise', 'sshexec:stagingstart', 'sftp', 'sshexec:stagingfinish'])
+        grunt.task.run(['sync', 'sass', 'less', 'ssi', 'imageOptimise', 'sshexec:stagingstart', 'sftp', 'sshexec:stagingfinish'])
     });
 
     // $ grunt tag:[major|minor|patch]
