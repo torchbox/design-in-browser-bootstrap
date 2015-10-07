@@ -19,8 +19,7 @@ This project provides a basic webserver and development environment for designer
 
 * Install Node.js: Click on the big "INSTALL" button here http://nodejs.org
 * From your machine's terminal:
-  * Install Grunt: `sudo npm install -g grunt grunt-cli`
-  * Install SASS: `sudo gem install sass`
+  * Install Gulp: `sudo npm install --global gulp`
 
 #### Once per project
 
@@ -77,7 +76,7 @@ Successfull key installation is indicated by it logging you in **without** askin
 
 The following needs to be done for this project specifically.
 
-* Copy the file `staging-config.example.json` (found in the same dir as this README), to `staging-config.json`
+* Copy the file `staging-ssh-config.example.js` (found in the same dir as this README), to `staging-ssh-config.js`
 
 Change the contents of the new file: 
 
@@ -92,9 +91,9 @@ Change the contents of the new file:
 (NB: you do NOT need to create the directory on the remote server. This will be done for you automatically).
 
 * Run `grunt stage`
-* Your site should now be available at `http://yourserver.com/[whatever folder name you gave in staging-config.json]`
+* Your site should now be available at `http://yourserver.com/[whatever folder name you gave in staging-ssh-config.js]`
 
-Be warned: this completely replaces the previous version. If you want to deploy it to a new directory, just change the directory name in `staging-config.json` first.
+Be warned: this completely replaces the previous version. If you want to deploy it to a new directory, just change the directory name in `staging-ssh-config.js` first.
 
 
 ## Version numbering

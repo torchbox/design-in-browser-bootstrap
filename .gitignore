@@ -4,4 +4,4 @@ node_modules
 .DS_Store
 *.zip
 site/build/*
-staging-config.json
+staging-ssh-config.js

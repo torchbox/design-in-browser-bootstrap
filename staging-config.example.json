@@ -1,7 +1,0 @@
-{
-    "host": "sanctuarymoon.rebelalliance.com",
-    "username": "hansolo",
-    "destinationPath": "/var/www/nerfherder/",
-    "localKeyPath": "/Users/hansolo/.ssh/id_rsa",
-    "passphrase": "iloveLe1a"
-}

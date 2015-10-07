@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block title %}Secure Payment Form{% endblock %}
 
@@ -22,8 +22,7 @@
                 <p>Create a <code>staging-config.json</code> file by renaming <code>staging-config.example.json</code>. See the <a href="https://github.com/torchbox/design-in-browser-bootstrap#deploying-to-a-staging-server"><code>README.md</code>  "Deploying to a staging server"->"Setup per project"</a> for information on how to configure it.</p>
             </li>
             <li>
-                <p>Delete all the HTML in this file and start writing your own! Leave in the <code>#include</code> comments to continue using the header and footer files provided for convenience.</p>
-                <p>Both LESS and SASS files are compiled automatically to a file called "main.css". This repo comes with sample SASS and LESS files so <strong>remember to delete one or other set</strong>, otherwise both will be compiled, one overwriting the other.</p>
+                <p>Delete all the HTML inside <code>{% raw %}{% block content %}{% endblock %}{% endraw %}</code> block in this file, and start writing your own!</p>
             </li>
         </ol>
     </div>
