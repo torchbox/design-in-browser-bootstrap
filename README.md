@@ -6,10 +6,10 @@ This project provides a basic webserver and development environment for designer
 ## What's included
 
 * SWIG templating: like Twig / Liquid / Jinja / Django templating language
-* SASS compilation support.
+* SASS CSS.
 * Automatic image optimisation
 * Livereload.
-* An automated way to upload your changes to a staging server.
+* An automated way to upload your site to a staging server.
 
 ## Installation
 
