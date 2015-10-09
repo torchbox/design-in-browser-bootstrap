@@ -28,7 +28,6 @@ This project provides a basic webserver and development environment for designer
 
 ## Developing with it
 
-* You should check the CSS folder and remove the files LESS or SASS file depend on which your team has decided to use.
 * The files you will want to edit are in `site/src`. A `site/build` folder is created on the fly as part of the server process, but should be ignored.
 
 

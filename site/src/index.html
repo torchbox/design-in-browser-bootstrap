@@ -3,27 +3,25 @@
 {% block title %}Secure Payment Form{% endblock %}
 
 {% block content %}
-    <div class="welcome-message">
-        <h1>Thanks for installing the Design In the Browser Bootstrap</h1>
+    <h1>Thanks for installing the Design In the Browser Bootstrap</h1>
 
-        <p>Before beginning work, the following are required:</p>
+    <p>Before beginning work, the following are required:</p>
 
-        <ol>
-            <li>
-                <p>The project must be renamed in  <code>package.json</code>.</p>
-                <p>Change the line that reads <code>"name": "DesignInTheBrowserBootstrap",</code> to specify your new project's name e.g <code>"name": "My New Project",</code>.
-            </li>
-            <li>
-                <p>A fresh git repository must be created:</p>
-                <p>In the same folder as the file <code>package.json</code>, run:<br/><code>rm -rf .git && git init && git add . && git commit -m "First commit"</code></p>
-                <p>This new repository will need to be uploaded somewhere eventually e.g Github, but this can be left till later.</p>
-            </li>
-            <li>
-                <p>Create a <code>staging-config.json</code> file by renaming <code>staging-config.example.json</code>. See the <a href="https://github.com/torchbox/design-in-browser-bootstrap#deploying-to-a-staging-server"><code>README.md</code>  "Deploying to a staging server"->"Setup per project"</a> for information on how to configure it.</p>
-            </li>
-            <li>
-                <p>Delete all the HTML inside <code>{% raw %}{% block content %}{% endblock %}{% endraw %}</code> block in this file, and start writing your own!</p>
-            </li>
-        </ol>
-    </div>
+    <ol>
+        <li>
+            <p>The project must be renamed in  <code>package.json</code>.</p>
+            <p>Change the line that reads <code>"name": "DesignInTheBrowserBootstrap",</code> to specify your new project's name e.g <code>"name": "Client XYZ",</code>.
+        </li>
+        <li>
+            <p>A fresh git repository must be created:</p>
+            <p>In the same folder as the file <code>package.json</code>, run:<br/><code>rm -rf .git && git init && git add . && git commit -m "First commit"</code></p>
+            <p>This new repository will need to be uploaded somewhere eventually e.g Github, but this can be left till later.</p>
+        </li>
+        <li>
+            <p>Create a <code>staging-ssh-config.js</code> file by renaming <code>staging-ssh-config.example.js</code>. See the <a href="https://github.com/torchbox/design-in-browser-bootstrap#deploying-to-a-staging-server"><code>README.md</code>  "Deploying to a staging server"->"Setup per project"</a> for information on how to configure it.</p>
+        </li>
+        <li>
+            <p>Delete all the HTML inside <code>{% raw %}{% block content %}{% endblock %}{% endraw %}</code> block in this file, and start writing your own!</p>
+        </li>
+    </ol>
 {% endblock %}
