@@ -112,9 +112,10 @@ npm ERR! Please try running this command again as root/Administrator.
 The key here is `npm ERR! Error: EACCES` and the solution is explained here:
 https://github.com/npm/npm/wiki/Troubleshooting#permission-error
 
+
 ### Files not appearing on site
 
-Gulp copies the contents of `site/src` to `site/build` each time it runs, to ensure all the source files are available to the grunt server, which runs from the `site/build` directory. Any *new* files you create while the server is running won't be available in the `src/build` folder until you stop and restart the grunt server: press Ctrl+C, then type `gulp` again.
+New files added to a folder while Gulp is already running _should_ get copied to the `build` folder automatically, but occasionally won't. Kill the Gulp task (Ctrl+C) and re-run `gulp` to resolve this.
 
 
 ## License
