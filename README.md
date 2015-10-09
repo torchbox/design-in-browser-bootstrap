@@ -5,13 +5,11 @@ This project provides a basic webserver and development environment for designer
 
 ## What's included
 
-* Server Side Include (SSI) support but *without* a need for any server-side language. This makes it easy to create modular code e.g a reuseable header/footer.
+* SWIG templating: like Twig / Liquid / Jinja / Django templating language
 * SASS compilation support.
-* LESS compilation support.
-* Image optimisation support via `grunt imageOptimise` command.
-* Livereload support.
+* Automatic image optimisation
+* Livereload.
 * An automated way to upload your changes to a staging server.
-* Automated Git tag version numbering
 
 ## Installation
 
@@ -25,7 +23,7 @@ This project provides a basic webserver and development environment for designer
 
 * Clone this repository somewhere
 * Install this project's dependencies: Within the repository directory, run `npm install` (Do *not* use sudo. Some users have experienced issues where this only works *with* sudo, but ideally you shouldn't use it)
-* Run `grunt`, which will open a welcome page providing further instructions.
+* Run `gulp`, which will open a welcome page providing further instructions.
 
 
 ## Developing with it
@@ -36,17 +34,14 @@ This project provides a basic webserver and development environment for designer
 
 ####  Running the development server
 
-* Run `grunt` from the command line from the same directory as this README. A small webserver will start and your browser will open at a URL displaying your site. CSS/SASS/LESS/JS and HTML files will be watched for changes, and the page refreshed automatically.
+* Run `gulp` from the command line from the same directory as this README. A small webserver will start and your browser will open at a URL displaying your site. CSS/SASS/Js/image/HTML files will be watched for changes and the page refreshed automatically.
 
-#### Image optimisation
-
-An image compression/optimisation feature is included, available by running `grunt imageOptimise`. It will optimise any GIF, PNG or JP(E)G images in the `img` folder. This task is not run automatically, or repeatedly on a 'watch' as it can be time consuming. It's suggested you only run this prior to delivering new images or changed images to a client/colleague.
 
 ## Deploying to a staging server
 
 #### Setup per developer computer
 
-Grunt can upload files via SFTP but **not** to servers that require a password typed in the terminal. Instead we access the server with SSH keys. These instructions configure that access. The following needs to be done on every machine you develop on, but only once per machine - not once per project.
+Gulp can upload files via SFTP but **not** to servers that require a password typed in the terminal. Instead we access the server with SSH keys. These instructions configure that access. The following needs to be done on every machine you develop on, but only once per machine - not once per project.
 
 * On your local machine run: `cat ~/.ssh/id_rsa.pub`
 
@@ -80,9 +75,10 @@ The following needs to be done for this project specifically.
 
 Change the contents of the new file: 
 
-* The `username` should be the one you usually use to connect to the staging server. 
-* `destinationPath` is the path on the server where you want everything to go. e.g  `/var/www/my-new-site/`. This path must end with a slash. The folder you choose does *not* need to exist already.
-* `localKeyPath` is the path to the *private* half of the key you created above. If in doubt, on OSX it should read: `/Users/[your osx username]/.ssh/id_rsa`
+* `host` is the hostname your staging server
+* The `user` should be the username you usually use to connect to the staging server. 
+* `remotePath` is the path on the server where you want everything to go. e.g  `/var/www/my-new-site`. This path must *not* end with a slash. The folder you choose does *not* need to exist already.
+* `key` is the path to the *private* half of the key you created above. If in doubt, on OSX it should read: `/Users/[your osx username]/.ssh/id_rsa`
 * If you've password protected your key, `passphrase` should contain the password you used.
 
 
@@ -90,21 +86,10 @@ Change the contents of the new file:
 
 (NB: you do NOT need to create the directory on the remote server. This will be done for you automatically).
 
-* Run `grunt stage`
+* Run `gulp stage`
 * Your site should now be available at `http://yourserver.com/[whatever folder name you gave in staging-ssh-config.js]`
 
 Be warned: this completely replaces the previous version. If you want to deploy it to a new directory, just change the directory name in `staging-ssh-config.js` first.
-
-
-## Version numbering
-
-This feature is **not** a system to provide readily browsable versions of your designs. Rather it's a simple interface to `git tag`, and a way of incrementing your `package.json` version number (the de facto way of giving your project an official version number)
-
-Run `grunt tag`, to automatically increment the version number in `package.json`, and create a new tag in your git repository, using that  number.
-
-Versions can be incremented as "major" e.g 1.0.0 to 2.0.0, "minor" e.g 1.0.0 to 1.1.0 or "patch" e.g 1.0.0 to 1.0.1. 
-
-Specify what kind of degree of change you want using the syntax: `grunt tag:major`, `grunt tag:minor` or `grunt tag:patch`.
 
 
 ## Troubleshooting
@@ -130,9 +115,7 @@ https://github.com/npm/npm/wiki/Troubleshooting#permission-error
 
 ### Files not appearing on site
 
-Grunt copies the contents of `site/src` to `site/build` each time it runs, to ensure all the source files are available to the grunt server, which runs from the `site/build` directory. Any *new* files you create while the server is running won't be available in the `src/build` folder until you stop and restart the grunt server: press Ctrl+C, then type `grunt` again.
-
-
+Gulp copies the contents of `site/src` to `site/build` each time it runs, to ensure all the source files are available to the grunt server, which runs from the `site/build` directory. Any *new* files you create while the server is running won't be available in the `src/build` folder until you stop and restart the grunt server: press Ctrl+C, then type `gulp` again.
 
 
 ## License
