@@ -1,6 +1,6 @@
 # Design In The Browser Bootstrap
 
-This project provides a basic webserver and development environment for designers to get started creating designs "in the browser", with real HTML templates, a simple "includes" system and tools like LiveReload to aid rapid development. It eschews the dependencies on complex setups like dynamic server-side languages, which can be a pain to configure for less technical people.
+This project uses Gulp to provide a basic webserver and development environment for designers to get started creating designs "in the browser", with a simple templating system.
 
 
 ## What's included
