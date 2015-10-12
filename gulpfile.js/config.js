@@ -21,6 +21,10 @@ module.exports = {
         src: src + "/js/**",
         dest: dest + "/js"
     },
+    fonts: {
+        src: src + "/fonts/**",
+        dest: dest + "/fonts"
+    },
     sass: {
         src: src + "/scss/**/*.{sass,scss}",
         dest: dest + "/css"
