@@ -17,6 +17,10 @@ module.exports = {
         src: src + "/img/**",
         dest: dest + "/img"
     },
+    scripts: {
+        src: src + "/js/**",
+        dest: dest + "/js"
+    },
     sass: {
         src: src + "/scss/**/*.{sass,scss}",
         dest: dest + "/css"
