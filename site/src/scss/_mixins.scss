@@ -37,16 +37,3 @@
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
 }
-
-// Placeholder text
-@mixin placeholder($color: $placeholderText) {
-    &:-moz-placeholder {
-        color: $color;
-    }
-    &:-ms-input-placeholder {
-        color: $color;
-    }
-    &::-webkit-input-placeholder {
-        color: $color;
-    }
-}
