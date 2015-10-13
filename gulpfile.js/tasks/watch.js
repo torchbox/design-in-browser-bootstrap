@@ -6,4 +6,5 @@ gulp.task('watch', ['browserSync'], function() {
     gulp.watch(config.images.src, ['images']);
     gulp.watch(config.markup.src, ['markup']);
     gulp.watch(config.scripts.src, ['scripts']);
+    gulp.watch(config.fonts.src, ['fonts']);
 });
