@@ -6,7 +6,7 @@ This project uses Gulp to provide a basic webserver and development environment 
 ## What's included
 
 * SWIG templating: like Twig / Liquid / Jinja / Django templating language
-* SASS CSS.
+* SASS CSS with auto-prefixing.
 * Automatic image optimisation
 * Livereload.
 * An automated way to upload your site to a staging server.
