@@ -21,8 +21,8 @@ This project uses Gulp to provide a basic webserver and development environment 
 
 #### Once per project
 
-* Clone this repository somewhere
-* Install this project's dependencies: Within the repository directory, run `npm install` (Do *not* use sudo. Some users have experienced issues where this only works *with* sudo, but ideally you shouldn't use it)
+* Clone this repository somewhere.
+* Install this project's dependencies: Within the repository directory, run `npm install` (If you encounter permission issues try `sudo chown -R $USER:$GROUP ~/.npm`. Some users have experienced issues where `npm install` only works *with* sudo, but ideally you shouldn't need to use it.)
 * Run `gulp`, which will open a welcome page providing further instructions.
 
 
