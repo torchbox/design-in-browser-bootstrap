@@ -22,8 +22,10 @@ This project uses Gulp to provide a basic webserver and development environment 
 #### Once per project
 
 * Clone this repository somewhere.
-* Install this project's dependencies: Within the repository directory, run `npm install` (If you encounter permission issues try `sudo chown -R $USER:$GROUP ~/.npm`. Some users have experienced issues where `npm install` only works *with* sudo, but ideally you shouldn't need to use it.)
+* Install this project's dependencies: Within the repository directory, run `npm install`.
 * Run `gulp`, which will open a welcome page providing further instructions.
+
+If you encounter any issues check the [Troubleshooting](#troubleshooting) section below.
 
 
 ## Developing with it
@@ -94,7 +96,7 @@ Be warned: this completely replaces the previous version. If you want to deploy 
 ## Troubleshooting
 
 ### Installation
-Node sometimes gets muddled and can't install modules to it's internal cache (at `~/.npm`). This results in errors like: 
+Node sometimes gets muddled and can't install modules to it's internal cache (at ~/.npm). This results in errors like:
 
 ```
 npm WARN package.json globalwitness@0.0.1 No repository field.
@@ -109,8 +111,7 @@ npm ERR! Please try running this command again as root/Administrator.
 
 ```
 
-The importants parts here are `npm ERR! Error: EACCES` and the fact it's trying to make directories (`mkdir`) in `.npm` dir when the error occurs. The solution is explained here:
-https://github.com/npm/npm/wiki/Troubleshooting#permission-error
+To apply user permissions on the directory run `chown -R $USER:$GROUP ~/.npm`, more details on the solution explained here: https://github.com/npm/npm/wiki/Troubleshooting#permission-error
 
 
 ### Files not appearing on site
