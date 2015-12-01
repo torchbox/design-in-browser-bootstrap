@@ -94,7 +94,7 @@ Be warned: this completely replaces the previous version. If you want to deploy 
 ## Troubleshooting
 
 ### Installation
-Node has a habit of getting its directory permissions confused on OSX, resulting in errors like: 
+Node sometimes gets muddled and can't install modules to it's internal cache (at `~/.npm`). This results in errors like: 
 
 ```
 npm WARN package.json globalwitness@0.0.1 No repository field.
@@ -109,7 +109,7 @@ npm ERR! Please try running this command again as root/Administrator.
 
 ```
 
-The key here is `npm ERR! Error: EACCES` and the solution is explained here:
+The importants parts here are `npm ERR! Error: EACCES` and the fact it's trying to make directories (`mkdir`) in `.npm` dir when the error occurs. The solution is explained here:
 https://github.com/npm/npm/wiki/Troubleshooting#permission-error
 
 
