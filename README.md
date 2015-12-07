@@ -7,10 +7,10 @@ This project uses Gulp to provide a basic webserver and development environment 
 
 * SWIG templating: like Twig / Liquid / Jinja / Django templating language
 * SASS CSS with auto-prefixing.
-* SVG Sprite generation
+* [SVG Sprite generation](#svg-sprite-generation)
 * Automatic image optimisation
 * Livereload.
-* An automated way to upload your site to a staging server.
+* [An automated way to upload your site to a staging server](#deploying-to-a-staging-server)
 
 ## Installation
 
