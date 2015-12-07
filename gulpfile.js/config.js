@@ -10,12 +10,18 @@ module.exports = {
         }
     },
     markup: {
-        src: src + "/*.html",
+        src: src + "/**/*.html",
         dest: dest
     },
     images: {
         src: src + "/img/**",
         dest: dest + "/img"
+    },
+    svg: {
+        src: src + "/img/sprite_src/**",
+        dest: dest + "/img",
+        precision: 2,
+        spriteFilename: "sprite.svg"
     },
     scripts: {
         src: src + "/js/**",

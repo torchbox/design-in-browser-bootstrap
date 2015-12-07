@@ -1,0 +1,37 @@
+{% extends "../base.html" %}
+
+{% block title %}SVG Sprite example{% endblock %}
+
+{% block content %}
+    <h1>SVG Sprite example</h1>
+
+    <p>(See sourcecode for instructions)</p>
+    <!-- First we must use the async svg-injector script. This should go in the HEAD.-->
+    <script src="/js/vendor/svg-injector.min.js"></script>
+
+    <!-- Next we add a placeholder to the sprite where we want the svg to be rendered. This nust exist in the markup before the first reference to the symbols within the sprite. e.g The first child of the BODY. -->
+    <img class="inject-me" src="/img/sprite.svg" style="display:none;">
+
+    <!-- Now we run the injector to replace the IMG above, with the real SVG -->
+    <script>
+        // Elements to inject
+        var mySVGsToInject = document.querySelectorAll('img.inject-me');
+
+        // Do the injection
+        SVGInjector(mySVGsToInject);
+    </script>
+
+    <!-- Now we can load any item from the sprite (only 2 exist in this example) -->
+    <svg width="20" height="20"><use xlink:href="#facebook"></use></svg>
+
+    <svg width="100" height="100"><use xlink:href="#twitter"></use></svg>
+
+    <!-- and we can change the colours of the icons wherever we use them using SVG's "fill" property -->
+    <style>
+        .red-twitter {
+            fill: red;
+        }
+    </style>
+
+    <svg width="50" height="50" class="red-twitter"><use xlink:href="#twitter"></use></svg>
+{% endblock %}

@@ -7,19 +7,20 @@ This project uses Gulp to provide a basic webserver and development environment 
 
 * SWIG templating: like Twig / Liquid / Jinja / Django templating language
 * SASS CSS with auto-prefixing.
+* SVG Sprite generation
 * Automatic image optimisation
 * Livereload.
 * An automated way to upload your site to a staging server.
 
 ## Installation
 
-#### Once per developer computer
+### Once per developer computer
 
 * Install Node.js: Click on the big "INSTALL" button here http://nodejs.org
 * From your machine's terminal:
   * Install Gulp: `sudo npm install --global gulp`
 
-#### Once per project
+### Once per project
 
 * Clone this repository somewhere.
 * Install this project's dependencies: Within the repository directory, run `npm install`.
@@ -32,15 +33,23 @@ If you encounter any issues check the [Troubleshooting](#troubleshooting) sectio
 
 * The files you will want to edit are in `site/src`. A `site/build` folder is created on the fly as part of the server process, but should be ignored.
 
+## SVG Sprite generation
 
-####  Running the development server
+Sprites are created by merging several individual image files onto a single canvas. In SVG sprites, unlike raster sprites, each individual image can be referenced in your HTML by name without using CSS background images or opaic coordinates systems.
+
+SVG sprites should ideally *not* be used as CSS background images, but rather as inline `<svg>` elements. To use an icon from an SVG sprite inline, the whole SVG sprite must first be included *inline* within every page. The icon is then referenced with the SVG `<use>` element.
+
+A full example of this exists in the `/examples/` subdirectory.
+
+
+###  Running the development server
 
 * Run `gulp` from the command line from the same directory as this README. A small webserver will start and your browser will open at a URL displaying your site. CSS/SASS/Js/image/HTML files will be watched for changes and the page refreshed automatically.
 
 
 ## Deploying to a staging server
 
-#### Setup per developer computer
+### Setup per developer computer
 
 Gulp can upload files via SFTP but **not** to servers that require a password typed in the terminal. Instead we access the server with SSH keys. These instructions configure that access. The following needs to be done on every machine you develop on, but only once per machine - not once per project.
 
@@ -68,7 +77,7 @@ This will automatically copy your key from your local machine to your staging se
 Successfull key installation is indicated by it logging you in **without** asking for a password. That was only a test though, so you can exit again with `exit`.
 
 
-#### Setup per project
+### Setup per project
 
 The following needs to be done for this project specifically.
 
@@ -83,7 +92,7 @@ Change the contents of the new file:
 * If you've password protected your key, `passphrase` should contain the password you used.
 
 
-#### Deploying
+### Deploying
 
 (NB: you do NOT need to create the directory on the remote server. This will be done for you automatically).
 

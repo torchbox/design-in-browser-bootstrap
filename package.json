@@ -15,6 +15,8 @@
     "gulp-sftp": "^0.1.5",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-swig": "^0.7.4",
+    "gulp-plumber": "^1.0.1",
+    "gulp-svg-sprite": "^1.2.16",
     "jscs": "^2.2.1",
     "require-dir": "^0.3.0"
   }
