@@ -33,15 +33,6 @@ If you encounter any issues check the [Troubleshooting](#troubleshooting) sectio
 
 * The files you will want to edit are in `site/src`. A `site/build` folder is created on the fly as part of the server process, but should be ignored.
 
-## SVG Sprite generation
-
-Sprites are created by merging several individual image files onto a single canvas. In SVG sprites, unlike raster sprites, each individual image can be referenced in your HTML by name without using CSS background images or opaic coordinates systems.
-
-SVG sprites should ideally *not* be used as CSS background images, but rather as inline `<svg>` elements. To use an icon from an SVG sprite inline, the whole SVG sprite must first be included *inline* within every page. The icon is then referenced with the SVG `<use>` element.
-
-A full example of this exists in the `/examples/` subdirectory.
-
-
 ###  Running the development server
 
 * Run `gulp` from the command line from the same directory as this README. A small webserver will start and your browser will open at a URL displaying your site. CSS/SASS/Js/image/HTML files will be watched for changes and the page refreshed automatically.
@@ -100,6 +91,15 @@ Change the contents of the new file:
 * Your site should now be available at `http://yourserver.com/[whatever folder name you gave in staging-ssh-config.js]`
 
 Be warned: this completely replaces the previous version. If you want to deploy it to a new directory, just change the directory name in `staging-ssh-config.js` first.
+
+
+## SVG Sprite generation
+
+Sprites are created by merging several individual image files onto a single canvas. In SVG sprites, unlike raster sprites, each individual image can be referenced in your HTML by name without using CSS background images or opaic coordinates systems.
+
+SVG sprites should ideally *not* be used as CSS background images, but rather as inline `<svg>` elements. To use an icon from an SVG sprite inline, the whole SVG sprite must first be included *inline* within every page. The icon is then referenced with the SVG `<use>` element.
+
+A full example of this exists in the `/examples/` subdirectory.
 
 
 ## Troubleshooting
