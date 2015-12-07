@@ -101,6 +101,13 @@ SVG sprites should ideally *not* be used as CSS background images, but rather as
 
 A full example of this exists in the `/examples/` subdirectory.
 
+### Creating a sprite
+
+* Place your individual SVG icons in the `img/sprite_src/` directory
+* Run `gulp svg-sprite`
+* The sprite will be output as `sprite.svg` in the `img` directory.
+
+You can change the location of the sources, destination or sprite filename in `gulpfile.js/config.js`
 
 ## Troubleshooting
 
