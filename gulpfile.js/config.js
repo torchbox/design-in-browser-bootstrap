@@ -1,5 +1,5 @@
+var src = "site/src";
 var dest = "site/build";
-var src = 'site/src';
 
 module.exports = {
     dest: dest,
