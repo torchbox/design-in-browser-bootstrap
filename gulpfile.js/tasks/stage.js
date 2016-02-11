@@ -3,16 +3,18 @@ var sftp = require('gulp-sftp');
 var colors = require('colors');
 var config = require('../config');
 
-try {
-    var sshConfig = require('../../staging-ssh-config');
-} catch (e) {
-    if (e.code == 'MODULE_NOT_FOUND') {
-        console.error("You need to create a 'staging-ssh-config.js' file".red);
-    }
-    process.exit();
-}
  
 gulp.task('stage', ['images', 'sass', 'markup'], function () {
+    
+    try {
+        var sshConfig = require('../../staging-ssh-config');
+    } catch (e) {
+        if (e.code == 'MODULE_NOT_FOUND') {
+            console.error("You need to create a 'staging-ssh-config.js' file".red);
+        }
+        process.exit();
+    }
+    
     return gulp.src(config.dest + '/**/*')
         .pipe(sftp({
             host: sshConfig.host,
