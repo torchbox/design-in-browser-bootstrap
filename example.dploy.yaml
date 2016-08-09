@@ -6,5 +6,7 @@ design:
   slots: 4
   check: true
   path:
-    local: "site/dist/"
-    remote: "/htdocs/csp/test2/"
+    local: "dist/"
+    remote: "/htdocs/csp/test1/"
+  include:
+    "dist/**": "/"
