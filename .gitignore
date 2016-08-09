@@ -4,5 +4,4 @@ node_modules
 .tmp
 .DS_Store
 *.zip
-site/build/*
-staging-ssh-config.js
+dist/
