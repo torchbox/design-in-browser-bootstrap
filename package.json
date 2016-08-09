@@ -5,17 +5,17 @@
   "sasslintConfig": ".sass-lint.yml",
   "scripts": {
     "deploy": "dploy",
-    "clean": "rm -rf site/dist",
-    "autoprefixer": "postcss -u autoprefixer -r site/dist/css/*.css",
-    "scss": "node-sass --output-style compressed -o site/dist/css site/src/_source/sass/",
-    "templates": "swig render site/src/*.html --output site/dist",
-    "serve": "browser-sync start --server site/dist --files 'site/dist/css/*.css, site/dist/js/*.js, site/dist/*.html, !node_modules/**/*.html'",
-    "lint": "sass-lint 'site/src/_source/sass/main.scss' -v -q || true",
+    "clean": "rm -rf dist",
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
+    "scss": "node-sass --output-style compressed -o dist/css site/sass/",
+    "templates": "swig render site/*.html --output dist",
+    "serve": "browser-sync start --server dist --files 'dist/css/*.css, dist/js/*.js, dist/*.html, !node_modules/**/*.html'",
+    "lint": "sass-lint 'site/sass/main.scss' -v -q || true",
     "build:html": "npm run templates",
     "build:css": "npm run scss && npm run autoprefixer",
     "build": "npm run build:html && npm run build:css",
-    "watch:html": "onchange 'site/src/*.html' -- npm run build:html",
-    "watch:css": "onchange 'site/src/_source/sass/' -- npm-run-all -p lint build:css",
+    "watch:html": "onchange 'site/*.html' -- npm run build:html",
+    "watch:css": "onchange 'site/sass/' -- npm-run-all -p lint build:css",
     "watch": "npm-run-all -p watch:css watch:html",
     "dev": "npm run build && npm-run-all -p serve watch",
     "postinstall": "npm run dev"
@@ -29,7 +29,6 @@
     "onchange": "^2.4.0",
     "postcss-cli": "^2.5.2",
     "sass-lint": "^1.8.2",
-    "stylelint": "^7.1.0",
     "swig-templates": "^2.0.1"
   },
   "engines": {
