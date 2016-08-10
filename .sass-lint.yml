@@ -10,11 +10,11 @@ options:
   # Output file instead of logging results
   # output-file: 'linters/sass-lint.html'
 # File Options
-# files:
+files:
+  ignore:
+    - 'site/sass/vendor/**/*.*'
 #   include:
 #    - 'site/src/_source/sass/**/*.s+(a|c)ss'
-#   ignore:
-#     - 'site/src/_source/sass/vendor/**/*.*'
 # Rule Configuration
 rules:
   extends-before-mixins: 2
