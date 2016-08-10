@@ -4,4 +4,4 @@ node_modules
 .tmp
 .DS_Store
 *.zip
-dist/
+dist/**
