@@ -1,7 +1,7 @@
 design:
   scheme: "sftp"
-  host: "web-1-a.rslon.torchbox.net"
-  user: "playground"
+  host: "ftp.loque.net"
+  user: "loque"
   privateKey: "~/.ssh/id_rsa"
   slots: 4
   check: true
