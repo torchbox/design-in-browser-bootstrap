@@ -14,10 +14,10 @@ class ColorPoint extends Point {
         this.color = color;
     }
     toString() {
-        return super.toString() + " in " + this.color;
+        return super.toString() + ' in ' + this.color;
     }
 }
 
-const cp = new ColorPoint(25, 8, "green");
+const cp = new ColorPoint(25, 8, 'green');
 
-console.log( "hello", cp );
+console.log( 'hello', cp );
