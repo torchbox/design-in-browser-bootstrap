@@ -7,6 +7,6 @@ design:
   check: true
   path:
     local: "dist/"
-    remote: "/htdocs/csp/test1/"
+    remote: "/htdocs/"
   include:
     "dist/**": "/"
