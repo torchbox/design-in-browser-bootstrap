@@ -12,6 +12,7 @@ This project provides a starting point for prototypes, with tooling and opinion 
 * [SASS](http://sass-lang.com/) CSS with [auto-prefixing](https://github.com/postcss/autoprefixer).
 * [Browsersync](https://www.browsersync.io).
 * [Rollup](https://rollupjs.org) and [Babel](https://babeljs.io) for ES2015 support with module loading.
+* Consideration for images, currently copying the directory only - to avoid slowdowns and non-essential dependancies.
 * An automated way to upload your site to a staging server using [dploy](https://github.com/LeanMeanFightingMachine/dploy).
 
 ## Installation
