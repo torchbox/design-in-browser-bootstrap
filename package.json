@@ -5,10 +5,10 @@
   "sasslintConfig": ".sass-lint.yml",
   "scripts": {
     "deploy": "dploy",
-    "clean": "rm -rf dist/{*.html,js/**,css/**}",
+    "clean": "rm -rf dist/{*.html,js/**,css/**,img/**}",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
     "scss": "node-sass --output-style compressed -o dist/css site/sass/",
-    "serve": "browser-sync start --server dist --files 'dist/css/*.css, dist/js/*.js, dist/*.html, !node_modules/**/*.html'",
+    "serve": "browser-sync start --server dist --files 'dist/css/*.css, dist/js/*.js, dist/*.html, dist/img/**/**, !node_modules/**/*.html'",
     "lint:js": "eslint site/javascript/*.js --ignore-pattern **/vendor/**/*.js || true",
     "lint:css": "sass-lint 'site/sass/**/*.scss' -v -q || true",
     "lint": "npm-run-all -p lint:js lint:css",
