@@ -22,8 +22,8 @@ This project provides a starting point for prototypes, with tooling and opinion 
 
 #### Once per project
 
-* Clone this repository to a new directory.
-* Run `rm -rf .git && git init && git add . && git commit -m "First commit"` to remove existing git links with this repository and create a fresh project with the directory as is committed.
+* Clone this repository to a new directory and `cd` into it.
+* Run `rm -rf .git && git init && git add . && git commit -m "First commit"` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
 * Install this project's dependencies: Within the repository directory, run `npm install`
 
 
