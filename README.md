@@ -8,11 +8,11 @@ This project provides a starting point for prototypes, with tooling and opinion 
 
 ## What's included
 
-* [SWIG templating](url:https://github.com/node-swig/swig-templates): like Twig / Liquid / Jinja / Django templating language.
-* [SASS](url:http://sass-lang.com/) CSS with [auto-prefixing](url:https://github.com/postcss/autoprefixer).
-* [Browsersync](url:https://www.browsersync.io).
-* [Rollup](url:https://rollupjs.org) and [Babel](url:https://babeljs.io) for ES2015 support with module loading.
-* An automated way to upload your site to a staging server using [dploy](url:https://github.com/LeanMeanFightingMachine/dploy).
+* [SWIG templating](https://github.com/node-swig/swig-templates): like Twig / Liquid / Jinja / Django templating language.
+* [SASS](http://sass-lang.com/) CSS with [auto-prefixing](https://github.com/postcss/autoprefixer).
+* [Browsersync](https://www.browsersync.io).
+* [Rollup](https://rollupjs.org) and [Babel](https://babeljs.io) for ES2015 support with module loading.
+* An automated way to upload your site to a staging server using [dploy](https://github.com/LeanMeanFightingMachine/dploy).
 
 ## Installation
 
