@@ -13,13 +13,15 @@
     "lint:css": "sass-lint 'site/sass/**/*.scss' -v -q || true",
     "lint": "npm-run-all -p lint:js lint:css",
     "build:html": "swig render site/*.html --output dist",
+    "build:img": "cp -R site/images/. dist/img/",
     "build:js": "rollup -c",
     "build:css": "npm run scss && npm run autoprefixer",
-    "build": "npm run lint && npm-run-all -p build:html build:js build:css",
-    "watch:html": "onchange 'site/*.html' -- npm run build:html",
+    "build": "npm run lint && npm-run-all -p build:html build:img build:js build:css",
+    "watch:html": "onchange 'site/**/*.html' -- npm run build:html",
+    "watch:img": "onchange 'site/img/**/**' -- npm run build:img",
     "watch:js": "onchange 'site/javascript/' -- npm-run-all -p lint:js build:js",
     "watch:css": "onchange 'site/sass/' -- npm-run-all -p lint:css build:css",
-    "watch": "npm-run-all -p watch:html watch:js watch:css",
+    "watch": "npm-run-all -p watch:html watch:img watch:js watch:css",
     "dev": "npm run build && npm-run-all -p serve watch"
   },
   "devDependencies": {
