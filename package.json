@@ -17,7 +17,7 @@
     "build:js": "rollup -c",
     "build:css": "npm run scss && npm run autoprefixer",
     "build": "npm run lint && npm-run-all -p build:html build:img build:js build:css",
-    "watch:html": "onchange 'site/**/*.html' -- npm run build:html",
+    "watch:html": "onchange 'site/**/*.{html,tpl}' -- npm run build:html",
     "watch:img": "onchange 'site/img/**/**' -- npm run build:img",
     "watch:js": "onchange 'site/javascript/' -- npm-run-all -p lint:js build:js",
     "watch:css": "onchange 'site/sass/' -- npm-run-all -p lint:css build:css",
