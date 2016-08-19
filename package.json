@@ -8,6 +8,7 @@
     "clean": "rm -rf dist/{*.html,js/**,css/**,img/**}",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
     "scss": "node-sass --output-style compressed -o dist/css site/sass/",
+    "serve:lab": "gulp patternlab:serve",
     "serve": "browser-sync start --server dist --files 'dist/css/*.css, dist/js/*.js, dist/*.html, dist/img/**/**, !node_modules/**/*.html'",
     "lint:js": "eslint site/javascript/*.js --ignore-pattern **/vendor/**/*.js || true",
     "lint:css": "sass-lint 'site/sass/**/*.scss' -v -q || true",
@@ -22,7 +23,9 @@
     "watch:js": "onchange 'site/javascript/' -- npm-run-all -p lint:js build:js",
     "watch:css": "onchange 'site/sass/' -- npm-run-all -p lint:css build:css",
     "watch": "npm-run-all -p watch:html watch:img watch:js watch:css",
-    "dev": "npm run build && npm-run-all -p serve watch"
+    "dev": "npm run build && npm-run-all -p serve watch",
+    "lab": "npm-run-all -p serve:lab watch",
+    "postinstall": "node node_modules/patternlab-node/core/scripts/postinstall.js"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -31,17 +34,24 @@
     "babel-preset-es2015": "^6.13.2",
     "browser-sync": "^2.13.0",
     "dploy": "^1.2.0",
+    "edition-node-gulp": "^1.3.0",
     "eslint": "^3.2.2",
+    "gulp": "gulpjs/gulp#4.0",
     "node-sass": "^3.7.0",
     "npm-run-all": "^2.1.1",
     "onchange": "^2.4.0",
+    "patternengine-node-twig": "^0.1.0",
     "postcss-cli": "^2.5.2",
     "rollup": "^0.34.8",
     "rollup-plugin-babel": "^2.6.1",
     "sass-lint": "^1.8.2",
-    "swig-templates": "^2.0.1"
+    "swig-templates": "^2.0.1",
+    "minimist": "^1.2.0",
+    "patternlab-node": "^2.0.0",
+    "styleguidekit-assets-default": "^3.0.0",
+    "styleguidekit-mustache-default": "^3.0.0"
   },
   "engines": {
-    "node": ">=4 <6"
+    "node": ">=5 <6"
   }
 }

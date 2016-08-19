@@ -1,0 +1,69 @@
+{
+  "paths" : {
+    "source" : {
+      "root": "./patternlab/",
+      "patterns" : "./site/templates/",
+      "data" : "./patternlab/_data/",
+      "meta": "./patternlab/_meta/",
+      "annotations" : "./patternlab/_annotations/",
+      "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
+      "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
+      "js" : "./patternlab/js",
+      "images" : "./patternlab/images",
+      "fonts" : "./patternlab/fonts",
+      "css" : "./patternlab/css/"
+    },
+    "public" : {
+      "dist" : "./dist/",
+      "root" : "./dist/styleguide/",
+      "patterns" : "./dist/styleguide/patterns/",
+      "data" : "./dist/styleguide/styleguide/data/",
+      "annotations" : "./dist/styleguide/annotations/",
+      "styleguide" : "./dist/styleguide/styleguide/",
+      "js" : "./dist/styleguide/js",
+      "images" : "./dist/styleguide/images",
+      "fonts" : "./dist/styleguide/fonts",
+      "css" : "./dist/styleguide/css"
+    }
+  },
+  "styleGuideExcludes": [
+  ],
+  "defaultPattern": "all",
+  "defaultShowPatternInfo": false,
+  "cleanPublic" : true,
+  "patternExtension": "twig",
+  "ignored-extensions" : ["scss", "DS_Store", "less"],
+  "ignored-directories" : ["scss"],
+  "debug": false,
+  "ishControlsHide": {
+    "s": false,
+    "m": false,
+    "l": false,
+    "full": false,
+    "random": false,
+    "disco": false,
+    "hay": true,
+    "mqs": false,
+    "find": false,
+    "views-all": false,
+    "views-annotations": false,
+    "views-code": false,
+    "views-new": false,
+    "tools-all": false,
+    "tools-docs": false
+  },
+  "ishMinimum": "240",
+  "ishMaximum": "2600",
+  "patternStateCascade": ["inprogress", "inreview", "complete"],
+  "patternStates": {
+  },
+  "patternExportPatternPartials": [],
+  "patternExportDirectory": "./pattern_exports/",
+  "cacheBust": true,
+  "starterkitSubDir": "dist",
+  "outputFileSuffixes": {
+    "rendered": ".rendered",
+    "rawTemplate": "",
+    "markupOnly": ".markup-only"
+  }
+}
