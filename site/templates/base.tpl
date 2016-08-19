@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <header></header>
-    <main>{% block content %}{% endblock %}</main>
-    <footer></footer>
+    <div class="site">
+        <div class="page">
+            {% include "structure.tpl" %}
+        </div>
+    </div>
+    {# <script src="js/vendor/jquery.js"></script> #}
     <script src="js/main.js"></script>
+    <script>
+        {% block javascript %}{% endblock %}
+    </script>
 </body>
 </html>
