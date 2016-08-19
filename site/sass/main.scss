@@ -1,11 +1,54 @@
-@import 'vendor/normalize';
-@import 'mixins';
+@import 'utils';
 @import 'variables';
 @import 'grid';
+@import 'defaults';
 
-$bgcolour: green;
+/* ============================================
 
-//
-html {
-  background: $bgcolour;
+    Structure
+
+*/
+
+// 100% wrapper hight
+html,
+body,
+.site {
+  height: 100%;
+}
+
+// Flexbox layout
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .page__header {
+    align-self: flex-start;
+    // stacking order
+    position: relative;
+    z-index: 2;
+  }
+
+  > main {
+    display: flex;
+    flex: 1;
+    // stacking order
+    position: relative;
+    z-index: 1;
+    // Add perspective
+    perspective: 1000px;
+  }
+}
+
+// 100% Width with centralized content container
+.page__footer {
+  width: 100%;
+  text-align: center;
+
+  > .content {
+    @include gridle_container;
+    // max-width: $max-width;
+    margin: 0 auto;
+    text-align: left;
+  }
 }

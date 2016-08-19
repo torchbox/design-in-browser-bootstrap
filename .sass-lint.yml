@@ -13,6 +13,9 @@ options:
 files:
   ignore:
     - 'site/sass/vendor/**/*.*'
+    - 'site/sass/core/_utils.scss'
+    - 'site/sass/core/_defaults.scss'
+    - 'site/sass/core/_grid.scss'
 #   include:
 #    - 'site/src/_source/sass/**/*.s+(a|c)ss'
 # Rule Configuration
@@ -20,6 +23,9 @@ rules:
   extends-before-mixins: 2
   extends-before-declarations: 2
   placeholder-in-extend: 2
+  empty-line-between-blocks:
+    - 1
+    - ignore-single-line-rulesets: true
   mixins-before-declarations:
     - 2
     -
