@@ -141,7 +141,7 @@ function reload() {
 }
 
 function watch() {
-  gulp.watch(path.resolve(paths().source.css, '**/*.css')).on('change', gulp.series('pl-copy:css', reload));
+  gulp.watch(path.resolve(paths().public.css, '**/*.css')).on('change', reload);
   gulp.watch(path.resolve(paths().source.styleguide, '**/*.*')).on('change', gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reload));
 
   var patternWatches = [
@@ -161,10 +161,6 @@ gulp.task('patternlab:connect', gulp.series(function(done) {
   browserSync.init({
     server: {
       baseDir: path.resolve(paths().public.dist)
-    },
-    snippetOptions: {
-      // Ignore all HTML files within the templates folder
-      blacklist: ['/index.html', '/', '/?*']
     },
     notify: {
       styles: [
