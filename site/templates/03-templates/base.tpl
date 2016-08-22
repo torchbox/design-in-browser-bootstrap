@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <div class="site">
-        <div class="page">
-            {% include "structure.tpl" %}
+    <div class="t-site">
+        <div class="t-page">
+            {% block structure %}{% endblock %}
         </div>
     </div>
     {# <script src="js/vendor/jquery.js"></script> #}
     <script src="js/main.js"></script>
     <script>
+        console.log( 'base' );
         {% block javascript %}{% endblock %}
     </script>
 </body>
