@@ -2,33 +2,40 @@
 
 {% block structure %}
 <header class="t-header">
-    <div class="content">
-        {# {% include "02-organisms/00-global/00-header.tpl" %} #}
-        {# {% include "02-organisms/00-global/00-header.twig" %} #}
-    </div>
+  <div class="content">
+      <div class="m-logo">
+        <div class="content">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 43.3">
+            <path fill="#999" d="M19.7 0s6.5 6-3 18.5c-8.7 11.2 2 28.1 12.4 24.2 0 0-2.7-3.3-3.5-7-1.5-6.8 1.8-9.2 4.8-11.6 2.8-2.2 7.2-7.1 2.8-14.1 0 0 .1 6-8.1 8 0 .1 8.5-14.3-5.4-18z"/><path fill="#999" d="M18 42S2.6 39.5 4.8 23.9c.8-6.1-2.6-8.1-4.8-9.5 0 0 12.2.4 11.3 8C9.9 34.7 15.4 40.2 18 42z"/><g fill="#999"><path d="M56.1 22.2h-5.4v16.2h-3V22.2h-5.4v-2.7h14l-.2 2.7zM66.6 38.8c-4.8 0-7.7-3.1-7.7-9.8 0-6.7 2.9-9.8 7.7-9.8 4.8 0 7.7 3.1 7.7 9.8 0 6.6-2.9 9.8-7.7 9.8zm0-17.1c-2.6 0-4.6 1.6-4.6 7.2s2 7.2 4.6 7.2c2.6 0 4.6-1.6 4.6-7.2 0-5.5-2-7.2-4.6-7.2zM89.4 38.4l-3.9-7c-.6.1-1.2.1-1.8.1h-1.3v6.9h-3V19.5c1.1-.2 3.5-.4 5.5-.4 3.9 0 7.2 1.8 7.2 6.1 0 2.9-1.5 4.6-3.9 5.4l4.4 7.7h-3.2zm-4.5-16.8c-.8 0-1.8.1-2.5.2v7.3h1.5c2.9 0 5.2-.9 5.2-3.8 0-2.8-2.2-3.7-4.2-3.7zM108.4 24c-1-1.8-2.3-2.3-4-2.3-3.2 0-4.8 2.7-4.8 7.2 0 4.7 1.7 7.2 5 7.2 1.4 0 2.7-.3 3.9-.7l.8 2.3c-1.5.7-3.3 1-4.8 1-4.8 0-8-2.8-8-9.8 0-6.9 3.6-9.8 7.9-9.8 3.3 0 4.8 1.1 6 3.1l-2 1.8zM126 38.4V30h-8.5v8.4h-3V19.5h3v7.8h8.5v-7.8h3v18.9h-3zM140.6 38.4c-1.4 0-4.3 0-5.5-.1V19.6c1.3-.3 3.9-.5 5.5-.5 3.5 0 6.7 1.1 6.7 4.9 0 1.8-.9 3.1-2.1 4 1.8.8 3.1 2.2 3.1 4.7 0 4.2-3.1 5.7-7.7 5.7zm-.2-16.8c-.6 0-1.5.1-2.3.2v5.5h3c.5 0 1 0 1.5.1 1.2-.7 1.7-1.8 1.7-2.9 0-2.3-1.7-2.9-3.9-2.9zm.5 8.1h-2.8V36c.7 0 1.7.1 2.3.1 2.7 0 4.7-.6 4.7-3.2.1-2.4-1.6-3.2-4.2-3.2zM159.9 38.8c-4.8 0-7.7-3.1-7.7-9.8 0-6.7 2.9-9.8 7.7-9.8 4.8 0 7.7 3.1 7.7 9.8 0 6.6-2.9 9.8-7.7 9.8zm0-17.1c-2.6 0-4.6 1.6-4.6 7.2s2 7.2 4.6 7.2c2.6 0 4.6-1.6 4.6-7.2 0-5.5-2-7.2-4.6-7.2zM181 25.4l-2.2 3.3 2.3 3.5 4 6.1h-3.5l-2.7-4.2-1.7-2.7-1.7 2.7-2.7 4.2h-3.6l4.2-6.1 2.2-3.3-2.3-3.5-3.8-5.9h3.6l2.7 4.2 1.5 2.4 1.5-2.4 2.7-4.2h3.6l-4.1 5.9z" />
+          </svg>
+        </div>
+      </div>
+      {# {% include "02-organisms/00-global/00-header.tpl" %} #}
+      {# {% include "02-organisms/00-global/00-header.twig" %} #}
+  </div>
 </header>
 <main>
-    <div class="t-notifications">
-        <div class="content">
-            {# {% include "core/notifications.tpl" %} #}
-        </div>
+  <div class="t-notifications">
+    <div class="content">
+        {# {% include "core/notifications.tpl" %} #}
     </div>
-    <nav class="t-navigation">
-        <div class="content">
-            {# {% include "core/navigation.tpl" %} #}
-        </div>
-    </nav>
-    <div class="t-content">
-        <div class="content">
-            {% block content %}{% endblock %}
-        </div>
+  </div>
+  <nav class="t-navigation">
+    <div class="content">
+        {# {% include "core/navigation.tpl" %} #}
     </div>
-    <footer class="t-footer">
-        <div class="content">
-            {# {% include "core/footer.tpl" %} #}
-        </div>
-    </footer>
+  </nav>
+  <div class="t-content">
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+  </div>
 </main>
+<footer class="t-footer">
+  <div class="content">
+      {# {% include "core/footer.tpl" %} #}
+  </div>
+</footer>
 {% endblock %}
 
 {% block javascript %}
