@@ -41,7 +41,7 @@
     "npm-run-all": "^2.1.1",
     "onchange": "^2.4.0",
     "patternengine-node-twig": "^0.1.0",
-    "patternlab-node": "^2.0.0",
+    "patternlab-node": "https://github.com/Loque-/patternlab-node/tarball/master",
     "postcss-cli": "^2.5.2",
     "rollup": "^0.34.8",
     "rollup-plugin-babel": "^2.6.1",

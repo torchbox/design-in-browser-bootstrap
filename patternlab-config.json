@@ -4,7 +4,7 @@
       "root": "./patternlab/",
       "patterns" : "./site/templates/",
       "data" : "./patternlab/_data/",
-      "meta": "./patternlab/_meta/",
+      "meta": "./site/templates/_meta/",
       "annotations" : "./patternlab/_annotations/",
       "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
       "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
