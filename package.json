@@ -7,7 +7,7 @@
     "deploy": "dploy",
     "clean": "rm -rf dist/{*.html,js/**,css/**,img/**}",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*.css",
-    "postautoprefixer": "cp -f dist/css/atomic.css dist/styleguide/css/style.css",
+    "//postautoprefixer": "cp -f dist/css/atomic.css dist/styleguide/css/style.css",
     "scss": "node-sass --output-style compressed -o dist/css site/sass/",
     "serve:lab": "gulp patternlab:serve",
     "serve": "browser-sync start --server dist --files 'dist/css/*.css, dist/js/*.js, dist/*.html, dist/img/**/**, !node_modules/**/*.html'",
@@ -25,7 +25,7 @@
     "watch:css": "onchange 'site/sass/' -- npm-run-all -p lint:css build:css",
     "watch": "npm-run-all -p watch:html watch:img watch:js watch:css",
     "dev": "npm run build && npm-run-all -p serve watch",
-    "lab": "npm-run-all -p serve:lab watch"
+    "lab": "npm run serve:lab"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -36,6 +36,8 @@
     "dploy": "^1.2.0",
     "eslint": "^3.2.2",
     "gulp": "gulpjs/gulp#4.0",
+    "gulp-run": "^1.7.1",
+    "gulp-shell": "^0.5.2",
     "minimist": "^1.2.0",
     "node-sass": "^3.7.0",
     "npm-run-all": "^2.1.1",

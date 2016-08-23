@@ -6,7 +6,8 @@
 var gulp = require('gulp'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
-  argv = require('minimist')(process.argv.slice(2));
+  argv = require('minimist')(process.argv.slice(2)),
+  run = require('gulp-run');
 
 /******************************************************
  * COPY TASKS - stream assets from source to destination
@@ -122,6 +123,13 @@ gulp.task('patternlab:build', gulp.series('pl-assets', build, function(done){
   done();
 }));
 
+// Test npm script linkup
+gulp.task('npm:css', function() {
+  return run('npm run build:css').exec()
+    .pipe(gulp.dest(path.resolve(paths().public.root)))
+    .pipe(browserSync.stream());
+});
+
 /******************************************************
  * SERVER AND WATCH TASKS
 ******************************************************/
@@ -141,8 +149,9 @@ function reload() {
 }
 
 function watch() {
-  gulp.watch(path.resolve(paths().public.css, '**/*.css')).on('change', reload);
+  // gulp.watch(path.resolve(paths().public.css, '**/*.css')).on('change', reload);
   gulp.watch(path.resolve(paths().source.styleguide, '**/*.*')).on('change', gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reload));
+  gulp.watch(path.resolve(paths().source.sass, '**/*.*')).on('change', gulp.series('npm:css'));
 
   var patternWatches = [
     path.resolve(paths().source.patterns, '**/*.json'),
@@ -191,4 +200,4 @@ gulp.task('patternlab:connect', gulp.series(function(done) {
 ******************************************************/
 gulp.task('default', gulp.series('patternlab:build'));
 gulp.task('patternlab:watch', gulp.series('patternlab:build', watch));
-gulp.task('patternlab:serve', gulp.series('patternlab:build', 'patternlab:connect', watch));
+gulp.task('patternlab:serve', gulp.series('patternlab:build', 'patternlab:connect', watch));  

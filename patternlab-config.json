@@ -11,19 +11,20 @@
       "js" : "./patternlab/js",
       "images" : "./patternlab/images",
       "fonts" : "./patternlab/fonts",
-      "css" : "./patternlab/css/"
+      "css" : "./patternlab/css/",
+      "sass" : "./site/sass/"
     },
     "public" : {
       "dist" : "./dist/",
-      "root" : "./dist/styleguide/",
-      "patterns" : "./dist/styleguide/patterns/",
-      "data" : "./dist/styleguide/styleguide/data/",
-      "annotations" : "./dist/styleguide/annotations/",
-      "styleguide" : "./dist/styleguide/styleguide/",
-      "js" : "./dist/styleguide/js",
-      "images" : "./dist/styleguide/images",
-      "fonts" : "./dist/styleguide/fonts",
-      "css" : "./dist/styleguide/css"
+      "root" : "./dist/",
+      "patterns" : "./dist/patterns/",
+      "data" : "./dist/styleguide/data/",
+      "annotations" : "./dist/annotations/",
+      "styleguide" : "./dist/styleguide/",
+      "js" : "./dist/js",
+      "images" : "./dist/images",
+      "fonts" : "./dist/fonts",
+      "css" : "./dist/css"
     }
   },
   "styleGuideExcludes": [
@@ -62,7 +63,7 @@
   "cacheBust": true,
   "starterkitSubDir": "dist",
   "outputFileSuffixes": {
-    "rendered": ".rendered",
+    "rendered": "",
     "rawTemplate": "",
     "markupOnly": ".markup-only"
   }
