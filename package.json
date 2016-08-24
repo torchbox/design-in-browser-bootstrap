@@ -45,22 +45,14 @@
     "browser-sync": "^2.13.0",
     "dploy": "^1.2.0",
     "eslint": "^3.2.2",
-    "gulp": "gulpjs/gulp#4.0",
-    "gulp-run": "^1.7.1",
-    "gulp-shell": "^0.5.2",
     "minimist": "^1.2.0",
     "node-sass": "^3.7.0",
     "npm-run-all": "^2.1.1",
     "onchange": "^2.4.0",
-    "patternengine-node-twig": "^0.1.0",
-    "patternlab-node": "^2.0.0",
     "postcss-cli": "^2.5.2",
     "rollup": "^0.34.8",
     "rollup-plugin-babel": "^2.6.1",
-    "sass-lint": "^1.8.2",
-    "styleguidekit-assets-default": "^3.0.0",
-    "styleguidekit-mustache-default": "^3.0.0",
-    "swig-templates": "^2.0.1"
+    "sass-lint": "^1.8.2"
   },
   "engines": {
     "node": ">=4 <6"
