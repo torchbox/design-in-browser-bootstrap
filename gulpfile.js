@@ -149,7 +149,7 @@ function reload() {
 }
 
 function watch() {
-  // gulp.watch(path.resolve(paths().public.css, '**/*.css')).on('change', reload);
+  gulp.watch(path.resolve(paths().public.css, '**/*.css')).on('change', reload);
   gulp.watch(path.resolve(paths().source.styleguide, '**/*.*')).on('change', gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reload));
   gulp.watch(path.resolve(paths().source.sass, '**/*.*')).on('change', gulp.series('npm:css'));
 
@@ -169,7 +169,7 @@ function watch() {
 gulp.task('patternlab:connect', gulp.series(function(done) {
   browserSync.init({
     server: {
-      baseDir: path.resolve(paths().public.dist)
+      baseDir: path.resolve(paths().public.root)
     },
     notify: {
       styles: [
