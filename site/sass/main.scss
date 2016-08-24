@@ -1,5 +1,6 @@
 @import 'utils';
 @import 'variables';
+@import 'vendor/normalize';
 @import 'grid';
 @import 'atomic';
 
@@ -22,6 +23,7 @@ body,
   display: flex;
   flex-direction: column;
   height: 100%;
+
   .t-header {
     align-self: flex-start;
     // stacking order
