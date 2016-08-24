@@ -171,6 +171,10 @@ gulp.task('patternlab:connect', gulp.series(function(done) {
     server: {
       baseDir: path.resolve(paths().public.root)
     },
+    snippetOptions: {
+      // Ignore all HTML files within the templates folder
+      blacklist: ['/index.html', '/', '/?*']
+    },
     notify: {
       styles: [
         'display: none',
