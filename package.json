@@ -34,6 +34,7 @@
     "watch:js": "onchange $npm_package_config_src_js -- npm-run-all -p lint:js build:js",
     "watch:css": "onchange $npm_package_config_src_css -- npm-run-all -p lint:css build:css",
     "watch": "npm-run-all -p watch:html watch:img watch:js watch:css",
+    "sync:html":"rsync -rtvu --delete $npm_package_config_src_html $npm_package_config_lab_html",
     "dev": "npm run build && npm-run-all -p serve watch",
     "lab": "npm run serve:lab"
   },
