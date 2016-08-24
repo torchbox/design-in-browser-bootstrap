@@ -21,7 +21,7 @@
     "serve:lab": "gulp patternlab:serve",
     "//serve": "browser-sync start --server dist --files '$npm_package_config_dest_css/*.css, $npm_package_config_dest_js/*.js, $npm_package_config_dest_html/*.html, $npm_package_config_dest_img/**/**, !node_modules/**/*.html'",
     "lint:js": "eslint $npm_package_config_src_js --ignore-pattern **/vendor/**/*.js || true",
-    "lint:css": "sass-lint $npm_package_config_src_cssdist**/*.scss -v -q || true",
+    "lint:css": "sass-lint $npm_package_config_src_css**/*.scss -v -q || true",
     "lint": "npm-run-all -p lint:js lint:css",
     "//build:html": "swig render $npm_package_config_src_html/*.html --output dist",
     "build:img": "cp -R $npm_package_config_src_img. $npm_package_config_dest_img/",
