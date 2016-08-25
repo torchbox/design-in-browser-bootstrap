@@ -32,9 +32,18 @@ To start a prototype using this bootstrap;
 
 ## Developing with it
 
-* To start the development environment `npm run lab` - to stop this process press `ctrl + c`
+* To start the development environment `npm run lab` - to stop this process press `ctrl + c`.
 * Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overwritten.
 
+## Deploying it
+
+*This has not been tested since adding patternlab*
+
+You can take advantage of the nodejs package [dploy](https://github.com/LeanMeanFightingMachine/dploy) to upload the `/dist` directory. To do so you will need to;
+
+ * Make a copy of `example.dploy.yaml` and name it `dploy.yaml`.
+ * Modify the `host` `user` and `path.remote` variables.
+ * Run `npm run deploy` to start the deployment process.
 
 ## Troubleshooting
 
