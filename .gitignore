@@ -11,5 +11,5 @@ patternlab/source/images/**
 /dist/*
 !/dist/patternlab/
 /dist/patternlab/*
-#!/dist/patternlab/index.html
+!/dist/patternlab/index.html
 !/dist/patternlab/styleguide/
