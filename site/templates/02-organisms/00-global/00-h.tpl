@@ -1,7 +1,0 @@
-<header class="header cf" role="banner">
-	{# {% include "atoms-logo" %} #}
-	<a href="#search-form" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
-	<a href="#nav" class="nav-toggle nav-toggle-menu icon-menu"><span class="is-vishidden">Menu</span></a>
-	{# {% include "molecules-primary-nav" %} #}
-	{# {% include "molecules-search" %} #}
-</header>
