@@ -21,19 +21,23 @@ It is assumed the developers computer is running OSX or Linux. Depending on your
 
 ## Installation
 
-* Clone this repository to a new directory and `cd` into it.
-* Run `npm run git:init` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
-* Install this project's dependencies: Within the repository directory, run `npm install`
+To start a prototype using this bootstrap;
+
+- [ ] **Get the files:** Clone this repository to a new directory, for example;
+`git clone https://github.com/Loque-/design-in-browser-bootstrap.git new-project`.
+- [ ] **Name the project:** Open `package.json` and replace the `name` with your project name [following npm guidelines](http://browsenpm.org/package.json#name).
+- [ ] **Setup git**: Run `npm run git:init` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
+- [ ] **Install dependancies** Within your newely created directory, run `npm install`
+
 
 
 ## Developing with it
 
-```
-After running `npm run lab` you will need to navigate manually to the `/patternlab/` directory in your browser e.g: http://localhost:3000/patternlab/
-```
+
+*After running `npm run lab` you will need to navigate manually to the `/patternlab/` directory in your browser e.g: http://localhost:3000/patternlab/*
 
 * To start the development environment `npm run lab` - to stop this process press `ctrl + c`
-* Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overitten.
+* Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overwritten.
 
 
 ## Troubleshooting
