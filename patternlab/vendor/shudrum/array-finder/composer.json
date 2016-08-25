@@ -1,0 +1,23 @@
+{
+    "name": "shudrum/array-finder",
+    "type": "library",
+    "description": "ArrayFinder component",
+    "keywords": [],
+    "license": "MIT",
+    "homepage": "https://github.com/Shudrum/ArrayFinder",
+    "authors": [
+        {
+            "name": "Julien Martin",
+            "email": "martin.julien82@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": { "Shudrum\\Component\\ArrayFinder\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
+}
