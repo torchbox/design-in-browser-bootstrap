@@ -32,6 +32,7 @@
     "sync:img":"rsync -rtvu --delete $npm_package_config_src_img/ $npm_package_config_lab_img/",
     "postsync:img": "browser-sync reload",
     "build:js": "rollup -c",
+    "postbuild:js": "browser-sync reload",
     "build:css": "npm run scss && npm run autoprefixer",
     "build": "npm-run-all -p lint sync:html sync:img build:js build:css && npm run lab:build",
     "watch:html": "onchange $npm_package_config_src_html/**/*.{html,tpl,twig} -- npm run sync:html",
@@ -41,7 +42,7 @@
     "watch": "npm-run-all -p watch:html watch:img watch:js watch:css",
     "lab:build": "cd patternlab && php core/console --generate",
     "lab:watch": "cd patternlab && php core/console --watch",
-    "lab": "npm-run-all -p serve lab:watch watch:html watch:css",
+    "lab": "npm-run-all -p serve lab:watch watch:html watch:css watch:js",
     "dev": "npm run build && npm run lab",
     "postinstall": "npm run build"
   },
