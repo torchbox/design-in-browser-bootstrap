@@ -28,9 +28,9 @@ It is assumed the developers computer is running OSX or Linux. Depending on your
 
 ## Developing with it
 
-:::info
+```
 After running `npm run lab` you will need to navigate manually to the `/patternlab/` directory in your browser e.g: http://localhost:3000/patternlab/ 
-:::
+```
 
 * To start the development environment `npm run lab` - to stop this process press `ctrl + c`
 * Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overitten.
