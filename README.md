@@ -29,7 +29,6 @@ To start a prototype using this bootstrap;
 - [ ] **Setup git**: Run `npm run git:init` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
 - [ ] **Install dependancies** Run `npm install` to run the install process.
 
-Done!
 
 ## Developing with it
 
