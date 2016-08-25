@@ -1,14 +1,18 @@
 
-WIP.
+# Design In The Browser Bootstrap, Patternlab edition!
 
-# Design In The Browser Bootstrap
+This project provides a starting point for prototypes, with tooling and opinion on CSS and JS structure to allow for rapid development utilising Patternlab.
 
-This project provides a starting point for prototypes, with tooling and opinion on CSS and JS structure to allow for rapid development.
+## What's required
 
+It is assumed the developers computer is running OSX or Linux. Depending on your setup you may already have the below installed;
+
+* [Node.js](http://nodejs.org) (version 4.x.x)
+* [PHP](http://www.php.net/) (version 5.5+)
 
 ## What's included
 
-* [SWIG templating](https://github.com/node-swig/swig-templates): like Twig / Liquid / Jinja / Django templating language.
+* [Patternlab-PHP](https://github.com/pattern-lab/edition-php-twig-standard): Currently the most complete and stable version of patternlab, and supports [twig](http://twig.sensiolabs.org/).
 * [SASS](http://sass-lang.com/) CSS with [auto-prefixing](https://github.com/postcss/autoprefixer).
 * [Browsersync](https://www.browsersync.io).
 * [Rollup](https://rollupjs.org) and [Babel](https://babeljs.io) for ES2015 support with module loading.
@@ -17,12 +21,6 @@ This project provides a starting point for prototypes, with tooling and opinion 
 
 ## Installation
 
-#### Once per developer computer
-
-* Install Node.js LTS: http://nodejs.org (version 4.x.x)
-
-#### Once per project
-
 * Clone this repository to a new directory and `cd` into it.
 * Run `rm -rf .git && git init && git add . && git commit -m "First commit"` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
 * Install this project's dependencies: Within the repository directory, run `npm install`
@@ -30,16 +28,12 @@ This project provides a starting point for prototypes, with tooling and opinion 
 
 ## Developing with it
 
+:::info
+After running `npm run lab` you will need to navigate manually to the `/patternlab/` directory in your browser e.g: http://localhost:3000/patternlab/ 
+:::
+
+* To start the development environment `npm run lab` - to stop this process press `ctrl + c`
 * Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overitten.
-* When running the Bootstrap, node will;
-	* Lint the source files.
-	* Build CSS, JS and HTML from the source files.
-	* Start a local server instance with browser-sync, allowing multiple devices/browsers to be updated when source files are saved.
-
-
-####  Starting Local development
-
-* Run `npm run dev` from the project root to start development scripts. This process will continue to watch files/folders in the source directory - to stop this process press `ctrl + c`
 
 
 ## Troubleshooting
