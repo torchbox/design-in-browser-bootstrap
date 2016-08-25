@@ -24,6 +24,7 @@
     "postautoprefixer": "browser-sync reload --files='*.css'",
     "scss": "node-sass --output-style compressed -o $npm_package_config_dest_css $npm_package_config_src_css",
     "serve": "browser-sync start --server dist",
+    "git:init": "rm -rf .git && git init && git add . && git commit -m 'First commit'",
     "lint:js": "eslint $npm_package_config_src_js --ignore-pattern **/vendor/**/*.js || true",
     "lint:css": "sass-lint $npm_package_config_src_css**/*.scss -v -q || true",
     "lint": "npm-run-all -p lint:js lint:css",
