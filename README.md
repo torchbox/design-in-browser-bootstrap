@@ -1,7 +1,7 @@
 
 # Design In The Browser Bootstrap, Patternlab edition!
 
-This project provides a starting point for prototypes, with tooling and opinion on CSS and JS structure to allow for rapid development utilising Patternlab.
+This project provides a starting point for prototypes, with tooling and an opinion on CSS and JS structure to allow for rapid development utilising Patternlab ensuring all work is as transferable and as maintainable as possible.
 
 ## What's required
 
@@ -27,14 +27,14 @@ To start a prototype using this bootstrap;
 `git clone https://github.com/Loque-/design-in-browser-bootstrap.git new-project`.
 - [ ] **Name the project:** Open `package.json` and replace the `name` with your project name [following npm guidelines](http://browsenpm.org/package.json#name).
 - [ ] **Setup git**: Run `npm run git:init` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
-- [ ] **Install dependancies** Within your newely created directory, run `npm install`
+- [ ] **Install dependancies** Run `npm install` to run the install process.
 
-
+Done!
 
 ## Developing with it
 
 
-*After running `npm run lab` you will need to navigate manually to the `/patternlab/` directory in your browser e.g: http://localhost:3000/patternlab/*
+*After running `npm run lab` you will need to navigate manually to the `/patternlab/` directory in your browser e.g: http://localhost:3000/patternlab/ - this is to ensure patternlab can run alongside projects and also leaves the index for a cover page on prototypes. Example to come later.*
 
 * To start the development environment `npm run lab` - to stop this process press `ctrl + c`
 * Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overwritten.
