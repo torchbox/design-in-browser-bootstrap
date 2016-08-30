@@ -32,7 +32,7 @@
     "postbuild:js": "browser-sync reload",
     "build:css": "npm run scss && npm run autoprefixer",
     "build": "npm-run-all -p lint sync:html sync:img build:js build:css && npm run lab:build",
-    "watch:html": "onchange $npm_package_config_src_html/**/*.{html,tpl,twig} -- npm run sync:html",
+    "watch:html": "onchange $npm_package_config_src_html/**/** -- npm run sync:html",
     "watch:img": "onchange $npm_package_config_src_img/**/** -- npm run sync:img",
     "watch:js": "onchange $npm_package_config_src_js -- npm-run-all -p lint:js build:js",
     "watch:css": "onchange $npm_package_config_src_css -- npm-run-all -p lint:css build:css",
