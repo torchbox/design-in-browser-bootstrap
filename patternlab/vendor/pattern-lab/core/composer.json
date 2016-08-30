@@ -1,0 +1,43 @@
+{
+  "name":             "pattern-lab/core",
+  "description":      "The core functionality for Pattern Lab.",
+  "keywords":         ["pattern lab", "styleguide", "style guide", "atomic", "atomic design"],
+  "homepage":         "http://patternlab.io",
+  "license":          "MIT",
+  "authors": [
+    {
+      "name":         "Dave Olsen",
+      "email":        "dmolsen@gmail.com",
+      "homepage":     "http://dmolsen.com",
+      "role":         "Lead Developer"
+    },
+    {
+      "name":         "Brad Frost",
+      "homepage":     "http://bradfrostweb.com",
+      "role":         "Creator"
+    }
+  ],
+  "support": {
+    "issues":         "https://github.com/pattern-lab/patternlab-php-core/issues",
+    "wiki":           "http://patternlab.io/docs/",
+    "source":         "https://github.com/pattern-lab/patternlab-php-core/releases"
+  },
+  "autoload": {
+    "psr-0": {
+      "PatternLab":   "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.4",
+    "alchemy/zippy": "^0.3",
+    "kevinlebrun/colors.php": "^1.0",
+    "michelf/php-markdown": "^1.6",
+    "seld/jsonlint": "^1.0",
+    "shudrum/array-finder": "^1.0",
+    "symfony/event-dispatcher": "^3.0",
+    "symfony/filesystem": "^3.0",
+    "symfony/finder": "^3.0",
+    "symfony/process": "^3.1",
+    "symfony/yaml": "^3.0"
+  }
+}

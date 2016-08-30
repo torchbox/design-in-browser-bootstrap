@@ -1,0 +1,85 @@
+@import 'utils';
+@import 'variables';
+@import 'vendor/normalize';
+@import 'grid';
+@import 'atomic';
+
+
+/* ============================================
+
+    Structure
+
+*/
+
+// 100% wrapper hight
+html,
+body,
+.t-site {
+  height: 100%;
+}
+
+// Flexbox layout
+.t-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .t-header {
+    align-self: flex-start;
+    // stacking order
+    position: relative;
+    z-index: 2;
+    // tmp
+    min-height: 50px;
+    border-bottom: solid 1px #303030;
+  }
+
+  > main {
+    display: flex;
+    flex: 1;
+    // stacking order
+    position: relative;
+    z-index: 1;
+    // Add perspective
+    perspective: 1000px;
+  }
+
+  .t-footer {
+    align-self: flex-end;
+    // stacking order
+    position: relative;
+    z-index: 2;
+    // tmp
+    min-height: 50px;
+    border-top: solid 1px #303030;
+  }
+}
+
+// 100% Width with centralized content container
+.t-header,
+.t-footer {
+  width: 100%;
+  text-align: center;
+
+  > .content {
+    @include gridle_container;
+    // max-width: $max-width;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+/* ============================================
+
+    Scroll Containers
+
+*/
+.t-page {
+  overflow: hidden;
+  .t-page-navigation,
+  .t-content {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+  }
+}

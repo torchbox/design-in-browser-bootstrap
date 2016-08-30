@@ -1,7 +1,16 @@
+dploy.yaml
 node_modules
 .sass-cache
 .tmp
 .DS_Store
 *.zip
-site/build/*
-staging-ssh-config.js
+patternlab/source/_patterns/**
+patternlab/source/images/**
+
+# Exclude dist apart from the patternlab styleguide
+/dist/*
+!/dist/patternlab/
+/dist/patternlab/*
+!/dist/patternlab/index.html
+!/dist/patternlab/styleguide/
+npm-debug.log

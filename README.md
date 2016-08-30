@@ -1,118 +1,54 @@
-# Design In The Browser Bootstrap
 
-This project uses Gulp to provide a basic webserver and development environment for designers to get started creating designs "in the browser", with a simple templating system.
+# Design In The Browser Bootstrap, Patternlab edition!
 
+This project provides a starting point for prototypes, with tooling and an opinion on CSS and JS structure to allow for rapid development utilising Patternlab ensuring all work is as transferable and as maintainable as possible.
+
+## What's required
+
+It is assumed the developers computer is running OSX or Linux. Depending on your setup you may already have the below installed;
+
+* [Node.js](http://nodejs.org) (version 4.x.x)
+* [PHP](http://www.php.net/) (version 5.5+)
 
 ## What's included
 
-* SWIG templating: like Twig / Liquid / Jinja / Django templating language
-* SASS CSS with auto-prefixing.
-* [SVG Sprite generation](#svg-sprite-generation)
-* Automatic image optimisation
-* Livereload.
-* [An automated way to upload your site to a staging server](#deploying-to-a-staging-server)
+* [Patternlab-PHP](https://github.com/pattern-lab/edition-php-twig-standard): Currently the most complete and stable version of patternlab, and supports [twig](http://twig.sensiolabs.org/).
+* [SASS](http://sass-lang.com/) CSS with [auto-prefixing](https://github.com/postcss/autoprefixer).
+* [Browsersync](https://www.browsersync.io).
+* [Rollup](https://rollupjs.org) and [Babel](https://babeljs.io) for ES2015 support with module loading.
+* Consideration for images, currently copying the directory only - to avoid slowdowns and non-essential dependancies.
+* An automated way to upload your site to a staging server using [dploy](https://github.com/LeanMeanFightingMachine/dploy).
 
 ## Installation
 
-### Once per developer computer
+To start a prototype using this bootstrap;
 
-* Install Node.js: Click on the big "INSTALL" button here http://nodejs.org
-* From your machine's terminal:
-  * Install Gulp: `sudo npm install --global gulp`
-
-### Once per project
-
-* Clone this repository somewhere.
-* Install this project's dependencies: Within the repository directory, run `npm install`.
-* Run `gulp`, which will open a welcome page providing further instructions.
-
-If you encounter any issues check the [Troubleshooting](#troubleshooting) section below.
+- [ ] **Get the files:** Clone this repository to a new directory, for example;
+`git clone https://github.com/Loque-/design-in-browser-bootstrap.git new-project`.
+- [ ] **Name the project:** Open `package.json` and replace the `name` with your project name [following npm guidelines](http://browsenpm.org/package.json#name).
+- [ ] **Setup git**: Run `npm run git:init` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
+- [ ] **Install dependancies** Run `npm install` to run the install process.
 
 
 ## Developing with it
 
-* The files you will want to edit are in `site/src`. A `site/build` folder is created on the fly as part of the server process, but should be ignored.
+* To start the development environment `npm run lab` - to stop this process press `ctrl + c`.
+* Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overwritten.
 
-###  Running the development server
+## Deploying it
 
-* Run `gulp` from the command line from the same directory as this README. A small webserver will start and your browser will open at a URL displaying your site. CSS/SASS/Js/image/HTML files will be watched for changes and the page refreshed automatically.
+*This has not been tested since adding patternlab*
 
+You can take advantage of the nodejs package [dploy](https://github.com/LeanMeanFightingMachine/dploy) to upload the `/dist` directory. To do so you will need to;
 
-## Deploying to a staging server
-
-### Setup per developer computer
-
-Gulp can upload files via SFTP but **not** to servers that require a password typed in the terminal. Instead we access the server with SSH keys. These instructions configure that access. The following needs to be done on every machine you develop on, but only once per machine - not once per project.
-
-* On your local machine run: `cat ~/.ssh/id_rsa.pub`
-
-If `No such file or directory`:
-
-* On your local machine run: `ssh-keygen -t rsa -C "[your email address]"` (replacing the square bracket placeholder, duh). This generates your keys.
-
-Once you've generated keys, or if you've generated them at some point in the past, we now install them on the staging server. This requires the "Homebrew" package manager for OSX. 
-
-(If typing `brew` on your command line indicates the command doesn't exist, you need to install Brew using the instructions here: http://brew.sh/. )
-
-With Brew installed, run:
-
-* `brew install ssh-copy-id`
-* `ssh-copy-id -i ~/.ssh/id_rsa [your ldap username]@[your server]` e.g `ssh-copy-id -i ~/.ssh/id_rsa han@rebelalliance.com`
-
-(If you're familiar enough with SSH to have created a key *not* called "id_rsa", obviously ssh-copy-id that other key instead)
-
-This will automatically copy your key from your local machine to your staging server. Double check it works with a simple login test:
-
-* On local run: `ssh [your ldap username]@[your server]`
-
-Successfull key installation is indicated by it logging you in **without** asking for a password. That was only a test though, so you can exit again with `exit`.
-
-
-### Setup per project
-
-The following needs to be done for this project specifically.
-
-* Copy the file `staging-ssh-config.example.js` (found in the same dir as this README), to `staging-ssh-config.js`
-
-Change the contents of the new file: 
-
-* `host` is the hostname your staging server
-* The `user` should be the username you usually use to connect to the staging server. 
-* `remotePath` is the path on the server where you want everything to go. e.g  `/var/www/my-new-site`. This path must *not* end with a slash. The folder you choose does *not* need to exist already.
-* `key` is the path to the *private* half of the key you created above. If in doubt, on OSX it should read: `/Users/[your osx username]/.ssh/id_rsa`
-* If you've password protected your key, `passphrase` should contain the password you used.
-
-
-### Deploying
-
-(NB: you do NOT need to create the directory on the remote server. This will be done for you automatically).
-
-* Run `gulp stage`
-* Your site should now be available at `http://yourserver.com/[whatever folder name you gave in staging-ssh-config.js]`
-
-Be warned: this completely replaces the previous version. If you want to deploy it to a new directory, just change the directory name in `staging-ssh-config.js` first.
-
-
-## SVG Sprite generation
-
-Sprites are created by merging several individual image files onto a single canvas. In SVG sprites, unlike raster sprites, each individual image can be referenced in your HTML by name without using CSS background images or opaic coordinates systems.
-
-SVG sprites should ideally *not* be used as CSS background images, but rather as inline `<svg>` elements. To use an icon from an SVG sprite inline, the whole SVG sprite must first be included *inline* within every page. The icon is then referenced with the SVG `<use>` element.
-
-A full example of this exists in the `/examples/` subdirectory.
-
-### Creating a sprite
-
-* Place your individual SVG icons in the `img/sprite_src/` directory
-* Run `gulp svg-sprite`
-* The sprite will be output as `sprite.svg` in the `img` directory.
-
-You can change the location of the sources, destination or sprite filename in `gulpfile.js/config.js`
+ * Make a copy of `example.dploy.yaml` and name it `dploy.yaml`.
+ * Modify the `host` `user` and `path.remote` variables.
+ * Run `npm run deploy` to start the deployment process.
 
 ## Troubleshooting
 
 ### Installation
-Node sometimes gets muddled and can't install modules to it's internal cache (at ~/.npm). This results in errors like:
+Node has a habit of getting its directory permissions confused on OSX, resulting in errors like: 
 
 ```
 npm WARN package.json globalwitness@0.0.1 No repository field.
@@ -127,17 +63,13 @@ npm ERR! Please try running this command again as root/Administrator.
 
 ```
 
-To apply user permissions on the directory run `chown -R $USER:$GROUP ~/.npm`, more details on the solution explained here: https://github.com/npm/npm/wiki/Troubleshooting#permission-error
-
-
-### Files not appearing on site
-
-New files added to a folder while Gulp is already running _should_ get copied to the `build` folder automatically, but occasionally won't. Kill the Gulp task (Ctrl+C) and re-run `gulp` to resolve this.
+The key here is `npm ERR! Error: EACCES` and the solution is explained here:
+https://github.com/npm/npm/wiki/Troubleshooting#permission-error
 
 
 ## License
 
-Copyright (c) 2014 Torchbox Ltd
+Copyright (c) 2016 Torchbox Ltd
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
