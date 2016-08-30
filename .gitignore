@@ -13,4 +13,6 @@ patternlab/source/images/**
 /dist/patternlab/*
 !/dist/patternlab/index.html
 !/dist/patternlab/styleguide/
+/dist/patternlab/styleguide/html/styleguide.html
+/dist/patternlab/styleguide/data/patternlab-data.js
 npm-debug.log
