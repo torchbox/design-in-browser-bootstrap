@@ -24,7 +24,7 @@ It is assumed the developers computer is running OSX or Linux. Depending on your
 To start a prototype using this bootstrap;
 
 - [ ] **Get the files:** Clone this repository to a new directory, for example;
-`git clone https://github.com/Loque-/design-in-browser-bootstrap.git new-project`.
+`git clone https://github.com/torchbox/design-in-browser-bootstrap.git new-project`.
 - [ ] **Name the project:** Open `package.json` and replace the `name` with your project name [following npm guidelines](http://browsenpm.org/package.json#name).
 - [ ] **Setup git**: Run `npm run git:init` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
 - [ ] **Install dependancies** Run `npm install` to run the install process.
