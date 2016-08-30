@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    $BASE DEFAULTS
+\*------------------------------------*/
+
+// Box Sizing
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+// Prevent text size change on orientation change.
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+// Font & basic colour setup
+body {
+  background: #fff;
+  color: #000;
+}
+
+// Prevent empty space below images appearing
+img, svg {
+  vertical-align: top;
+}
+
+// Default setup for headings
+h1, h2, h3, h4, h5 {
+  
+}
+
+p {
+  margin: 0;
+  line-height: 25px;
+}
+
+// Blockquote
+blockquote {
+    font-style:italic;
+    border-left: 1px solid $gray;
+    color: $gray;
+  padding-left: $pad;
+  margin-bottom: $space;
+}
+
+// Clearfix
+.cf {
+    *zoom: 1;
+}
+.cf:before, .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/* Loading */
+.loading-icon {
+  width: 50px;
+}

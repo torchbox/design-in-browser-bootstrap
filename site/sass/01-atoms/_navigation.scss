@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+
+/**
+ * Generic horizontal navigation
+ */
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        display: inline-block;
+
+        > a {
+            display: inline-block;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+
+/**
+ * Stacked menu – items stack horizontally
+ */
+.nav--stacked {
+
+    > li {
+        display: list-item;
+    }
+}
+
+
+
+/**
+ * Stretch menu – items expand to fill container
+ */
+.nav--stretch {
+    display: table;
+    width: 100%;
+    text-align: center;
+
+    > li {
+        display: table-cell;
+    }
+}

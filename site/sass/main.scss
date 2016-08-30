@@ -1,85 +1,102 @@
-@import 'utils';
-@import 'variables';
+/*------------------------------------*\
+    $TABLE OF CONTENTS 
+\*------------------------------------*/
+
+
+/**
+ *
+ * Vendor ---------------------------
+ * .....Gridle
+ * .....Normalize
+ *
+ * Config ---------------------------
+ * .....Variables
+ * .....Type
+ * .....Grid
+ * .....Animation
+ *
+ * Lib ------------------------------
+ * .....Mixins
+ *
+ * Atoms ----------------------------
+ * Molecules ------------------------
+ * Organisms ------------------------
+ * Templates ------------------------
+ * Pages ----------------------------
+ *
+ */
+
+
+/*------------------------------------*\
+    $VENDOR
+\*------------------------------------*/
+@import 'vendor/gridle/gridle';
 @import 'vendor/normalize';
-@import 'grid';
-@import 'atomic';
 
 
-/* ============================================
+/*------------------------------------*\
+    $CONFIG
+\*------------------------------------*/
+@import 'config/variables';
+@import 'config/type';
+@import 'config/grid';
+@import 'config/animation';
 
-    Structure
 
-*/
+/*------------------------------------*\
+    $LIB
+\*------------------------------------*/
+@import 'lib/mixins';
 
-// 100% wrapper hight
-html,
-body,
-.t-site {
-  height: 100%;
-}
 
-// Flexbox layout
-.t-page {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+/*------------------------------------*\
+    $ATOMS
+\*------------------------------------*/
+@import '01-atoms/base';
+@import '01-atoms/navigation';
+@import '01-atoms/links';
+@import '01-atoms/forms';
+@import '01-atoms/lists';
+@import '01-atoms/states';
+@import '01-atoms/media';
+@import '01-atoms/table';
 
-  .t-header {
-    align-self: flex-start;
-    // stacking order
-    position: relative;
-    z-index: 2;
-    // tmp
-    min-height: 50px;
-    border-bottom: solid 1px #303030;
-  }
 
-  > main {
-    display: flex;
-    flex: 1;
-    // stacking order
-    position: relative;
-    z-index: 1;
-    // Add perspective
-    perspective: 1000px;
-  }
+/*------------------------------------*\
+    $MOLECULES
+\*------------------------------------*/
+@import '02-molecules/layout';
+@import '02-molecules/header';
+@import '02-molecules/nav';
+@import '02-molecules/main';
+@import '02-molecules/footer';
+@import '02-molecules/text';
+@import '02-molecules/icons';
+@import '02-molecules/buttons';
+@import '02-molecules/blocks';
+@import '02-molecules/lists';
+@import '02-molecules/tooltip';
+@import '02-molecules/accordion';
+@import '02-molecules/tabs';
+@import '02-molecules/sections';
+@import '02-molecules/article';
+@import '02-molecules/comments';
+@import '02-molecules/messaging';
 
-  .t-footer {
-    align-self: flex-end;
-    // stacking order
-    position: relative;
-    z-index: 2;
-    // tmp
-    min-height: 50px;
-    border-top: solid 1px #303030;
-  }
-}
 
-// 100% Width with centralized content container
-.t-header,
-.t-footer {
-  width: 100%;
-  text-align: center;
+/*------------------------------------*\
+    $ORGANISMS
+\*------------------------------------*/
+// @import '03-organisms/';
 
-  > .content {
-    @include gridle_container;
-    // max-width: $max-width;
-    margin: 0 auto;
-    text-align: left;
-  }
-}
 
-/* ============================================
+/*------------------------------------*\
+    $TEMPLATES
+\*------------------------------------*/
+// @import '04-templates/';
 
-    Scroll Containers
 
-*/
-.t-page {
-  overflow: hidden;
-  .t-page-navigation,
-  .t-content {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
-  }
-}
+/*------------------------------------*\
+    $PAGES
+\*------------------------------------*/
+// @import '05-pages/';
