@@ -17,6 +17,7 @@
  */
 
 
+
 // [ul]
 .main-menu {
 
@@ -35,7 +36,7 @@
 	// List item link [a]
 	&__link {
 		// Fancy underline effect
-		@extend %animated-underline;
+		@include animated-underline;
 
 		position: relative;
 		padding: 10px 0;
@@ -66,7 +67,7 @@
 		// List item link [a]
 		&__link {
 			// Fancy underline effect
-			@extend %animated-underline;
+			@include animated-underline;
 
 			position: relative;
 			padding: 10px 0;

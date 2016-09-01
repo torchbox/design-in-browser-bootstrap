@@ -69,3 +69,36 @@
 @function font-size($size) {
     @return map-get($font-sizes, $size);
 }
+
+/* ============================================
+   Animated underline
+*/
+
+@mixin animated-underline(
+    $color: $color--primary,
+    $duration: $default-transtion-speed,
+    $stroke: 1px,
+    $yPos: 5px,
+    $easing: ease) {
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: $yPos;
+        right: 0;
+        width: 0;
+        height: $stroke;
+        background: $color;
+        transition:
+            width ease $duration,
+            left ease $duration,
+            right ease $duration;
+    }
+    &:hover {
+        &:after {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+    }
+}
