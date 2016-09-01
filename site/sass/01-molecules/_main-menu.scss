@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    $MAIN MENU
+\*------------------------------------*/
+
+.main-menu {
+	
+	// List item
+	&__item {
+		display: inline-block;
+		margin: 0 10px;
+		font-size: 14px;
+		text-transform: uppercase;
+
+		&:hover {
+			.sub-menu {
+				display: block;
+			}
+		}
+	}
+
+	// List item link
+	&__item-link {
+		position: relative;
+		padding: 10px 0;
+		color: #2b3033;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 5px;
+			right: 0;
+			width: 0;
+			height: 1px;
+			background: $color--primary;
+			transition: 
+				width ease $default-transtion-speed,
+				left ease $default-transtion-speed,
+				right ease $default-transtion-speed;
+		}
+		
+
+		// Active/hover state
+		&--active,
+		&:hover {
+			color: $color--primary;
+
+			&:after {
+				width: 100%;
+				left: 0;
+				right: auto;
+			}
+		}
+	}
+}

@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    $TABLE OF CONTENTS 
+	$TABLE OF CONTENTS 
 \*------------------------------------*/
 
 
@@ -28,75 +28,53 @@
 
 
 /*------------------------------------*\
-    $VENDOR
+	$VENDOR
 \*------------------------------------*/
 @import 'vendor/gridle/gridle';
 @import 'vendor/normalize';
 
 
 /*------------------------------------*\
-    $CONFIG
+	$CONFIG
 \*------------------------------------*/
 @import 'config/variables';
 @import 'config/type';
 @import 'config/grid';
-@import 'config/animation';
+@import 'config/mixins';
 
 
 /*------------------------------------*\
-    $LIB
+	$ATOMS
 \*------------------------------------*/
-@import 'lib/mixins';
+@import '00-atoms/base';
+@import '00-atoms/links';
+@import '00-atoms/forms';
+@import '00-atoms/lists';
+@import '00-atoms/media';
+@import '00-atoms/table';
+@import '00-atoms/logo';
 
 
 /*------------------------------------*\
-    $ATOMS
+	$MOLECULES
 \*------------------------------------*/
-@import '01-atoms/base';
-@import '01-atoms/navigation';
-@import '01-atoms/links';
-@import '01-atoms/forms';
-@import '01-atoms/lists';
-@import '01-atoms/states';
-@import '01-atoms/media';
-@import '01-atoms/table';
+@import '01-molecules/main-menu';
+@import '01-molecules/sub-menu';
 
 
 /*------------------------------------*\
-    $MOLECULES
+	$ORGANISMS
 \*------------------------------------*/
-@import '02-molecules/layout';
-@import '02-molecules/header';
-@import '02-molecules/nav';
-@import '02-molecules/main';
-@import '02-molecules/footer';
-@import '02-molecules/text';
-@import '02-molecules/icons';
-@import '02-molecules/buttons';
-@import '02-molecules/blocks';
-@import '02-molecules/lists';
-@import '02-molecules/tooltip';
-@import '02-molecules/accordion';
-@import '02-molecules/tabs';
-@import '02-molecules/sections';
-@import '02-molecules/article';
-@import '02-molecules/comments';
-@import '02-molecules/messaging';
+@import '02-organisms/site-header';
 
 
 /*------------------------------------*\
-    $ORGANISMS
+	$TEMPLATES
 \*------------------------------------*/
-// @import '03-organisms/';
+// @import '03-templates/';
 
 
 /*------------------------------------*\
-    $TEMPLATES
+	$PAGES
 \*------------------------------------*/
-// @import '04-templates/';
-
-
-/*------------------------------------*\
-    $PAGES
-\*------------------------------------*/
-// @import '05-pages/';
+// @import '04-pages/';

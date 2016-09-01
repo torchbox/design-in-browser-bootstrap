@@ -1,61 +1,61 @@
 /*------------------------------------*\
-    $BASE DEFAULTS
+		$BASE DEFAULTS
 \*------------------------------------*/
 
 // Box Sizing
 *, *:before, *:after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 // Prevent text size change on orientation change.
 html {
-  -webkit-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 // Font & basic colour setup
 body {
-  background: #fff;
-  color: #000;
+	background: #fff;
+	color: #000;
 }
 
 // Prevent empty space below images appearing
 img, svg {
-  vertical-align: top;
+	vertical-align: top;
 }
 
 // Default setup for headings
 h1, h2, h3, h4, h5 {
-  
+
 }
 
 p {
-  margin: 0;
-  line-height: 25px;
+	margin: 0;
+	line-height: 25px;
 }
 
 // Blockquote
 blockquote {
-    font-style:italic;
-    border-left: 1px solid $gray;
-    color: $gray;
-  padding-left: $pad;
-  margin-bottom: $space;
+	font-style:italic;
+	border-left: 1px solid #000;
+	color: #000;
+	padding-left: #000;
+	margin-bottom: #000;
 }
 
 // Clearfix
 .cf {
-    *zoom: 1;
+	*zoom: 1;
 }
 .cf:before, .cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+	content: " "; /* 1 */
+	display: table; /* 2 */
 }
 
 .cf:after {
-    clear: both;
+	clear: both;
 }
 
-/* Loading */
+// Loading
 .loading-icon {
-  width: 50px;
+	width: 50px;
 }

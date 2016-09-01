@@ -14,7 +14,7 @@ fieldset {
 
 label {
 	display: block;
-	padding-bottom: $space-half;
+	padding-bottom: 1em;
 }
 
 button, input, select, textarea {
@@ -25,8 +25,8 @@ button, input, select, textarea {
 
 input, textarea {
 	width: 100%;
-	border: 1px solid $gray;
-	padding: $pad-half 0.65rem;
+	border: 1px solid #000;
+	padding: 1em 0.65rem;
 }
 
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
@@ -34,9 +34,9 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 }
 
 button, input[type="submit"] {
-	padding: $pad-half;
-	background: $gray-dark;
-	border: 1px solid $gray;
+	padding: 1em;
+	background: #000;
+	border: 1px solid #000;
 	cursor: pointer;
 }
 
@@ -58,7 +58,7 @@ input[type="search"]::-webkit-search-decoration {
 
 //Form Field Container
 .field-container {
-	margin-bottom: $space;
+	margin-bottom: 1em;
 }
 
 .inline-form {
@@ -67,9 +67,8 @@ input[type="search"]::-webkit-search-decoration {
 	}
 	
 	input[type=submit], button, .btn {
-		font-size: $font-size-small-2;
 		padding: 0.65rem 1.3rem;
-		background: $gray-dark;
+		background: #000;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -77,19 +76,13 @@ input[type="search"]::-webkit-search-decoration {
 		width: auto;
 
 		&:hover, &:focus {
-			background: $gray;
-			color: $white;
+			background: #000;
+			color: #fff;
 		}
 	}
 }
 
-/* Validation */
-.has-error {
-	border-color: $error;
-}
-.is-valid {
-	border-color: $valid;
-}
+
 
 
 /*------------------------------------*\
@@ -104,6 +97,6 @@ input[type="search"]::-webkit-search-decoration {
 	background: none;
 	padding: 0.78em 1em;
 	border: 0;
-	border-left: 1px solid $gray;
-	color: $gray;
+	border-left: 1px solid #000;
+	color: #000;
 }
