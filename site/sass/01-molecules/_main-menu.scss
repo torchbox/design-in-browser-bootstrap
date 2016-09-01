@@ -14,6 +14,8 @@
  * ---- li.main-menu__sub-menu__item
  * ----- a.main-menu__sub-menu__link
  *
+ * [1] This has some positional styling which is delegated
+ * to .site-header
  */
 
 
@@ -82,7 +84,7 @@
 		}
 	}
 
-	// Delegates layout to site header:
+	// [1] Delegates layout to site header:
 	// This might be a nice way to stop components getting
 	// tangled so much, e.g. the delegated styling for main-menu
 	// component is also found in this file
