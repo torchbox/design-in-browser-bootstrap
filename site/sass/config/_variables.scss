@@ -2,26 +2,103 @@
     $VARIABLES
 \*------------------------------------*/
 
-$color--primary : #2eb1b0;
-$color--secondary : #68aa6c;
-$color--tertiary : #fb5a40;
-$color--quaternary : #f5c157;
 
-//Typography
+/* ============================================
+   Colours
+   Hex colours (or rgba, hsl) are abstracted into
+   named colour vars for readability. These can
+   then be used elsewhere, e.g. for "Theme Colours"
+   see below:
+*/
+
+// Colour vars
+$color--teal: #2eb1b0;
+$color--green: #68aa6c;
+$color--orange: #fb5a40;
+$color--yellow: #f5c157;
+$color--dark-grey: #2b3033;
+$color--white: #fff;
+
+// Theme colours
+$color--primary: $color--teal;
+$color--secondary: $color--green;
+$color--tertiary: $color--orange;
+$color--quaternary: $color--yellow;
+$color--base: $color--dark-grey;
+
+// Text colours
+$color--text: $color--base;
+
+
+/* ============================================
+   Typography
+*/
 $font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 $font-secondary : Georgia, Times, "Times New Roman", serif;
 
-// Grid dimensions
+
+/* ============================================
+   Grid Dimentions
+*/
 $gutter-mobile:     10px;
 $gutter-tablet:     20px;
 $gutter-desktop:    40px;
 
-// Breakpoints
+
+/* ============================================
+   Breakpoints
+*/
 $bp-tablet-portrait:  481px;
 $bp-tablet-landscape: 769px;
 $bp-deskop:           1025px;
 $bp-deskop-wide:      1201px;
 $max-width:         1100px;
 
-// Transition duration
+
+/* ============================================
+   Transition speeds
+*/
 $default-transtion-speed: 250ms;
+
+
+/* ============================================
+   Font sizes
+   The font sizes should be returned by the font-size()
+   function defined in mixins.scss
+   Naming convention based on:
+   https://github.com/jakegiltsoff/sassline/blob/master/assets/sass/sassline-base/_modular-scale.scss
+*/
+
+$font-sizes: (
+    'eta': 14px
+);
+
+
+/* ============================================
+   Text Effect Placeholders:
+   Placeholder styles for adding text effects
+   to various elements
+*/
+
+%animated-underline {
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        width: 0;
+        height: 1px;
+        background: $color--primary;
+        transition:
+            width ease $default-transtion-speed,
+            left ease $default-transtion-speed,
+            right ease $default-transtion-speed;
+    }
+    &:hover {
+        &:after {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+    }
+}
