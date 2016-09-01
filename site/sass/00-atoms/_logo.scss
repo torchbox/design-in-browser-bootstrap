@@ -3,11 +3,20 @@
 \*------------------------------------*/
 
 .logo {
-	height: 40px;
-	width: 165px;
 	fill: #2b2b2c;
 
 	&--some-modifier {
 		fill: red;
 	}
+
+    // Delegates layout to site header:
+    // This might be a nice way to stop components getting
+    // tangled so much, e.g. the delegated styling for logo
+    // component is also found in this file
+    .site-header & {
+        top: 1rem;
+        position: relative;
+        height: 40px;
+        width: 165px;
+    }
 }

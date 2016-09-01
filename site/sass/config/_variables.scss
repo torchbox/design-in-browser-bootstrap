@@ -72,3 +72,13 @@ $default-transtion-speed: 250ms;
 $font-sizes: (
     'eta': 14px
 );
+
+/* ============================================
+   Aligner: placeholder class used to align
+   components at the template-level
+   For want of a better place to put this I've left it here:
+*/
+%aligner {
+    max-width: 1100px;
+    margin: 0 auto;
+}

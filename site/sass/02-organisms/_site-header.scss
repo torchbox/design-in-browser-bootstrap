@@ -4,5 +4,10 @@
 
 .site-header {
 	background: #fff;
-	padding: 30px;
+	padding: 0;
+
+    &__aligner {
+        @extend %aligner;
+        display: flex;
+    }
 }

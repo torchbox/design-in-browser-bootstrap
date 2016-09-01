@@ -17,7 +17,6 @@
  */
 
 
-
 // [ul]
 .main-menu {
 
@@ -81,5 +80,15 @@
 		.main-menu__item:hover & {
 			display: block;
 		}
+	}
+
+	// Delegates layout to site header:
+	// This might be a nice way to stop components getting
+	// tangled so much, e.g. the delegated styling for main-menu
+	// component is also found in this file
+	.site-header & {
+		// Fills remaining horizontal space after logo
+	    flex: 1;
+	    text-align: right;
 	}
 }
