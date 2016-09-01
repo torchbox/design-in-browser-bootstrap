@@ -2,14 +2,15 @@
     $MIXINS
 \*------------------------------------*/
 
-/* CSS Transition
-	Usage: @include transition(width,0.3s,ease-out);
- */
+/* ============================================
+   CSS Transition
+   Usage: @include transition(width,0.3s,ease-out);
+*/
 @mixin transition($transition-property, $transition-time, $method) {
 	transition: $transition-property $transition-time $method;
 }
 
-/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback
 	Usage: @include font-size(1, large);
 */
 @mixin font-size( $decimal-size, $keyword: null ) {
@@ -56,4 +57,15 @@
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+}
+
+/* ============================================
+    Font-size function.
+    Usage:
+        font-size('eta');
+    Returns:
+        14px
+*/
+@function font-size($size) {
+    @return map-get($font-sizes, $size);
 }
