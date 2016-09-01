@@ -2,53 +2,83 @@
     $MAIN MENU
 \*------------------------------------*/
 
+
+/**
+ *
+ * Recommended structure:
+
+ * - ul.main-menu
+ * -- li.main-menu__item
+ * --- a.main-menu__link
+ * --- ul.main-menu__sub-menu
+ * ---- li.main-menu__sub-menu__item
+ * ----- a.main-menu__sub-menu__link
+ *
+ */
+
+
+// [ul]
 .main-menu {
-	
-	// List item
+
+	// List item [li]
 	&__item {
 		display: inline-block;
-		margin: 0 10px;
-		font-size: 14px;
+		margin: 2.75rem 0.5rem 1.5rem 0.5rem;
+		font-size: font-size('eta');
 		text-transform: uppercase;
+		padding: 0 1rem;
 
-		&:hover {
-			.sub-menu {
-				display: block;
-			}
-		}
+		// Require to absolutely position sub-menu
+		position: relative;
 	}
 
-	// List item link
-	&__item-link {
+	// List item link [a]
+	&__link {
+		// Fancy underline effect
+		@extend %animated-underline;
+
 		position: relative;
 		padding: 10px 0;
-		color: #2b3033;
-
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: 5px;
-			right: 0;
-			width: 0;
-			height: 1px;
-			background: $color--primary;
-			transition: 
-				width ease $default-transtion-speed,
-				left ease $default-transtion-speed,
-				right ease $default-transtion-speed;
-		}
-		
+		color: $color--text;
 
 		// Active/hover state
 		&--active,
 		&:hover {
 			color: $color--primary;
+		}
+	}
 
-			&:after {
-				width: 100%;
-				left: 0;
-				right: auto;
+	// The sub-menu drop-down [ul]
+	&__sub-menu {
+		display: none;
+		position: absolute;
+		padding: 10px 1rem;
+		top: 2rem;
+		left: 0;
+		background: #fff;
+
+		// List item [li]
+		&__item {
+			padding: 8px 0;
+			white-space: nowrap;
+		}
+
+		// List item link [a]
+		&__link {
+			// Fancy underline effect
+			@extend %animated-underline;
+
+			position: relative;
+			padding: 10px 0;
+
+			&:hover {
+				color: $color--primary;
 			}
+		}
+
+		// Display the sub-menu on hover
+		.main-menu__item:hover & {
+			display: block;
 		}
 	}
 }
