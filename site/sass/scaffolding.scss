@@ -1,68 +1,83 @@
+/*------------------------------------*\
+    $SCAFFOLDING
+\*------------------------------------*/
+
+
 /**
- * This stylesheet is for styles you want to include only when displaying demo
- * styles for grids, animations, color swatches, etc.
+ *
+ *
+ * This stylesheet is for styles you want to include only when
+ * displaying demo styles for grids, animations, color swatches, etc.
  * These styles will not be your production CSS.
+ *
+ * Maybe we could prefix these styles, e.g. .demo-*, to highlight
+ * the fact these are only a requirement for the
+ * Patternlab Website itself?
+ *
  */
- @import 'config/variables';
- 
+
+
+@import 'config/variables';
+
 #sg-patterns {
-  box-sizing: border-box !important;
-  max-width: 100%;
-  padding: 0 0.5em;
+    box-sizing: border-box !important;
+    max-width: 100%;
+    padding: 0 .5em;
 }
 
 .demo-animate {
-  background: #ddd;
-  padding: 1em;
-  margin-bottom: 1em;
-  text-align: center;
-  border-radius: 8px;
-  cursor: pointer;
+    background: #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
 }
+
 
 .sg-colors {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
+    display: flex;
+    margin: 0 !important;
+    flex-wrap: wrap;
+    list-style: none !important;
+    padding: 0 !important;
 
-.sg-colors li {
-  flex: auto;
-  padding: 0.3em;
-  margin: 0 0.5em 0.5em 0;
-  min-width: 5em;
-  max-width: 14em;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+    li {
+        margin: 0 .5em .5em 0;
+        padding: .3em;
+        min-width: 5em;
+        max-width: 14em;
+        flex: auto;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
 }
 
 .sg-swatch {
-  display: block;
-  height: 4em;
-  margin-bottom: 0.3em;
-  border-radius: 5px;
+    display: block;
+    height: 4em;
+    margin-bottom: .3em;
+    border-radius: 5px;
 }
 
 .sg-label {
-  font-size: 90%;
-  line-height: 1;
+    font-size: 90%;
+    line-height: 1;
 }
 
 .bg-colour--primary {
-  background-color: $color--primary;
+    background-color: $color--primary;
 }
 
 .bg-colour--secondary {
-  background-color: $color--secondary;
+    background-color: $color--secondary;
 }
 
 .bg-colour--tertiary {
-  background-color: $color--tertiary;
+    background-color: $color--tertiary;
 }
 
 .bg-colour--quaternary {
-  background-color: $color--quaternary;
+    background-color: $color--quaternary;
 }
 
