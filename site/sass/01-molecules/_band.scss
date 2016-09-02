@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    $BAND
+\*------------------------------------*/
+
+
+/**
+ *
+ * A Band is a horizontal slice of the site, often populated with text-column
+ * content and other typographical elements.
+ *
+ */
+
+// Group the band themes here so they're iterable
+$band-themes: (
+    'dark': $band--dark,
+    'darker': $band--darker,
+    'white': $band--white
+);
+
+.band {
+    &__aligner {
+
+    }
+
+    // Loop through each of the themes and apply styling
+    @each $theme, $color-var in $band-themes {
+        &--#{$theme} {
+            background-color: $color-var;
+
+            // White themes tend to require alternate styling to deal with text
+            // legibility etc...
+            @if $theme == 'white' {
+                color: $color-base;
+
+                // If we have a white panel links must inherit default styles
+                a {
+                    color: inherit;
+                    text-decoration: inherit;
+                }
+            }
+        }
+    }
+}
