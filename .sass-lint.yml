@@ -20,6 +20,9 @@ files:
 #    - 'site/src/_source/sass/**/*.s+(a|c)ss'
 # Rule Configuration
 rules:
+  bem-depth:
+    - 0
+    - max-depth: 3
   extends-before-mixins: 2
   extends-before-declarations: 2
   placeholder-in-extend: 2
@@ -33,18 +36,14 @@ rules:
         - breakpoint
         - mq
 
-  no-warn: 1
-  no-debug: 1
-  no-ids: 2
-  no-important: 2
-  hex-notation:
-    - 2
-    -
-      style: uppercase
+  no-warn: 0
+  no-debug: 0
+  no-ids: 0
+  no-important: 0
+  no-color-literals: 0
   indentation:
-    - 2
-    -
-      size: 2
+    - 1
+    - size: 4
   property-sort-order:
     - 1
     -
@@ -53,8 +52,12 @@ rules:
         - margin
       ignore-custom-properties: true
   variable-for-property:
-    - 2
+    - 0
     -
       properties:
         - margin
         - content
+  no-css-comments: 0
+  class-name-format:
+    - 1
+    - convention: hyphenatedlowercase
