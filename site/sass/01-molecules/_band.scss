@@ -30,7 +30,7 @@ $band-themes: (
             // White themes tend to require alternate styling to deal with text
             // legibility etc...
             @if $theme == 'white' {
-                color: $color-base;
+                color: $color--base;
 
                 // If we have a white panel links must inherit default styles
                 a {
