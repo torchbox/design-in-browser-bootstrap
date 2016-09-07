@@ -32,7 +32,7 @@ To start a prototype using this bootstrap;
 
 ## Developing with it
 
-* To start the development environment `npm run lab` - to stop this process press `ctrl + c`.
+* To start the development environment `npm run dev` - to stop this process press `ctrl + c`.
 * Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overwritten.
 
 ## Deploying it
