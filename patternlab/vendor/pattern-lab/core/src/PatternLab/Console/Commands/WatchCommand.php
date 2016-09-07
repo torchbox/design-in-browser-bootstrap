@@ -68,7 +68,7 @@ class WatchCommand extends Command {
 				// a vanilla --watch command needs to have a --no-procs version built
 				// so we don't get caught in while() loops. re-request the console command
 				$commands     = array();
-				$commands[]   = array("command" => $this->build()." --no-procs", "timeout" => null, "idle" => 600);
+				$commands[]   = array("command" => $this->build()." --no-procs", "timeout" => null, "idle" => null);
 				
 				Console::writeInfo("spawning the watch process...");
 				

@@ -67,6 +67,10 @@ The key here is `npm ERR! Error: EACCES` and the solution is explained here:
 https://github.com/npm/npm/wiki/Troubleshooting#permission-error
 
 
+## Technical Debt
+
+ - 30 minute timeout from patternlab is hardcoded and within the vendor directory, a value has been modified in vendor/pattern-lab/core/src/PatternLab/Console/Commands/WatchCommand.php
+
 ## License
 
 Copyright (c) 2016 Torchbox Ltd
