@@ -37,8 +37,6 @@ To start a prototype using this bootstrap;
 
 ## Deploying it
 
-*This has not been tested since adding patternlab*
-
 You can take advantage of the nodejs package [dploy](https://github.com/LeanMeanFightingMachine/dploy) to upload the `/dist` directory. To do so you will need to;
 
  * Make a copy of `example.dploy.yaml` and name it `dploy.yaml`.
