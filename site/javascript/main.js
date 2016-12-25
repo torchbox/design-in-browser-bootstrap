@@ -13,3 +13,10 @@ class ColorPoint extends Point {
 const cp = new ColorPoint(25, 8, 'green');
 
 console.log( 'hello', cp );
+
+
+// test importing node modules
+
+import leftPad from 'left-pad';
+
+console.log( 'leftPad', leftPad('foo', 5) );
