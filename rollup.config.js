@@ -5,6 +5,7 @@ export default {
     dest: 'dist/js/main.js',
     format: 'umd',
     plugins: [ babel() ],
+    sourceMap: true,
     globals: {
         // jquery: 'jQuery',
         // window: 'window'
