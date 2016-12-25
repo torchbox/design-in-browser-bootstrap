@@ -20,3 +20,18 @@ console.log( 'hello', cp );
 import leftPad from 'left-pad';
 
 console.log( 'leftPad', leftPad('foo', 5) );
+
+
+// Import jQuery as a CommonJS module from ./vendor/ (via globals.js)
+// and then import an old jQuery plugin that's NOT defined as a proper module.
+// jQuery has to be imported in a separete file to ensure that
+// the global jQuery object that the jquery-test-plugin references exist.
+// https://github.com/rollup/rollup/issues/592#issuecomment-205783255
+
+import './globals';
+
+console.log( 'jQuery', jQuery('body') );
+
+import './vendor/jquery-test-plugin';
+
+console.log( 'testPlugin', jQuery.testPlugin );
