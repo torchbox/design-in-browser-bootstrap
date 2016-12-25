@@ -5,6 +5,10 @@ import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
+// uses UglifyJS2, and works with transpiled code only: https://github.com/TrySound/rollup-plugin-uglify#warning
+import uglify from 'rollup-plugin-uglify';
+
+
 export default {
     entry: 'site/javascript/main.js',
     dest: 'dist/js/main.js',
@@ -17,6 +21,7 @@ export default {
         }),
         commonjs(),
         babel(),
+        uglify(),  // TODO: run uglify for production build only
     ],
     sourceMap: true,
     globals: {
