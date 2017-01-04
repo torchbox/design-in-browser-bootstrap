@@ -68,7 +68,9 @@
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^6.0.1",
     "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-filesize": "^1.0.1",
     "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-sizes": "^0.2.3",
     "rollup-plugin-uglify": "^1.0.1",
     "sass-lint": "^1.8.2"
   },

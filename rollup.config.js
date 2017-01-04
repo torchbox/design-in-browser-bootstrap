@@ -11,6 +11,10 @@ import uglify from 'rollup-plugin-uglify';
 // run eslint from rollup: it also uses .eslintrc
 import eslint from 'rollup-plugin-eslint';
 
+// plugins to display the original size of each import, and the final size of the bundle
+import sizes from 'rollup-plugin-sizes';
+import filesize from 'rollup-plugin-filesize';
+
 
 let plugins = [
     resolve({
@@ -27,7 +31,10 @@ let plugins = [
 
 if(process.env.UGLIFY != '0'){
     plugins.push(uglify());
+    plugins.push(sizes());
+    plugins.push(filesize());
 }
+
 
 export default {
     entry: `site/javascript/${process.env.entry}`,
