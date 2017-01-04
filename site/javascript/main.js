@@ -28,10 +28,14 @@ console.log( 'leftPad', leftPad('foo', 5) );
 // the global jQuery object that the jquery-test-plugin references exist.
 // https://github.com/rollup/rollup/issues/592#issuecomment-205783255
 
-import './globals';
+import jQuery from './globals';
 
 console.log( 'jQuery', jQuery('body') );
 
 import './vendor/jquery-test-plugin';
 
 console.log( 'testPlugin', jQuery.testPlugin );
+
+
+// someGlobalVariable is specified in .eslintrc, so there shouldn't be a warning about it
+console.log(someGlobalVariable);

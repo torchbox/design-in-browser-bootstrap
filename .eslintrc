@@ -4,6 +4,9 @@
         "commonjs": true,
         "es6": true
     },
+    "globals": {
+        "someGlobalVariable": true
+    },
     "extends": "eslint:recommended",
     "parserOptions": {
         "sourceType": "module"
