@@ -13,8 +13,8 @@ import eslint from 'rollup-plugin-eslint';
 
 
 export default {
-    entry: 'site/javascript/main.js',
-    dest: 'dist/js/main.js',
+    entry: `site/javascript/${process.env.entry}`,
+    dest: `dist/js/${process.env.entry}`,
     format: 'umd',
     plugins: [
         resolve({

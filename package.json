@@ -36,7 +36,7 @@
     "sync:img": "rsync -rtvu --delete $npm_package_config_src_img/ $npm_package_config_dest_img/",
     "postsync:img": "browser-sync reload",
     "sync": "npm-run-all -p sync:html sync:img",
-    "build:js": "rollup -c",
+    "build:js": "rollup -c --environment entry:main.js",
     "postbuild:js": "browser-sync reload",
     "build:css": "npm run scss",
     "build": "npm-run-all -p lint sync:html sync:img build:js build:css && npm run lab:build",
