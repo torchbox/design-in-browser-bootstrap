@@ -47,7 +47,7 @@
     "watch": "npm-run-all -p watch:html watch:img watch:js watch:css",
     "lab:build": "cd patternlab && php core/console --generate",
     "lab:watch": "cd patternlab && php core/console --watch",
-    "lab": "npm-run-all -p serve lab:watch watch build:css build:js",
+    "lab": "UGLIFY=0 npm-run-all -p serve lab:watch watch build:css build:js",
     "dev": "npm run sync && npm run lab",
     "postinstall": "npm run build"
   },

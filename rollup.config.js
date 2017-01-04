@@ -12,23 +12,28 @@ import uglify from 'rollup-plugin-uglify';
 import eslint from 'rollup-plugin-eslint';
 
 
+let plugins = [
+    resolve({
+        jsnext: true,
+        main: true,
+        browser: true,
+    }),
+    commonjs(),
+    eslint({
+        exclude: ['node_modules/**', 'site/javascript/vendor/**']
+    }),
+    babel(),
+];
+
+if(process.env.UGLIFY != '0'){
+    plugins.push(uglify());
+}
+
 export default {
     entry: `site/javascript/${process.env.entry}`,
     dest: `dist/js/${process.env.entry}`,
     format: 'umd',
-    plugins: [
-        resolve({
-            jsnext: true,
-            main: true,
-            browser: true,
-        }),
-        commonjs(),
-        eslint({
-            exclude: ['node_modules/**', 'site/javascript/vendor/**']
-        }),
-        babel(),
-        uglify(),  // TODO: run uglify for production build only
-    ],
+    plugins: plugins,
     sourceMap: true,
     globals: {}  // specify globals in .eslintrc to ignore linting errors
 };
