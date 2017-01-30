@@ -16,6 +16,17 @@ It is assumed the developers computer is running OSX or Linux. Depending on your
 * [SASS](http://sass-lang.com/) CSS with [auto-prefixing](https://github.com/postcss/autoprefixer).
 * [Browsersync](https://www.browsersync.io).
 * [Rollup](https://rollupjs.org) and [Babel](https://babeljs.io) for ES2015 support with module loading.
+* Rollup plugins (`rollup.config.js`):
+  * eslint
+  * uglifyjs with sourcemaps (disabled by default)
+  * support for using any installed node modules on the webiste
+  * display file size information
+* Examples in `/site/javascript/main.js` showing...
+  * how to import ES6 modules (`point.js`)
+  * how to import CommonJS modules (`vendor/jquery.js` via `globals.js`)
+  * how to expose variables like `jQuery` globally (`globals.js`)
+  * how to import plain old javascript files that might depend on global variables (`vendor/jquery-test-plugin.js`)
+  * how to use external global variables without importing them (`main.js` + `.eslintrc`)
 * Consideration for images, currently copying the directory only - to avoid slowdowns and non-essential dependancies.
 * An automated way to upload your site to a staging server using [dploy](https://github.com/LeanMeanFightingMachine/dploy).
 
@@ -27,13 +38,23 @@ To start a prototype using this bootstrap;
 `git clone https://github.com/torchbox/design-in-browser-bootstrap.git new-project`.
 - [ ] **Name the project:** Open `package.json` and replace the `name` with your project name [following npm guidelines](http://browsenpm.org/package.json#name).
 - [ ] **Setup git**: Run `npm run git:init` in the root of your new project to remove existing git links with this repository and create a fresh project with the directory as is committed.
-- [ ] **Install dependancies** Run `npm install` to run the install process.
+- [ ] **Install dependencies** Run `yarn install` to run the install process. `npm install` will work too, see [section about yarn below](#yarn).
 
 
 ## Developing with it
 
 * To start the development environment `npm run dev` - to stop this process press `ctrl + c`.
 * Source files for developing your project are in `site` and the distribution folder for the compiled assets is `dist`. Any changes made to files in the `dist` directory will be overwritten.
+
+### yarn
+
+* Yarn is the recommended way to install and upgrade node modules. It's like npm but [handles dependencies better](http://stackoverflow.com/questions/40057469/what-is-the-difference-between-yarn-lock-and-npm-shrinkwrap#answer-40057535).
+* Install yarn itself: https://yarnpkg.com/en/docs/install
+* Install all packages from `package.json`: `yarn install`
+* Add new packages with yarn: `yarn add --dev package_name` (this will add it to `package.json` and `yarn.lock` too)
+* Upgrade packages: `yarn upgrade-interactive`
+* Keep using `npm` for running npm scripts. Although `yarn run` seems to work as well but `npm-run-all` might not use yarn, so stick to `npm run` for now.
+
 
 ## Deploying it
 
@@ -46,7 +67,7 @@ You can take advantage of the nodejs package [dploy](https://github.com/LeanMean
 ## Troubleshooting
 
 ### Installation
-Node has a habit of getting its directory permissions confused on OSX, resulting in errors like: 
+Node has a habit of getting its directory permissions confused on OSX, resulting in errors like:
 
 ```
 npm WARN package.json globalwitness@0.0.1 No repository field.
@@ -56,7 +77,7 @@ npm ERR!   errno: 3,
 npm ERR!   code: 'EACCES',
 npm ERR!   path: '/Users/Dave/.npm/depd/1.0.0',
 npm ERR!   parent: 'connect' }
-npm ERR! 
+npm ERR!
 npm ERR! Please try running this command again as root/Administrator.
 
 ```
