@@ -27,7 +27,7 @@
     "serve": "browser-sync start --config browsersync.config.js",
     "git:init": "rm -rf .git && git init && git add . && git commit -m 'Project start'",
     "lint:js": "eslint $npm_package_config_src_js --ignore-pattern **/vendor/**/*.js || true",
-    "lint:css": "sass-lint $npm_package_config_src_css**/*.scss -v -q || true",
+    "lint:css": "sass-lint $npm_package_config_src_css/**/*.scss -v -q || true",
     "lint": "npm-run-all -p lint:js lint:css",
     "//sync:js": "rsync -rtvu --delete $npm_package_config_src_js/ $npm_package_config_dest_js/",
     "//postsync:js": "browser-sync reload",
