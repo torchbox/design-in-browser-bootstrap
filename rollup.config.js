@@ -33,7 +33,8 @@ let plugins = [
     commonjs(),
     replace({
         // https://github.com/rollup/rollup/issues/487#issuecomment-177596512
-        'process.env.NODE_ENV': JSON.stringify('development')  // 'production'
+        // TODO: use 'development' mode locally, which supports the React Chrome extension
+        'process.env.NODE_ENV': JSON.stringify('production')
     }),
     eslint({
         exclude: ['node_modules/**', 'site/javascript/vendor/**']
