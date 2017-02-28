@@ -15,14 +15,27 @@ import eslint from 'rollup-plugin-eslint';
 import sizes from 'rollup-plugin-sizes';
 import filesize from 'rollup-plugin-filesize';
 
+// replace strings in files while bundling them
+import replace from 'rollup-plugin-replace';
+
+// handle jsx syntax, used by e.g. react as well
+import jsx from 'rollup-plugin-jsx';
 
 let plugins = [
+    jsx({
+        factory: 'React.createElement'
+    }),
     resolve({
         jsnext: true,
         main: true,
         browser: true,
     }),
     commonjs(),
+    replace({
+        // https://github.com/rollup/rollup/issues/487#issuecomment-177596512
+        // TODO: use 'development' mode locally, which supports the React Chrome extension
+        'process.env.NODE_ENV': JSON.stringify('production')
+    }),
     eslint({
         exclude: ['node_modules/**', 'site/javascript/vendor/**']
     }),

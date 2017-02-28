@@ -16,3 +16,4 @@ patternlab/source/images/**
 /dist/patternlab/styleguide/html/styleguide.html
 /dist/patternlab/styleguide/data/patternlab-data.js
 npm-debug.log
+yarn-error.log

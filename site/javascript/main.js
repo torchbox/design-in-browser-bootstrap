@@ -1,3 +1,5 @@
+/*eslint-disable no-console */
+
 import Point from './point';
 
 class ColorPoint extends Point {
@@ -38,4 +40,21 @@ console.log( 'testPlugin', jQuery.testPlugin );
 
 
 // someGlobalVariable is specified in .eslintrc, so there shouldn't be a warning about it
-console.log(someGlobalVariable);
+try{
+    console.log( someGlobalVariable );
+}catch(e){
+    // eslint-disable-no-empty
+}
+
+
+// test JSX tranforms
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+let jsxDiv = <div/>;
+
+console.log( 'jsxDiv', jsxDiv );
+
+
+/*eslint-enable no-console */
