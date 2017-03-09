@@ -1,0 +1,21 @@
+<div class="block--image-inline">
+    <div class="content">
+
+        <div class="image">
+            <div class="image--inline" data-src="{{ url }}"></div>
+            <div class="image--placeholder">
+                <div class="placeholder" style="background-image: url('{{ placeholder }}')"></div>
+            </div>
+            {% include "patterns/01-molecules/01-loading/00-progress.twig"  %}
+        </div>
+
+        <div class="image--details">
+        	<div class="content">
+        		<span class="text--copyright">
+        			{{ content }}
+        		</span>
+        	</div>
+        </div>
+
+    </div>
+</div>

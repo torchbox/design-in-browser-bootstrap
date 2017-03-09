@@ -11,9 +11,7 @@
  *
  * Config ---------------------------
  * .....Variables
- * .....Type
  * .....Grid
- * .....Animation
  *
  * Lib ------------------------------
  * .....Mixins
@@ -38,8 +36,11 @@
 	$CONFIG
 \*------------------------------------*/
 @import 'config/variables';
-@import 'config/type';
 @import 'config/grid';
+
+/*------------------------------------*\
+	$Lib
+\*------------------------------------*/
 @import 'config/mixins';
 
 
@@ -47,26 +48,14 @@
 	$ATOMS
 \*------------------------------------*/
 @import '00-atoms/base';
-@import '00-atoms/links';
-@import '00-atoms/forms';
-@import '00-atoms/lists';
-@import '00-atoms/media';
-@import '00-atoms/table';
-@import '00-atoms/logo';
-
 
 /*------------------------------------*\
 	$MOLECULES
 \*------------------------------------*/
-@import '01-molecules/main-menu';
-@import '01-molecules/hero';
-@import '01-molecules/band';
-
 
 /*------------------------------------*\
 	$ORGANISMS
 \*------------------------------------*/
-@import '02-organisms/site-header';
 
 
 /*------------------------------------*\
