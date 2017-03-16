@@ -1,4 +1,51 @@
-<div class="t-homepage">
-    {% include "organisms-site-header" %}
-    {% include "molecules-hero" %}
+
+
+<div class="page">
+	<header class="page__header">
+
+		<div class="branding">
+			<div class="logo">
+
+			</div>
+		</div>
+		
+		{% include "organisms-priority-nav" %}
+
+	</header>
+	
+	<nav class="site-nav">
+
+		<ul class="site-nav__menu">
+			<li class="site-nav__item">
+				<a class="site-nav__link" href="#">
+					<span class="site-nav__text">
+						item
+					</span>
+				</a>
+			</li>
+			<li class="site-nav__item">
+				<a class="site-nav__link" href="#">
+					<span class="site-nav__text">
+						item
+					</span>
+				</a>
+			</li>
+			<li class="site-nav__item">
+				<a class="site-nav__link" href="#">
+					<span class="site-nav__text">
+						item
+					</span>
+				</a>
+			</li>
+		</ul>
+
+	</nav>
+	
+	<div class="page__body">
+
+		{% include "atoms-heading" with { content : "hello" } %}
+		{% include "atoms-paragraph" with { content : "world" } %}
+
+	</div>
+	<footer class="page__footer"></footer>
 </div>
