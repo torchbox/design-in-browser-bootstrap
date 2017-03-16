@@ -1,29 +1,5 @@
 {
-  "title" : "Pattern Lab",
-  "htmlClass": "pl",
-  "bodyClass": "body",
-  "img": {
-    "landscape_4x3": {
-      "src": "../../images/fpo_4x3.png",
-      "alt": "4x3 Image"
-    },
-    "landscape_16x9": {
-      "src": "../../images/fpo_16x9.png",
-      "alt": "16x9 Image"
-    },
-    "square": {
-      "src": "../../images/fpo_square.png",
-      "alt": "Square Thumbnail"
-    },
-    "avatar" : {
-      "src" : "../../images/fpo_avatar.png",
-      "alt" : "Person Name"
-    },
-    "rectangle": {
-      "src": "http://placeimg.com/400/300/tech",
-      "alt": "Rectangle"
-    }
-  },
+  "title" : "Design In The Browser Bootstrap",
   "headline" : {
     "short" : "Lorem ipsum dolor sit (37 characters)",
     "medium" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (72 characters)"
@@ -71,23 +47,5 @@
     "long": "20",
     "short": "20"
   },
-  "seconds" : "31",
-  "author" : {
-    "first_name": "Author",
-    "last_name": "Name"
-  },
-  "hero": true,
-  "emergency" : false,
-  "touts" : [
-    { },
-    { },
-    { }
-  ],
-  "latest_posts" : [
-    { },
-    { },
-    { },
-    { },
-    { }
-  ]
+  "seconds" : "31"
 }
