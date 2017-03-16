@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $Text Paragraph
+\*------------------------------------*/
+
+.text--paragraph {
+    @include font-smoothing;
+    display: block;
+    // Paragraph text in design docs (mixin?)
+    font-family: $font-secondary;
+    font-weight: 400;
+    // Responsive points
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 $gutter-mobile;
+    padding: 0px;
+    @include gridle_state( tablet-portrait ){
+        font-size: 19px;
+        line-height: 27px;
+    }
+    @include gridle_state( tablet-landscape ){
+        font-size: 20px;
+        line-height: 28px;
+    }
+    @include gridle_state( desktop ){
+        font-size: 21px;
+        line-height: 29px;
+    }
+    @include gridle_state( desktop-wide ){
+        font-size: 22px;
+        line-height: 30px;
+    }
+}

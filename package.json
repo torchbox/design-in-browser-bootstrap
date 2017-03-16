@@ -8,7 +8,7 @@
   },
   "sasslintConfig": ".sass-lint.yml",
   "config": {
-    "src_html": "site/templates",
+    "src_html": "site/patterns",
     "src_js": "site/javascript",
     "src_css": "site/sass",
     "src_img": "site/images",
