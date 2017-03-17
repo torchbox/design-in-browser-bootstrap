@@ -31,7 +31,7 @@ rules:
   mixins-before-declarations:
     - 2
     - exclude:
-        - gridle_state
+        - media-query
   no-warn: 0
   no-debug: 0
   indentation:
@@ -56,4 +56,4 @@ rules:
     - 1
   mixin-name-format: 
     - 1
-    - convention: snakecase
+    - convention: hyphenatedlowercase

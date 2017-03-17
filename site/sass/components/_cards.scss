@@ -7,8 +7,8 @@
 
     > .content {
         @include aligner;
-        @include gutter_x;
-        @include gutter_y;
+        @include gutter-x;
+        @include gutter-y;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -17,7 +17,7 @@
 
     &__title {
 
-        @include gutter_x;
+        @include gutter-x;
 
         // > .content {
 
@@ -64,8 +64,8 @@
     $credit--delay: 100ms;
     $credit--ease: cubic-bezier(0.41, 0, 0.2, 1.15);
 
-    @include gutter_x;
-    @include gutter_y($top: false);
+    @include gutter-x;
+    @include gutter-y($top: false);
     flex-basis: 100%;
     flex-shrink: 0;
 
@@ -78,10 +78,10 @@
         perspective-origin: center center;
     }
 
-    @include gridle_state(tablet-portrait) {
+    @include media-query(tablet-portrait) {
         flex-basis: 50%;
     }
-    @include gridle_state(desktop) {
+    @include media-query(desktop) {
         flex-basis: 25%;
         min-height: 400px;
 
@@ -129,8 +129,8 @@
     }
 
     &__text {
-        @include gutter_x($divideby: 1);
-        @include gutter_y;
+        @include gutter-x($divideby: 1);
+        @include gutter-y;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -156,7 +156,11 @@
             position: relative;
             width: 100%;
             height: 100%;
-            transition: opacity $credit--speed $credit--ease ($credit--delay + $credit--delay), transform $credit--speed $credit--ease $credit--delay;
+            // sass-lint:disable indentation
+            transition:
+                opacity $credit--speed $credit--ease ($credit--delay + $credit--delay),
+                transform $credit--speed $credit--ease $credit--delay;
+            // sass-lint:enable indentation
             transform: translate3d(0, 100%, 0);
             opacity: 0;
 
@@ -169,6 +173,3 @@
     }
 
 }
-
-
-

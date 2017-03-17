@@ -4,11 +4,31 @@
 
 
 /* ============================================
+    Media Query mixin
+*/
+
+@mixin media-query($queries...) {
+    @each $query in $queries {
+        @each $breakpoint in $breakpoints {
+            $name:        nth($breakpoint, 1);
+            $declaration: nth($breakpoint, 2);
+
+            @if $query == $name and $declaration {
+                @media only screen and #{$declaration} {
+                    @content;
+                }
+            }
+        }
+    }
+}
+
+
+/* ============================================
   Placeholder text
 */
 
-// sass-lint:disable no-vendor-prefixes no-misspelled-properties
-@mixin placeholder_text {
+@mixin placeholder-text {
+    // sass-lint:disable no-vendor-prefixes
     &.placeholder { @content; }
     &:-moz-placeholder { @content; }
     &::-moz-placeholder { @content; }
@@ -21,11 +41,10 @@
   iOS Native vertical scroll
 */
 
-// sass-lint:disable no-misspelled-properties
-@mixin native_vertical_scroll {
+@mixin native-vertical-scroll {
     overflow-y: scroll;
     overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-misspelled-properties
 }
 
 
@@ -45,19 +64,19 @@
    Outter gutter
 */
 
-@mixin gutter_x($divideby: 2) {
+@mixin gutter-x($divideby: 2) {
 
     padding-left: $gutter--mobile / $divideby;
     padding-right: $gutter--mobile / $divideby;
-    @include gridle_state(tablet-portrait) {
+    @include media-query(tablet-portrait) {
         padding-left: $gutter--tablet / $divideby;
         padding-right: $gutter--tablet / $divideby;
     }
-    @include gridle_state(desktop) {
+    @include media-query(desktop) {
         padding-left: $gutter--desktop / $divideby;
         padding-right: $gutter--desktop / $divideby;
     }
-    @include gridle_state(desktop-wide) {
+    @include media-query(desktop-wide) {
         padding-left: $gutter--desktop-wide / $divideby;
         padding-right: $gutter--desktop-wide / $divideby;
     }
@@ -68,30 +87,30 @@
    Vertical spacing
 */
 
-@mixin gutter_y($top: true, $bottom: true) {
+@mixin gutter-y($top: true, $bottom: true) {
 
     @if $top {
         padding-top: $gutter--mobile;
-        @include gridle_state(tablet-portrait) {
+        @include media-query(tablet-portrait) {
             padding-top: $gutter--tablet;
         }
-        @include gridle_state(desktop) {
+        @include media-query(desktop) {
             padding-top: $gutter--desktop;
         }
-        @include gridle_state(desktop-wide) {
+        @include media-query(desktop-wide) {
             padding-top: $gutter--desktop-wide;
         }
     }
 
     @if $bottom {
         padding-bottom: $gutter--mobile;
-        @include gridle_state(tablet-portrait) {
+        @include media-query(tablet-portrait) {
             padding-bottom: $gutter--tablet;
         }
-        @include gridle_state(desktop) {
+        @include media-query(desktop) {
             padding-bottom: $gutter--desktop;
         }
-        @include gridle_state(desktop-wide) {
+        @include media-query(desktop-wide) {
             padding-bottom: $gutter--desktop-wide;
         }
     }

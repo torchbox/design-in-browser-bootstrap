@@ -6,8 +6,8 @@
 
     > .content {
         @include aligner;
-        @include gutter_x($divideby: 1);
-        @include gutter_y;
+        @include gutter-x($divideby: 1);
+        @include gutter-y;
         text-align: center;
     }
 

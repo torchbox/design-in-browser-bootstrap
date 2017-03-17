@@ -17,21 +17,21 @@
     margin: 0 0 $gutter--mobile;
     padding: 0;
 
-    @include gridle_state(tablet-portrait) {
+    @include media-query(tablet-portrait) {
         font-size: $size + $size--modifier;
         line-height: $height + $size--modifier;
         margin: 0 0 $gutter--tablet;
     }
-    @include gridle_state(tablet-landscape) {
+    @include media-query(tablet-landscape) {
         font-size: $size + ($size--modifier * 1);
         line-height: $height + ($size--modifier * 1);
     }
-    @include gridle_state(desktop) {
+    @include media-query(desktop) {
         font-size: $size + ($size--modifier * 2);
         line-height: $height + ($size--modifier * 2);
         margin: 0 0 $gutter--desktop;
     }
-    @include gridle_state(desktop) {
+    @include media-query(desktop-wide) {
         font-size: $size + ($size--modifier * 3);
         line-height: $height + ($size--modifier * 3);
         margin: 0 0 $gutter--desktop-wide;
