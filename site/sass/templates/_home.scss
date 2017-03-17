@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    $Homepage template
+\*------------------------------------*/
+
+.homepage__introduction {
+
+    > .content {
+        @include aligner;
+        @include gutter_x($divideby: 1);
+        @include gutter_y;
+        text-align: center;
+    }
+
+}

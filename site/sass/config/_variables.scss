@@ -5,20 +5,21 @@
 
 /* ============================================
    Colours
-   Hex colours (or rgba, hsl) are abstracted into
-   named colour vars for readability. These can
-   then be used elsewhere, e.g. for "Theme Colours"
-   see below:
+   https://coolors.co/2eb1b0-68aa6c-fb5a40-f5c157-2b3033
 */
 
 // Colour vars
-$color--teal: #2eb1b0;
-$color--green: #68aa6c;
-$color--orange: #fb5a40;
-$color--yellow: #f5c157;
-$color--dark-grey: #2b3033;
-$color--white: #fff;
+$color--teal:       #2eb1b0;
+$color--green:      #68aa6c;
+$color--orange:     #fb5a40;
+$color--yellow:     #f5c157;
+$color--dark-grey:  #2b3033;
+$color--white:      #fff;
 
+// Defaults
+$color--foreground: $color--dark-grey;
+$color--background: $color--white;
+$color--brand: $color--orange;
 
 // Theme colours
 $color--primary: $color--teal;
@@ -26,56 +27,38 @@ $color--secondary: $color--green;
 $color--tertiary: $color--orange;
 $color--quaternary: $color--yellow;
 
-$color--base: $color--dark-grey;
-
-
-// Text colours
-$color--text: $color--base;
-
-
-// Band theme colours (@FIXME: use the proper colours here:)
-$band--dark: #444;
-$band--darker: #222;
-$band--white: #fff;
-
 
 /* ============================================
    Typography
    :: Default to system font stack
 */
-$font--primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-// $font--secondary : Georgia, Times, "Times New Roman", serif;
+$font--primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 
 
 /* ============================================
    Grid Dimentions
 */
-$gutter-mobile:     10px;
-$gutter-tablet:     20px;
-$gutter-desktop:    40px;
+$gutter--mobile:        10px;
+$gutter--tablet:        20px;
+$gutter--desktop:       26px;
+$gutter--desktop-wide:  40px;
+
+
+/* ============================================
+   Max width
+*/
+$max-width: 1350px;
 
 
 /* ============================================
    Breakpoints
 */
-$bp-tablet-portrait:  481px;
-$bp-tablet-landscape: 769px;
-$bp-deskop:           1025px;
-$bp-deskop-wide:      1201px;
+$bp-tablet-portrait:  768px;
+$bp-tablet-landscape: 1024px;
+$bp-deskop:           1280px;
+$bp-deskop-wide:      2556px;
 
 
 /* ============================================
    Transition speeds
 */
-$transtion-speed: 250ms;
-
-
-/* ============================================
-   Aligner: placeholder class used to align
-   components at the template-level
-   For want of a better place to put this I've left it here:
-*/
-%aligner {
-    max-width: 1100px;
-    margin: 0 auto;
-}

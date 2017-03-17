@@ -1,15 +1,16 @@
 <img 
-    class="image--picture"
+    class="image__cover"
+
+    alt="{{ image.description }}"
 
     {# Serve medium size image by default for browsers that do not support srcset #}
-    src="https://unsplash.it/768/432?image=1044"
+    src="{{ image.fallback }}"
 
     {# Provide srcset that matches the (key) breakpoints in _variables.scss #}
     srcset="
-        https://unsplash.it/2000/675?image=1044 2000w,
-        https://unsplash.it/1200/675?image=1044 1200w,
-        https://unsplash.it/768/432?image=1044 768w,
-        https://unsplash.it/480/270?image=1044 480w
+        {% for src in image.srcset %}
+            {{ src }}{% if loop.last == false %},{% endif %}
+        {% endfor %}
     "
 
     {# Example of sizes implementation #}

@@ -1,9 +1,17 @@
 
 
 <nav class="priority-nav">
+
 	<ul class="priority-nav__menu">
 		{% for item in navigationItems %}
 			{% include "atoms-priority-nav__item" with item %}
 		{% endfor %}
-	</ul>	
+	</ul>
+
+
+	<a href="#" class="navigation-link">
+		{% include "atoms-navigation__icon" %}
+	</a>
+
+
 </nav>

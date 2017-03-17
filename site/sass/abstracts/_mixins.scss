@@ -6,19 +6,93 @@
 /* ============================================
   Placeholder text
 */
-@mixin placeholder-text {
-  &.placeholder{ @content; }
-  &:-moz-placeholder{ @content; }
-  &::-moz-placeholder{ @content; }
-  &:-ms-input-placeholder{ @content; }
-  &::-webkit-input-placeholder{ @content; }
+
+// sass-lint:disable no-vendor-prefixes no-misspelled-properties
+@mixin placeholder_text {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
 };
+
 
 /* ============================================
   iOS Native vertical scroll
 */
-@mixin native-vertical-scroll {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
+
+// sass-lint:disable no-misspelled-properties
+@mixin native_vertical_scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* ============================================
+   Aligner: placeholder class used to align
+   components at the template-level
+   For want of a better place to put this I've left it here:
+*/
+
+@mixin aligner {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+
+/* ============================================
+   Outter gutter
+*/
+
+@mixin gutter_x($divideby: 2) {
+
+    padding-left: $gutter--mobile / $divideby;
+    padding-right: $gutter--mobile / $divideby;
+    @include gridle_state(tablet-portrait) {
+        padding-left: $gutter--tablet / $divideby;
+        padding-right: $gutter--tablet / $divideby;
+    }
+    @include gridle_state(desktop) {
+        padding-left: $gutter--desktop / $divideby;
+        padding-right: $gutter--desktop / $divideby;
+    }
+    @include gridle_state(desktop-wide) {
+        padding-left: $gutter--desktop-wide / $divideby;
+        padding-right: $gutter--desktop-wide / $divideby;
+    }
+}
+
+
+/* ============================================
+   Vertical spacing
+*/
+
+@mixin gutter_y($top: true, $bottom: true) {
+
+    @if $top {
+        padding-top: $gutter--mobile;
+        @include gridle_state(tablet-portrait) {
+            padding-top: $gutter--tablet;
+        }
+        @include gridle_state(desktop) {
+            padding-top: $gutter--desktop;
+        }
+        @include gridle_state(desktop-wide) {
+            padding-top: $gutter--desktop-wide;
+        }
+    }
+
+    @if $bottom {
+        padding-bottom: $gutter--mobile;
+        @include gridle_state(tablet-portrait) {
+            padding-bottom: $gutter--tablet;
+        }
+        @include gridle_state(desktop) {
+            padding-bottom: $gutter--desktop;
+        }
+        @include gridle_state(desktop-wide) {
+            padding-bottom: $gutter--desktop-wide;
+        }
+    }
 }

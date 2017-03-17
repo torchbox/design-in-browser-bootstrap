@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    $Priority Navigation
+\*------------------------------------*/
+
+.page__header {
+
+    > .content {
+        @include aligner;
+        @include gutter_x;
+        @include gutter_y;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+/*------------------------------------*\
+    $Branding
+\*------------------------------------*/
+
+
+.branding {
+
+    @include gutter_x;
+
+    // &__link {
+
+    // }
+
+    // &__icon {
+
+    // }
+
+    &__svg {
+        height: 40px;
+        width: 165px;
+        fill: $color--foreground;
+    }
+
+
+}
+
+
+/*------------------------------------*\
+    $Priority Navigation
+\*------------------------------------*/
+
+.priority-nav {
+
+    @include gutter_x;
+
+    &__menu {
+        display: none;
+
+        @include gridle_state(tablet-landscape) {
+            display: block;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+    }
+
+
+    // &__link {}
+
+    // &__text {}
+
+    .navigation-link {
+        display: block;
+
+        @include gridle_state(tablet-landscape) {
+            display: none;
+        }
+    }
+
+}
