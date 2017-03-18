@@ -1,0 +1,23 @@
+
+
+<div class="card {{ variant }}">
+	<a class="content" href="{{ href }}">
+		<div class="card__image">
+			<div class="content">
+				{% include "atoms-cover-image" %}
+			</div>
+		</div>
+		<div class="card__text">
+			<div class="content">
+				{% include "atoms-detail" with { content : category, modifier : 'text__detail--mobile' } %}
+				{% include "atoms-subheading" with { content : title } %}
+				<span class="card__detail">
+					<div class="content">
+						{% include "atoms-detail" with { content : author, modifier : 'text__detail--highlight' } %}
+						{% include "atoms-detail" with { content : date } %}
+					</div>
+				</span>
+			</div>
+		</div>
+	</a>
+</div>

@@ -1,0 +1,12 @@
+{
+	"navigationItems" : [
+		{
+			"title" : "link 1",
+			"href" : "http://torchbox.com"
+		},
+		{
+			"title" : "link 2",
+			"href" : "http://wagtail.io"
+		}
+	]
+}

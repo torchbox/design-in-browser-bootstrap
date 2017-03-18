@@ -11,9 +11,7 @@
  *
  * Config ---------------------------
  * .....Variables
- * .....Type
  * .....Grid
- * .....Animation
  *
  * Lib ------------------------------
  * .....Mixins
@@ -30,7 +28,6 @@
 /*------------------------------------*\
 	$VENDOR
 \*------------------------------------*/
-@import 'vendor/gridle/gridle';
 @import 'vendor/normalize';
 
 
@@ -38,44 +35,44 @@
 	$CONFIG
 \*------------------------------------*/
 @import 'config/variables';
-@import 'config/type';
-@import 'config/grid';
-@import 'config/mixins';
 
 
 /*------------------------------------*\
-	$ATOMS
+	$Abstracts
 \*------------------------------------*/
-@import '00-atoms/base';
-@import '00-atoms/links';
-@import '00-atoms/forms';
-@import '00-atoms/lists';
-@import '00-atoms/media';
-@import '00-atoms/table';
-@import '00-atoms/logo';
+@import 'abstracts/mixins';
+@import 'abstracts/base';
+@import 'abstracts/layout';
 
 
 /*------------------------------------*\
-	$MOLECULES
+	$Atoms
 \*------------------------------------*/
-@import '01-molecules/main-menu';
-@import '01-molecules/hero';
-@import '01-molecules/band';
+@import 'atoms/text/heading';
+@import 'atoms/text/paragraph';
+@import 'atoms/text/subheading';
+@import 'atoms/text/detail';
+@import 'atoms/image/full-width';
+@import 'atoms/image/inline';
+@import 'atoms/image/cover';
 
 
 /*------------------------------------*\
-	$ORGANISMS
+	$Components
 \*------------------------------------*/
-@import '02-organisms/site-header';
+@import 'components/header';
+@import 'components/cards';
+// @import 'components/priority-nav';
 
 
 /*------------------------------------*\
 	$TEMPLATES
 \*------------------------------------*/
-// @import '03-templates/';
+@import 'templates/home';
 
 
 /*------------------------------------*\
 	$PAGES
 \*------------------------------------*/
 // @import '04-pages/';
+

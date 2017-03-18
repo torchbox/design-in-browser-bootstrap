@@ -1,0 +1,32 @@
+/* ============================================
+    Core template layout
+*/
+
+// 100% wrapper hight
+html,
+body {
+    height: 100%;
+}
+
+// Flexbox layout
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__header {
+        width: 100%;
+        align-self: flex-start;
+    }
+
+    &__nav {
+        display: none;
+    }
+
+    &__body {
+        z-index: 1;
+        // Add perspective 
+        perspective: 1000px;
+        perspective-origin: center center;
+    }
+}

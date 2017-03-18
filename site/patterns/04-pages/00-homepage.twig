@@ -1,0 +1,96 @@
+
+
+<div class="page">
+
+	{# {% include "organisms-header" %} #}
+	<header class="page__header">
+		<div class="content">
+			{% include "molecules-branding" %}
+			{% include "molecules-priority-nav" %}
+		</div>
+	</header>
+
+	{# TODO: Add aria role #}
+	<nav id="page__nav" class="page__nav">
+
+		<ul class="nav__menu">
+
+			{# {% include "atoms-priority-nav__item" with item %} #}
+
+			<li class="nav__item">
+				<a class="nav__link" href="#">
+					<span class="nav__text">
+						item
+					</span>
+				</a>
+			</li>
+
+
+			<li class="nav__item">
+				<a class="nav__link" href="#">
+					<span class="nav__text">
+						item
+					</span>
+				</a>
+			</li>
+
+
+			<li class="nav__item">
+				<a class="nav__link" href="#">
+					<span class="nav__text">
+						item
+					</span>
+				</a>
+			</li>
+
+
+		</ul>
+
+
+	</nav>
+
+	<div class="page__body">
+
+		<div class="body__hero">
+			{% include "atoms-image" with hero %}
+		</div>
+
+
+		{# Introduction #}
+		<div class="homepage__introduction">
+			<div class="content">
+				{% include "atoms-introduction"  with { content : introduction } %}	
+			</div>
+		</div>
+
+
+		<nav class="cards">
+			<div class="content">
+
+				<div class="cards__title">
+					<div class="content">
+						{% include "atoms-heading" with { content : "tenetur a sapiente delectus" } %}
+					</div>
+				</div>
+
+
+				<div class="cards__list">
+					<div class="content">
+
+						{% for item in newsItems %}
+							{% include "molecules-card" with item %}
+						{% endfor %}
+
+					</div>
+				</div>
+
+			</div>
+		</nav>
+
+	</div>
+
+
+	<footer class="page__footer"></footer>
+
+
+</div>

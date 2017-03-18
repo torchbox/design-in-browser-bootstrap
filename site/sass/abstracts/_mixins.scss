@@ -1,0 +1,117 @@
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+
+
+/* ============================================
+    Media Query mixin
+*/
+
+@mixin media-query($queries...) {
+    @each $query in $queries {
+        @each $breakpoint in $breakpoints {
+            $name:        nth($breakpoint, 1);
+            $declaration: nth($breakpoint, 2);
+
+            @if $query == $name and $declaration {
+                @media only screen and #{$declaration} {
+                    @content;
+                }
+            }
+        }
+    }
+}
+
+
+/* ============================================
+  Placeholder text
+*/
+
+@mixin placeholder-text {
+    // sass-lint:disable no-vendor-prefixes
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+};
+
+
+/* ============================================
+  iOS Native vertical scroll
+*/
+
+@mixin native-vertical-scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-misspelled-properties
+}
+
+
+/* ============================================
+   Aligner: placeholder class used to align
+   components at the template-level
+   For want of a better place to put this I've left it here:
+*/
+
+@mixin aligner {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+
+/* ============================================
+   Outter gutter
+*/
+
+@mixin gutter-x($divideby: 2) {
+
+    padding-left: $gutter--mobile / $divideby;
+    padding-right: $gutter--mobile / $divideby;
+    @include media-query(tablet-portrait) {
+        padding-left: $gutter--tablet / $divideby;
+        padding-right: $gutter--tablet / $divideby;
+    }
+    @include media-query(desktop) {
+        padding-left: $gutter--desktop / $divideby;
+        padding-right: $gutter--desktop / $divideby;
+    }
+    @include media-query(desktop-wide) {
+        padding-left: $gutter--desktop-wide / $divideby;
+        padding-right: $gutter--desktop-wide / $divideby;
+    }
+}
+
+
+/* ============================================
+   Vertical spacing
+*/
+
+@mixin gutter-y($top: true, $bottom: true) {
+
+    @if $top {
+        padding-top: $gutter--mobile;
+        @include media-query(tablet-portrait) {
+            padding-top: $gutter--tablet;
+        }
+        @include media-query(desktop) {
+            padding-top: $gutter--desktop;
+        }
+        @include media-query(desktop-wide) {
+            padding-top: $gutter--desktop-wide;
+        }
+    }
+
+    @if $bottom {
+        padding-bottom: $gutter--mobile;
+        @include media-query(tablet-portrait) {
+            padding-bottom: $gutter--tablet;
+        }
+        @include media-query(desktop) {
+            padding-bottom: $gutter--desktop;
+        }
+        @include media-query(desktop-wide) {
+            padding-bottom: $gutter--desktop-wide;
+        }
+    }
+}

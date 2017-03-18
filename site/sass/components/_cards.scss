@@ -1,0 +1,175 @@
+/*------------------------------------*\
+    $Cards
+\*------------------------------------*/
+
+
+.cards {
+
+    > .content {
+        @include aligner;
+        @include gutter-x;
+        @include gutter-y;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+
+        @include gutter-x;
+
+        // > .content {
+
+        // }
+
+    }
+
+    &__list {
+
+        > .content {
+            display: flex;
+            align-items: stretch;
+            // justify-content: center;
+            flex-wrap: wrap;
+        }
+
+    }
+
+}
+
+
+/*------------------------------------*\
+    $Card
+\*------------------------------------*/
+
+
+.card {
+    $root: &;
+
+    $image--speed: 600ms;
+    $image--delay: 0ms;
+    $image--ease: cubic-bezier(0.41, 0, 0.2, 1.15);
+    $image--depth: 100px;
+
+    $overlay--speed: 700ms;
+    $overlay--delay: 0ms;
+    $overlay--ease: cubic-bezier(0.41, 0, 0.2, 1.15);
+
+    $text--speed: 700ms;
+    $text--delay: 0ms;
+    $text--ease: cubic-bezier(0.41, 0, 0.2, 1.15);
+
+    $credit--speed: 600ms;
+    $credit--delay: 100ms;
+    $credit--ease: cubic-bezier(0.41, 0, 0.2, 1.15);
+
+    @include gutter-x;
+    @include gutter-y($top: false);
+    flex-basis: 100%;
+    flex-shrink: 0;
+
+    > .content {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        perspective: 1000px;
+        perspective-origin: center center;
+    }
+
+    @include media-query(tablet-portrait) {
+        flex-basis: 50%;
+    }
+    @include media-query(desktop) {
+        flex-basis: 25%;
+        min-height: 400px;
+
+        &:nth-of-type(1),
+        &:nth-of-type(6) {
+            flex-basis: 50%;
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: calc(100% + $image--depth);
+        height: 100%;
+        transform: translate3d(0, 0, $image--depth);
+        transition: transform $image--speed $image--ease $image--delay;
+
+        > .content {
+            height: 100%;
+        }
+
+        #{$root}:hover & {
+            transform: translate3d(0, 0%, 0);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba($color--dark-grey, 0) 0%, rgba($color--dark-grey, 0) 58%, rgba($color--dark-grey, 0.5) 72%, rgba($color--dark-grey, 1) 100%);
+            mix-blend-mode: multiply;
+            will-change: opacity;
+            // Transition
+            transition: transform $overlay--speed $overlay--ease $overlay--delay;
+            // Transition properties
+            transform: translate3d(0, 20%, 0);
+
+            #{$root}:hover & {
+                transform: translate3d(0, 0%, 0);
+            }
+        }
+
+    }
+
+    &__text {
+        @include gutter-x($divideby: 1);
+        @include gutter-y;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: $color--white;
+        transition: transform $text--speed $text--ease $text--delay;
+        transform: translate3d(0, 20px, 0);
+
+        // > .content {}
+
+        #{$root}:hover & {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    &__detail {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        > .content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            // sass-lint:disable indentation
+            transition:
+                opacity $credit--speed $credit--ease ($credit--delay + $credit--delay),
+                transform $credit--speed $credit--ease $credit--delay;
+            // sass-lint:enable indentation
+            transform: translate3d(0, 100%, 0);
+            opacity: 0;
+
+            #{$root}:hover & {
+                opacity: 1;
+                transform: translate3d(0, 0%, 0);
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    $Priority Navigation
+\*------------------------------------*/
+
+.page__header {
+
+    > .content {
+        @include aligner;
+        @include gutter-x;
+        @include gutter-y;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+/*------------------------------------*\
+    $Branding
+\*------------------------------------*/
+
+
+.branding {
+
+    @include gutter-x;
+
+    // &__link {
+
+    // }
+
+    // &__icon {
+
+    // }
+
+    &__svg {
+        height: 40px;
+        width: 165px;
+        fill: $color--foreground;
+    }
+
+
+}
+
+
+/*------------------------------------*\
+    $Priority Navigation
+\*------------------------------------*/
+
+.priority-nav {
+
+    @include gutter-x;
+
+    &__menu {
+        display: none;
+
+        @include media-query(tablet-landscape) {
+            display: block;
+        }
+    }
+
+    &__item {
+        @include gutter-x;
+        display: inline-block;
+    }
+
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__text {
+        text-transform: uppercase;
+    }
+
+    .navigation-link {
+        display: block;
+
+        @include media-query(tablet-landscape) {
+            display: none;
+        }
+    }
+
+}
+
