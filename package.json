@@ -47,10 +47,10 @@
     "lint": "npm-run-all -p lint:js lint:css"
     ,
     "//[ Watches ]//": "",
-    "watch:html": "onchange $npm_package_config_src_html'/**/**' -- npm run sync:html && npm run reload",
-    "watch:img": "onchange $npm_package_config_src_img'/**/**' -- npm run sync:img && npm run reload",
-    "watch:js": "onchange $npm_package_config_src_js'/**/**' -- npm-run-all -p compile:js:dev lint:js && npm run reload",
-    "watch:css": "onchange $npm_package_config_src_css -- npm-run-all -p compile:css:dev lint:css && npm run reload:css",
+    "watch:html": "onchange $npm_package_config_src_html'/**/**' -- npm-run-all sync:html reload",
+    "watch:img": "onchange $npm_package_config_src_img'/**/**' -- npm-run-all sync:img reload",
+    "watch:js": "onchange $npm_package_config_src_js'/**/**' -- npm-run-all compile:js:dev reload -p lint:js",
+    "watch:css": "onchange $npm_package_config_src_css -- npm-run-all compile:css:dev reload:css -p lint:css",
     "watch": "npm-run-all -p watch:*"
     ,
     "//[ Patternlab Syncs ]//": "",
@@ -67,7 +67,7 @@
     "build": "npm-run-all clean sync compile:*:dev lab:build",
     "build:prod": "npm-run-all clean sync compile:*:prod lab:build",
     "playground": "npm-run-all clean build:prod upload",
-    "lab": "npm-run-all -p sync serve lab:watch watch compile:*:dev",
+    "lab": "npm-run-all clean sync compile:*:dev serve -p lab:watch watch",
     "dev": "npm run lab"
     ,
     "postinstall": "npm run build"
