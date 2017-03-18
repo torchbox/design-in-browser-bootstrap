@@ -29,7 +29,7 @@ let plugins = [
     babel(),
 ];
 
-if(process.env.UGLIFY != '0'){
+if(process.env.production){
     plugins.push(uglify());
     plugins.push(sizes());
     plugins.push(filesize());
