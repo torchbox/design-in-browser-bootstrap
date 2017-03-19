@@ -5,18 +5,22 @@
 // 100% wrapper hight
 html,
 body {
-    height: 100%;
+    // Breaks position sticky
+    // height: 100%;
 }
 
 // Flexbox layout
 .page {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     height: 100%;
 
     &__header {
+        position: sticky;
+        top: 0px;
+        z-index: 10;
         width: 100%;
-        align-self: flex-start;
+        // align-self: flex-start;
     }
 
     &__nav {

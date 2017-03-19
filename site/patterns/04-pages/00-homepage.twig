@@ -2,13 +2,7 @@
 
 <div class="page">
 
-	{# {% include "organisms-header" %} #}
-	<header class="page__header">
-		<div class="content">
-			{% include "molecules-branding" %}
-			{% include "molecules-priority-nav" %}
-		</div>
-	</header>
+	{% include "organisms-header" %}
 
 	{# TODO: Add aria role #}
 	<nav id="page__nav" class="page__nav">
@@ -49,10 +43,12 @@
 
 	</nav>
 
-	<div class="page__body">
+	<section class="page__body">
 
-		<div class="body__hero">
-			{% include "atoms-image" with hero %}
+		<div class="homepage__hero">
+			<div class="content">
+				{% include "atoms-image" with hero %}
+			</div>
 		</div>
 
 
@@ -87,7 +83,7 @@
 			</div>
 		</nav>
 
-	</div>
+	</section>
 
 
 	<footer class="page__footer"></footer>

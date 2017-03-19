@@ -1,41 +1,62 @@
-import Point from './point';
+import $ from './globals';
 
-class ColorPoint extends Point {
-    constructor(x, y, color) {
-        super(x, y);
-        this.color = color;
+
+function checkSticky() {
+
+    var $stickyItems = $( '.js-sticky' ),
+        resizeTimer;
+
+    function checkStuck( $item, scrollPos ){
+
+        if( scrollPos >= $item.stickyPos && !$item.stuck ){
+            $item.addClass( 'stuck' );
+            $item.trigger( 'stuck' );
+            $item.stuck = true;
+        } else if( scrollPos < $item.stickyPos && $item.stuck ) {
+            $item.removeClass( 'stuck' );
+            $item.trigger( 'unstuck' );
+            $item.stuck = false;
+        }
+
     }
-    toString() {
-        return super.toString() + ' in ' + this.color;
+
+    function updateValues( $item ){
+
+        var offset  = +$item.css( 'top' ).split( 'px' )[0], // get top value used, make sure it is a number
+            topPos  = $item.offset().top, // get top position (even if it is stuck, it preserves offset)
+            stuckAt = topPos - offset; // where the element will actually stick
+
+        $item.stickyPos = stuckAt;
+
     }
+
+    $stickyItems.each(function( e ){
+
+        var $item = $( this );
+
+        $item.stuck = false;    // default to unstuck
+        updateValues( $item );  // update vars
+
+        $( window ).on( 'load', function( e ){
+            checkStuck( $item, e.currentTarget.scrollY );
+        });
+
+        $( window ).on( 'scroll', function( e ){
+            checkStuck( $item, e.currentTarget.scrollY );
+        });
+
+        $( window ).on( 'resize', function( e ){
+            clearTimeout( resizeTimer );
+            resizeTimer = setTimeout(function(){
+
+                updateValues( $item );
+                checkStuck( $item, e.currentTarget.scrollY );
+
+            }, 100 );
+        });
+
+    });
+
 }
 
-const cp = new ColorPoint(25, 8, 'green');
-
-console.log( 'hello', cp );
-
-
-// test importing node modules
-
-import leftPad from 'left-pad';
-
-console.log( 'leftPad', leftPad('foo', 5) );
-
-
-// Import jQuery as a CommonJS module from ./vendor/ (via globals.js)
-// and then import an old jQuery plugin that's NOT defined as a proper module.
-// jQuery has to be imported in a separete file to ensure that
-// the global jQuery object that the jquery-test-plugin references exist.
-// https://github.com/rollup/rollup/issues/592#issuecomment-205783255
-
-import jQuery from './globals';
-
-console.log( 'jQuery', jQuery('body') );
-
-import './vendor/jquery-test-plugin';
-
-console.log( 'testPlugin', jQuery.testPlugin );
-
-
-// someGlobalVariable is specified in .eslintrc, so there shouldn't be a warning about it
-console.log(someGlobalVariable);
+checkSticky();

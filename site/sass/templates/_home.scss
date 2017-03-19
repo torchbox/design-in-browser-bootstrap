@@ -2,13 +2,23 @@
     $Homepage template
 \*------------------------------------*/
 
+.homepage__hero {
+
+    > .content {
+        @include gutter(0, 0, 1, 0);
+    }
+}
+
+
 .homepage__introduction {
 
     > .content {
         @include aligner;
-        @include gutter-x($divideby: 1);
-        @include gutter-y;
+        @include gutter(1, 2, 1, 2);
+        max-width: 1024px;
         text-align: center;
+
+        border-bottom: solid 1px rgba($color--dark-grey, 0.1);
     }
 
 }
