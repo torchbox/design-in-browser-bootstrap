@@ -3,11 +3,11 @@
 \*------------------------------------*/
 
 .page__header {
+    @include gutter(1, 2, 1, 2);
     background: $color--background;
 
     > .content {
         @include aligner;
-        @include gutter(1, 2, 1, 2);
         display: flex;
         justify-content: space-between;
         align-items: center;

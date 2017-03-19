@@ -43,11 +43,11 @@
 
 	</nav>
 
-	<section class="page__body">
+	<div class="page__body">
 
 		<div class="homepage__hero">
 			<div class="content">
-				{% include "atoms-image" with hero %}
+				{% include "atoms-image__full-width" with hero %}
 			</div>
 		</div>
 
@@ -55,7 +55,7 @@
 		{# Introduction #}
 		<div class="homepage__introduction">
 			<div class="content">
-				{% include "atoms-introduction"  with { content : introduction } %}	
+				{% include "atoms-text__introduction"  with { content : introduction } %}	
 			</div>
 		</div>
 
@@ -65,7 +65,7 @@
 
 				<div class="cards__title">
 					<div class="content">
-						{% include "atoms-heading" with { content : "tenetur a sapiente delectus" } %}
+						{% include "atoms-text__heading" with { content : "tenetur a sapiente delectus" } %}
 					</div>
 				</div>
 
@@ -83,7 +83,7 @@
 			</div>
 		</nav>
 
-	</section>
+	</div>
 
 
 	<footer class="page__footer"></footer>

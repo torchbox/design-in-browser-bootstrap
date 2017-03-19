@@ -4,10 +4,10 @@
 
 
 .cards {
+    @include gutter(1, 2, 1, 2);
 
     > .content {
         @include aligner;
-        @include gutter(1, 2, 1, 2);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -91,7 +91,7 @@
 
     &__image {
         position: relative;
-        width: calc(100% + $image--depth);
+        width: calc(100% + #{$image--depth});
         height: 100%;
         transform: translate3d(0, 0, $image--depth);
         transition: transform $image--speed $image--ease $image--delay;
