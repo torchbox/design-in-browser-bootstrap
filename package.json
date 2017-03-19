@@ -70,9 +70,8 @@
     "//[ Tasks ]//": "",
     "build": "npm-run-all clean sync compile:*:dev lab:build",
     "build:prod": "npm-run-all clean sync compile:*:prod lab:build",
-    "playground": "npm-run-all clean build:prod upload",
-    "lab": "npm-run-all clean sync compile:*:dev serve -p lab:watch watch",
-    "dev": "npm run lab"
+    "deploy": "npm-run-all clean build:prod upload",
+    "lab": "npm-run-all clean sync compile:*:dev -p lab:watch watch serve"
     ,
     "postinstall": "npm run build"
   },

@@ -4,11 +4,10 @@
 
 
 .cards {
+    @include gutter(1, 2, 1, 2);
 
     > .content {
         @include aligner;
-        @include gutter-x;
-        @include gutter-y;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -17,7 +16,7 @@
 
     &__title {
 
-        @include gutter-x;
+        @include gutter(1, 0, 1, 0);
 
         // > .content {
 
@@ -64,8 +63,7 @@
     $credit--delay: 100ms;
     $credit--ease: cubic-bezier(0.41, 0, 0.2, 1.15);
 
-    @include gutter-x;
-    @include gutter-y($top: false);
+    @include gutter;
     flex-basis: 100%;
     flex-shrink: 0;
 
@@ -93,7 +91,7 @@
 
     &__image {
         position: relative;
-        width: calc(100% + $image--depth);
+        width: calc(100% + #{$image--depth});
         height: 100%;
         transform: translate3d(0, 0, $image--depth);
         transition: transform $image--speed $image--ease $image--delay;
@@ -129,8 +127,8 @@
     }
 
     &__text {
-        @include gutter-x($divideby: 1);
-        @include gutter-y;
+        @include gutter(1, 1, 1, 1);
+
         position: absolute;
         bottom: 0;
         left: 0;
