@@ -1,5 +1,5 @@
 import $ from '../globals';
-import animateElement from '../abstracts/utils';
+import { animateElement } from '../abstracts/utils';
 
 class MobileMenu {
 
