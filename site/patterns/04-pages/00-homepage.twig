@@ -1,92 +1,38 @@
 
 
-<div class="page">
+<div class="app">
 
-	{% include "organisms-header" %}
+	{% include "organisms-app__header" %}
 
-	{# TODO: Add aria role #}
-	<nav id="page__nav" class="page__nav">
+	<div class="app__body">
 
-		<ul class="nav__menu">
+		{% include "organisms-app__navigation" %}
 
-			{# {% include "atoms-priority-nav__item" with item %} #}
-
-			<li class="nav__item">
-				<a class="nav__link" href="#">
-					<span class="nav__text">
-						item
-					</span>
-				</a>
-			</li>
-
-
-			<li class="nav__item">
-				<a class="nav__link" href="#">
-					<span class="nav__text">
-						item
-					</span>
-				</a>
-			</li>
-
-
-			<li class="nav__item">
-				<a class="nav__link" href="#">
-					<span class="nav__text">
-						item
-					</span>
-				</a>
-			</li>
-
-
-		</ul>
-
-
-	</nav>
-
-	<div class="page__body">
-
-		<div class="homepage__hero">
-			<div class="content">
-				{% include "atoms-image__full-width" with hero %}
-			</div>
-		</div>
-
-
-		{# Introduction #}
-		<div class="homepage__introduction">
-			<div class="content">
-				{% include "atoms-text__introduction"  with { content : introduction } %}	
-			</div>
-		</div>
-
-
-		<nav class="cards">
+		<div class="app__page">
 			<div class="content">
 
-				<div class="cards__title">
+				<div class="homepage__hero">
 					<div class="content">
-						{% include "atoms-text__section-heading" with { content : "tenetur a sapiente delectus" } %}
+						{% include "atoms-image__full-width" with hero %}
 					</div>
 				</div>
 
-
-				<div class="cards__list">
+				<div class="homepage__introduction">
 					<div class="content">
-
-						{% for item in newsItems %}
-							{% include "molecules-card" with item %}
-						{% endfor %}
-
+						{% include "atoms-text__introduction"  with { content : introduction } %}	
 					</div>
 				</div>
 
+				{% include "organisms-cards" with { cards : blog_posts } %}
+				{% include "organisms-cards" with { cards : projects } %}
+
 			</div>
-		</nav>
+		</div>
 
 	</div>
 
 
-	<footer class="page__footer"></footer>
+	<footer class="app__footer"></footer>
 
 
 </div>

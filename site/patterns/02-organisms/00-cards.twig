@@ -1,0 +1,24 @@
+
+
+<nav class="cards">
+	<div class="content">
+
+		<div class="cards__title">
+			<div class="content">
+				{% include "atoms-text__section-heading" with { content : "tenetur a sapiente delectus" } %}
+			</div>
+		</div>
+
+
+		<div class="cards__list">
+			<div class="content">
+
+				{% for card in cards.items %}
+					{% include "molecules-card" with card %}
+				{% endfor %}
+
+			</div>
+		</div>
+
+	</div>
+</nav>

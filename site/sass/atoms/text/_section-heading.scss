@@ -16,6 +16,7 @@
     font-weight: $weight;
     margin: 0 0 $gutter--mobile;
     padding: 0;
+    text-align: center;
 
     @include media-query(tablet-portrait) {
         font-size: $size + $size--modifier;
