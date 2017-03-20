@@ -1,38 +1,20 @@
+{% extends "templates-fixed-header" %}
 
+{% block app__page %}
 
-<div class="app">
-
-	{% include "organisms-app__header" %}
-
-	<div class="app__body">
-
-		{% include "organisms-app__navigation" %}
-
-		<div class="app__page">
-			<div class="content">
-
-				<div class="homepage__hero">
-					<div class="content">
-						{% include "atoms-image__full-width" with hero %}
-					</div>
-				</div>
-
-				<div class="homepage__introduction">
-					<div class="content">
-						{% include "atoms-text__introduction"  with { content : introduction } %}	
-					</div>
-				</div>
-
-				{% include "organisms-cards" with { cards : blog_posts } %}
-				{% include "organisms-cards" with { cards : projects } %}
-
-			</div>
+	<div class="homepage__hero">
+		<div class="content">
+			{% include "atoms-image__full-width" with hero %}
 		</div>
-
 	</div>
 
+	<div class="homepage__introduction">
+		<div class="content">
+			{% include "atoms-text__introduction"  with { content : introduction } %}	
+		</div>
+	</div>
 
-	<footer class="app__footer"></footer>
+	{% include "organisms-cards" with { cards : blog_posts } %}
+	{% include "organisms-cards" with { cards : projects } %}
 
-
-</div>
+{% endblock %}
