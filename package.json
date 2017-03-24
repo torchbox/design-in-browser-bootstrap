@@ -32,47 +32,40 @@
     "clean:lab": "rm -rf $npm_package_config_dest_html/{*.html,js/**,css/**,img/**}",
     "clean:dist": "rm -rf $npm_package_config_dist/{js/**,css/**,images/**,patternlab/{annotations,css,fonts,js,patternlab-components,patterns}}",
     "clean": "npm-run-all -p clean:*",
-    "git:init": "rm -rf .git && git init && git add . && git commit -m 'Project start'"
-    ,
+    "git:init": "rm -rf .git && git init && git add . && git commit -m 'Project start'",
     "//[ SASS ]//": "",
     "compile:css": "node-sass -o $npm_package_config_dest_css $npm_package_config_src_css",
     "compile:css:dev": "npm run compile:css -- --output-style expanded --source-map true",
     "compile:css:prod": "npm run compile:css -- --output-style compressed && npm run autoprefixer",
-    "autoprefixer": "postcss -u autoprefixer -b 'last 2 versions, iOS 8, > 3%' -r $npm_package_config_dest_css/*.css"
-    ,
+    "autoprefixer": "postcss -u autoprefixer -b 'last 2 versions, iOS 8, > 3%' -r $npm_package_config_dest_css/*.css",
     "//[ Javascript ]//": "",
     "compile:js": "rollup -c",
-    "compile:js:dev": "npm run compile:js -- --environment entry:main.js --sourcemap",
-    "compile:js:prod": "npm run compile:js -- --environment entry:main.js,production"
-    ,
+    "compile:js:dev": "npm run compile:js -- --environment entry:main.js",
+    "compile:js:watch": "npm run compile:js -- --environment entry:main.js --watch",
+    "compile:js:prod": "npm run compile:js -- --environment entry:main.js,production",
     "//[ Linting ]//": "",
     "lint:css": "sass-lint $npm_package_config_src_css'/**/**' -v -q || true",
     "lint:js": "eslint $npm_package_config_src_js --ignore-pattern **/vendor/**/*.js || true",
-    "lint": "npm-run-all -p lint:js lint:css"
-    ,
+    "lint": "npm-run-all -p lint:js lint:css",
     "//[ Watches ]//": "",
     "watch:html": "onchange $npm_package_config_src_html'/**/**' -- npm-run-all sync:html reload",
     "watch:img": "onchange $npm_package_config_src_img'/**/**' -- npm-run-all sync:img reload",
-    "watch:js": "onchange $npm_package_config_src_js'/**/**' -- npm-run-all compile:js:dev reload -p lint:js",
+    "watch:js": "onchange $npm_package_config_dest_js'/**/**' -- npm-run-all -p reload lint:js",
     "watch:css": "onchange $npm_package_config_src_css -- npm-run-all compile:css:dev reload:css -p lint:css",
-    "watch": "npm-run-all -p watch:*"
-    ,
+    "watch": "npm-run-all -p watch:*",
     "//[ Patternlab Syncs ]//": "",
     "sync:html": "rsync -rtvu --delete $npm_package_config_src_html/ $npm_package_config_dest_html/",
     "postsync:html": "npm run lab:build",
     "sync:img": "rsync -rtvu --delete $npm_package_config_src_img/ $npm_package_config_dest_img/",
-    "sync": "npm-run-all -p sync:*"
-    ,
+    "sync": "npm-run-all -p sync:*",
     "//[ Patternlab ]//": "",
     "lab:build": "cd patternlab && php core/console --generate",
-    "lab:watch": "cd patternlab && php core/console --watch"
-    ,
+    "lab:watch": "cd patternlab && php core/console --watch",
     "//[ Tasks ]//": "",
-    "build": "npm-run-all clean sync compile:*:dev lab:build",
+    "build": "npm-run-all clean sync lab:build compile:*:dev",
     "build:prod": "npm-run-all clean sync compile:*:prod lab:build",
     "deploy": "npm-run-all clean build:prod upload",
-    "lab": "npm-run-all clean sync compile:*:dev -p lab:watch watch serve"
-    ,
+    "lab": "npm-run-all clean sync compile:css:dev -p compile:js:watch lab:watch watch serve --silent",
     "postinstall": "npm run build"
   },
   "devDependencies": {
@@ -96,6 +89,7 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-sizes": "^0.2.3",
     "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^3.2.2",
     "sass-lint": "^1.8.2"
   },
   "engines": {

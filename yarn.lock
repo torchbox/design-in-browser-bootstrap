@@ -3287,6 +3287,12 @@ rollup-pluginutils@^1.3.1, rollup-pluginutils@^1.5.0, rollup-pluginutils@^1.5.1:
     estree-walker "^0.2.1"
     minimatch "^3.0.2"
 
+rollup-watch@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/rollup-watch/-/rollup-watch-3.2.2.tgz#5e574232e9ef36da9177f46946d8080cb267354b"
+  dependencies:
+    require-relative "0.8.7"
+
 rollup@^0.38.0:
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.38.0.tgz#b58d99538ad96dd1c0239f1de383a80b0e067f70"

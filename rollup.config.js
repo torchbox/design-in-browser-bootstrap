@@ -1,46 +1,42 @@
-// babel transpiles ES6 to ordinary javascript
-import babel from 'rollup-plugin-babel';
+/* global process */
 
-// resolve and commonjs add support for importing node modules
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-
-// uses UglifyJS2, and works with transpiled code only: https://github.com/TrySound/rollup-plugin-uglify#warning
-import uglify from 'rollup-plugin-uglify';
-
-// run eslint from rollup: it also uses .eslintrc
-import eslint from 'rollup-plugin-eslint';
-
-// plugins to display the original size of each import, and the final size of the bundle
+import babel from 'rollup-plugin-babel'; // babel transpiles ES6 to ordinary javascript
+import resolve from 'rollup-plugin-node-resolve'; // resolve and commonjs add support for importing node modules
+import commonjs from 'rollup-plugin-commonjs'; // uses UglifyJS2, and works with transpiled code only: https://github.com/TrySound/rollup-plugin-uglify#warning
+import uglify from 'rollup-plugin-uglify'; // plugins to display the original size of each import, and the final size of the bundle
 import sizes from 'rollup-plugin-sizes';
 import filesize from 'rollup-plugin-filesize';
+// Could do multiple entries
+// const entries = [
+//     'client/scripts/main.js',
+//     'client/scripts/example.js'
+// ];
+// entry: `site/javascript/${entries}`,
+// Create default config object
+let config = {
+    entry       : `site/javascript/${process.env.entry}`,
+    dest        : `dist/js/${process.env.entry}`,
+    format      : 'umd',
+    globals     : {}, // specify globals in .eslintrc to ignore linting errors
+    plugins     : [
+        resolve({
+            jsnext: true,
+            main: true,
+            browser: true,
+        }),
+        commonjs(),
+        babel(),
+    ]
+};
 
-
-let plugins = [
-    resolve({
-        jsnext: true,
-        main: true,
-        browser: true,
-    }),
-    commonjs(),
-    eslint({
-        exclude: ['node_modules/**', 'site/javascript/vendor/**']
-    }),
-    babel(),
-];
-
+// Add Production or Development settings to the config object
 if(process.env.production){
-    plugins.push(uglify());
-    plugins.push(sizes());
-    plugins.push(filesize());
+    config.sourceMap = false;
+    config.plugins.push(uglify());
+    config.plugins.push(sizes());
+    config.plugins.push(filesize());
+} else {
+    config.sourceMap = true;
 }
 
-
-export default {
-    entry: `site/javascript/${process.env.entry}`,
-    dest: `dist/js/${process.env.entry}`,
-    format: 'umd',
-    plugins: plugins,
-    sourceMap: true,
-    globals: {}  // specify globals in .eslintrc to ignore linting errors
-};
+export default config;
