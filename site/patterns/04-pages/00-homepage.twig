@@ -1,92 +1,20 @@
+{% extends "templates-fixed-header" %}
 
+{% block app__page %}
 
-<div class="page">
-
-	{% include "organisms-header" %}
-
-	{# TODO: Add aria role #}
-	<nav id="page__nav" class="page__nav">
-
-		<ul class="nav__menu">
-
-			{# {% include "atoms-priority-nav__item" with item %} #}
-
-			<li class="nav__item">
-				<a class="nav__link" href="#">
-					<span class="nav__text">
-						item
-					</span>
-				</a>
-			</li>
-
-
-			<li class="nav__item">
-				<a class="nav__link" href="#">
-					<span class="nav__text">
-						item
-					</span>
-				</a>
-			</li>
-
-
-			<li class="nav__item">
-				<a class="nav__link" href="#">
-					<span class="nav__text">
-						item
-					</span>
-				</a>
-			</li>
-
-
-		</ul>
-
-
-	</nav>
-
-	<div class="page__body">
-
-		<div class="homepage__hero">
-			<div class="content">
-				{% include "atoms-image__full-width" with hero %}
-			</div>
+	<div class="homepage__hero">
+		<div class="content">
+			{% include "atoms-image__full-width" with hero %}
 		</div>
-
-
-		{# Introduction #}
-		<div class="homepage__introduction">
-			<div class="content">
-				{% include "atoms-text__introduction"  with { content : introduction } %}	
-			</div>
-		</div>
-
-
-		<nav class="cards">
-			<div class="content">
-
-				<div class="cards__title">
-					<div class="content">
-						{% include "atoms-text__heading" with { content : "tenetur a sapiente delectus" } %}
-					</div>
-				</div>
-
-
-				<div class="cards__list">
-					<div class="content">
-
-						{% for item in newsItems %}
-							{% include "molecules-card" with item %}
-						{% endfor %}
-
-					</div>
-				</div>
-
-			</div>
-		</nav>
-
 	</div>
 
+	<div class="homepage__introduction">
+		<div class="content">
+			{% include "atoms-text__introduction"  with { content : introduction } %}	
+		</div>
+	</div>
 
-	<footer class="page__footer"></footer>
+	{% include "organisms-cards" with { cards : blog_posts } %}
+	{% include "organisms-cards" with { cards : projects } %}
 
-
-</div>
+{% endblock %}
