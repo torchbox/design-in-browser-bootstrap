@@ -49,6 +49,7 @@ body {
         > .content {
             @include native-vertical-scroll;
             height: 100%;
+            will-change: transform;
         }
 
     }

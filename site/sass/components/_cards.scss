@@ -5,6 +5,7 @@
 
 .cards {
     @include gutter(1, 2, 1, 2);
+    will-change: transform;
 
     > .content {
         @include aligner;
@@ -15,16 +16,21 @@
     }
 
     &__title {
-
         @include gutter(1, 0, 1, 0);
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        background: $color--white;
 
-        // > .content {
-
-        // }
-
+        &.stuck {
+            background: hotpink;
+        }
     }
 
     &__list {
+        position: relative;
+        z-index: 1;
 
         > .content {
             display: flex;
@@ -67,15 +73,6 @@
     flex-basis: 100%;
     flex-shrink: 0;
 
-    > .content {
-        display: block;
-        overflow: hidden;
-        position: relative;
-        height: 100%;
-        perspective: 1000px;
-        perspective-origin: center center;
-    }
-
     @include media-query(tablet-portrait) {
         flex-basis: 50%;
     }
@@ -87,6 +84,15 @@
         &:nth-of-type(6) {
             flex-basis: 50%;
         }
+    }
+
+    > .content {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        perspective: 1000px;
+        perspective-origin: center center;
     }
 
     &__image {

@@ -1,5 +1,5 @@
 import $ from '../globals';
-import { animateElement } from '../abstracts/utils';
+import animateElement from '../utility/animate-element';
 
 class MobileMenu {
 
@@ -63,13 +63,13 @@ class MobileMenu {
             this.openMenu();
         }
     }
-    anchorClick( event ) {
+    _onClick(event) {
         event.preventDefault();
         this.toggle();
     }
     bindEvents() {
         // window.addEventListener('scroll', () => this.watch());
-        this.$anchor.on('click', ( e ) => this.anchorClick( e ));
+        this.$anchor.on('click', ( e ) => this._onClick( e ));
     }
     init(){
         // Test for elements?
