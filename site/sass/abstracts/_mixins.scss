@@ -45,6 +45,7 @@
 */
 
 @mixin native-vertical-scroll {
+    position: relative; // Ensures container is considered the offsetParent() in JS
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-misspelled-properties
