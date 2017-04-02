@@ -76,9 +76,9 @@ class AnimatedHeader {
     onBottom() {}
     onNotBottom() {}
 
-    init(){
+    init(){       
         
-        let elem = $('.app__header')[0];
+        let elem = this.$element[0];
         let options = {
             scroller : this.scrollContainer,
             offset : 200,
@@ -103,6 +103,12 @@ class AnimatedHeader {
             onBottom    : () => this.onBottom(),
             onNotBottom : () => this.onNotBottom()
         };
+
+        if( !elem ){
+            // console.warn( 'AnimatedHeader :: No $element found in dom, selector:', this.$element.selector );
+            return false;
+        }
+
         let headroom = new Headroom( elem, options );
         headroom.init( );
     }
