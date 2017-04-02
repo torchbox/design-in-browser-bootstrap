@@ -104,30 +104,37 @@
         display: block;
         overflow: hidden;
         position: relative;
-        min-width: 280px;
+        // min-width: 280px;
         height: 100%;
-        min-height: 280px;
+        // min-height: 200px;
         background: $color--foreground;
-        perspective: 1000px;
-        perspective-origin: center center;
+
+        @include media-query(desktop) {
+            perspective: 1000px;
+            perspective-origin: center center;
+        }
     }
 
     &__image {
         position: relative;
-        width: calc(100% + #{$image--depth});
-        height: 100%;
-        transform: translate3d(0, 0, $image--depth);
-        // sass-lint:disable indentation
-        transition:
-            transform $image--speed $image--ease $image--delay;
-        // sass-lint:enable indentation
+        z-index: 1;
 
-        > .content {
+        @include media-query(desktop) {
+            width: calc(100% + #{$image--depth});
             height: 100%;
-        }
+            transform: translate3d(0, 0, $image--depth);
+            // sass-lint:disable indentation
+            transition:
+                transform $image--speed $image--ease $image--delay;
+            // sass-lint:enable indentation
 
-        #{$root}:hover & {
-            transform: translate3d(0, 0%, 0);
+            > .content {
+                height: 100%;
+            }
+
+            #{$root}:hover & {
+                transform: translate3d(0, 0%, 0);
+            }
         }
 
         // Gadient overlay
@@ -166,6 +173,8 @@
         @include gutter(1, 1, 1, 1);
 
         position: absolute;
+        z-index: 2;
+        transform-style: flat;
         bottom: 0;
         left: 0;
         color: $color--white;
