@@ -1,4 +1,3 @@
-
 /*
 	Example of importing and using classes
 */
@@ -23,7 +22,8 @@ console.log( 'hello', appHeader, appNav );
 
 
 /*
-	Example of importing and using functions
+	Example of using jquery, importing functions from seperate files and running them
+	TODO: Seperate and improve example
 */
 
 import $ from './globals';
@@ -42,3 +42,15 @@ positionSticky(
 // $('.cards__title').on( 'unstuck', function( e ){
 // 	console.log( 'OFF, Demonstrate custom events on elements', e );
 // });
+
+
+/*
+	Example of importing node module
+*/
+
+import FastClick from 'fastclick';
+
+let fastclick = new FastClick(document.body);
+
+
+
