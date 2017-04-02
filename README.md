@@ -76,6 +76,13 @@ To only build assets for either development or production you can use
  * `npm run build` To build development assets
  * `npm run build:prod` To build assets with minification and vendor prefixes
 
+### Debug script
+
+To test production, minified and vendor prefixed assets you can use
+
+ * `npm run debug` To develop with a simple http server, no browsersync and production assets
+
+
 ## Troubleshooting
 
 ### Installation
