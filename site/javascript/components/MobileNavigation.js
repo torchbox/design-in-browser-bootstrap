@@ -1,7 +1,7 @@
 import $ from '../globals';
 import animateElement from '../utility/animate-element';
 
-class MobileMenu {
+class MobileNavigation {
 
     constructor(opts) {
 
@@ -12,7 +12,7 @@ class MobileMenu {
             closeClass  : closeClass    = 'close',
             inSpeed     : inSpeed       = 600,
             outSpeed    : outSpeed      = 600
-        } = (opts) ? opts:{};
+        } = (opts) ? opts : {};
 
         // Bind our options to the object
         this.$target    = $( target );
@@ -32,6 +32,9 @@ class MobileMenu {
         this.init();
     }
     openMenu(){
+
+        console.log( 'open menu' );
+
         // Set busy state
         this.state.busy = true;
         // Animate element
@@ -53,6 +56,8 @@ class MobileMenu {
     }
     toggle() {
 
+        console.log( 'toggle' );
+
         if( this.state.busy ){
             return false;
         }
@@ -65,6 +70,7 @@ class MobileMenu {
     }
     _onClick(event) {
         event.preventDefault();
+        console.log( 'onclick', event );
         this.toggle();
     }
     bindEvents() {
@@ -78,4 +84,4 @@ class MobileMenu {
     }
 }
 
-export default MobileMenu;
+export default MobileNavigation;

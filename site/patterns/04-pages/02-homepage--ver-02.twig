@@ -14,7 +14,7 @@
 		</div>
 	</div>
 
-	{% include "organisms-cards" with { cards : blog_posts } %}
-	{% include "organisms-cards" with { cards : projects } %}
+	{% include "organisms-cards" with { cards : blog_posts, modifier : "cards--sticky" } %}
+	{% include "organisms-cards" with { cards : projects, modifier : "cards--sticky" } %}
 
 {% endblock %}

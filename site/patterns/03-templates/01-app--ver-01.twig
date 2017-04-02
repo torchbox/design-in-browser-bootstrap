@@ -1,0 +1,23 @@
+<div class="app app--ver-01">
+
+	{% include "organisms-app__header--animated" %}
+
+	<div class="app__body">
+
+		{% include "organisms-app__navigation" %}
+
+		<div class="app__page">
+			<div class="content">
+
+				{% block app__page %}
+
+				{% endblock %}
+
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="app__footer"></footer>
+
+</div>

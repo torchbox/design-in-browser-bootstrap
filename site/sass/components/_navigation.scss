@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    Full Navigation
+\*------------------------------------*/
+
+
+.app__nav {
+
+    // Animation variables here
+    @include gutter;
+
+    background: $color--white;
+    transform: translate3d(100%, 0%, 0);
+    // sass-lint:disable indentation
+    transition:
+        transform 900ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    // sass-lint:enddisable indentation
+
+    .unload {
+        display: none;
+    }
+
+    &.anim--open {
+        transform: translate3d(0%, 0%, 0);
+
+        &-setup {
+            transform: translate3d(100%, 0%, 0);
+            transition-duration: 0ms;
+            transition-delay: 0ms;
+        }
+
+        &-transition {
+            // sass-lint:disable indentation
+            transition:
+                transform 900ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            // sass-lint:enddisable indentation
+        }
+    }
+
+    &.anim--close {
+        transform: translate3d(-100%, 0%, 0);
+
+        &-setup {
+            // z-index: 2;
+            transform: translate3d(0%, 0%, 0);
+            transition-duration: 0ms;
+            transition-delay: 0ms;
+        }
+
+        &-transition {
+            // sass-lint:disable indentation
+            transition:
+                transform 900ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            // sass-lint:enddisable indentation
+        }
+    }
+}
+
+
+

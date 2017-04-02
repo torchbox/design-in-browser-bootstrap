@@ -4,6 +4,8 @@
 
 
 .cards {
+    $root: &;
+
     @include gutter(1, 2, 1, 2);
     will-change: transform;
 
@@ -17,15 +19,27 @@
 
     &__title {
         @include gutter(1, 0, 1, 0);
-        position: sticky;
-        top: 0;
+        align-items: center;
         width: 100%;
         z-index: 2;
-        background: $color--white;
+        color: $color--foreground;
+        background: $color--background;
 
-        &.stuck {
-            background: hotpink;
+        // sass-lint:disable indentation
+        transition:
+            color $anim--speed $anim--ease 0ms;
+        // sass-lint:enable indentation
+
+        // sass-lint:disable-all
+        #{$root}--sticky & {
+            position: sticky;
+            top: 0;
+
+            &.stuck {
+                color: $color--brand;
+            }
         }
+        // sass-lint:enable-all
     }
 
     &__list {
@@ -90,7 +104,10 @@
         display: block;
         overflow: hidden;
         position: relative;
+        min-width: 280px;
         height: 100%;
+        min-height: 280px;
+        background: $color--foreground;
         perspective: 1000px;
         perspective-origin: center center;
     }
