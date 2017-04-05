@@ -14,14 +14,15 @@
     font-size: $size;
     line-height: $height;
     font-weight: $weight;
-    margin: 0 0 $gutter--mobile;
+    margin: 0;
+    // margin: 0 0 $gutter--mobile;
     padding: 0;
     text-align: center;
 
     @include media-query(tablet-portrait) {
         font-size: $size + $size--modifier;
         line-height: $height + $size--modifier;
-        margin: 0 0 $gutter--tablet;
+        // margin: 0 0 $gutter--tablet;
     }
     @include media-query(tablet-landscape) {
         font-size: $size + ($size--modifier * 1);
@@ -30,11 +31,11 @@
     @include media-query(desktop) {
         font-size: $size + ($size--modifier * 2);
         line-height: $height + ($size--modifier * 2);
-        margin: 0 0 $gutter--desktop;
+        // margin: 0 0 $gutter--desktop;
     }
     @include media-query(desktop-wide) {
         font-size: $size + ($size--modifier * 3);
         line-height: $height + ($size--modifier * 3);
-        margin: 0 0 $gutter--desktop-wide;
+        // margin: 0 0 $gutter--desktop-wide;
     }
 }

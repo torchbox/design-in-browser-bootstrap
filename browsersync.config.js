@@ -5,6 +5,7 @@
 module.exports = {
     server: 'dist',
     startPath: '/patternlab/',
+    open: false,
     snippetOptions: {
         async: true,
         whitelist: [],

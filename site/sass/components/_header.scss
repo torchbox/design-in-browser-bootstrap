@@ -3,10 +3,12 @@
 \*------------------------------------*/
 
 .app__header {
-    @include gutter(1, 2, 1, 2);
-    background: $color--background;
+
+    // background: $color--background;
+    border-bottom: solid 1px $color--orange;
 
     > .content {
+        @include gutter(1, 2, 1, 2);
         @include aligner;
         display: flex;
         justify-content: space-between;
@@ -48,6 +50,7 @@
         height: 40px;
         width: 165px;
         fill: $color--foreground;
+        will-change: transform;
     }
 
 
@@ -119,6 +122,7 @@
     }
 
     .navigation-link {
+        @include gutter;
         display: block;
 
         @include media-query(tablet-landscape) {

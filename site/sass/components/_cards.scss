@@ -4,6 +4,8 @@
 
 
 .cards {
+    $root: &;
+
     @include gutter(1, 2, 1, 2);
     will-change: transform;
 
@@ -17,15 +19,27 @@
 
     &__title {
         @include gutter(1, 0, 1, 0);
-        position: sticky;
-        top: 0;
+        align-items: center;
         width: 100%;
         z-index: 2;
-        background: $color--white;
+        color: $color--foreground;
+        background: $color--background;
 
-        &.stuck {
-            background: hotpink;
+        // sass-lint:disable indentation
+        transition:
+            color $anim--speed $anim--ease 0ms;
+        // sass-lint:enable indentation
+
+        // sass-lint:disable-all
+        #{$root}--sticky & {
+            position: sticky;
+            top: 0;
+
+            &.stuck {
+                color: $color--brand;
+            }
         }
+        // sass-lint:enable-all
     }
 
     &__list {
@@ -90,27 +104,37 @@
         display: block;
         overflow: hidden;
         position: relative;
+        // min-width: 280px;
         height: 100%;
-        perspective: 1000px;
-        perspective-origin: center center;
+        // min-height: 200px;
+        background: $color--foreground;
+
+        @include media-query(desktop) {
+            perspective: 1000px;
+            perspective-origin: center center;
+        }
     }
 
     &__image {
         position: relative;
-        width: calc(100% + #{$image--depth});
-        height: 100%;
-        transform: translate3d(0, 0, $image--depth);
-        // sass-lint:disable indentation
-        transition:
-            transform $image--speed $image--ease $image--delay;
-        // sass-lint:enable indentation
+        z-index: 1;
 
-        > .content {
+        @include media-query(desktop) {
+            width: calc(100% + #{$image--depth});
             height: 100%;
-        }
+            transform: translate3d(0, 0, $image--depth);
+            // sass-lint:disable indentation
+            transition:
+                transform $image--speed $image--ease $image--delay;
+            // sass-lint:enable indentation
 
-        #{$root}:hover & {
-            transform: translate3d(0, 0%, 0);
+            > .content {
+                height: 100%;
+            }
+
+            #{$root}:hover & {
+                transform: translate3d(0, 0%, 0);
+            }
         }
 
         // Gadient overlay
@@ -149,6 +173,8 @@
         @include gutter(1, 1, 1, 1);
 
         position: absolute;
+        z-index: 2;
+        transform-style: flat;
         bottom: 0;
         left: 0;
         color: $color--white;
