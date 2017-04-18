@@ -14,8 +14,8 @@ import filesize from 'rollup-plugin-filesize';
 // entry: `site/javascript/${entries}`,
 // Create default config object
 let config = {
-    entry       : `site/javascript/${process.env.entry}`,
-    dest        : `dist/js/${process.env.entry}`,
+    entry       : `${process.env.npm_package_config_src_js}/${process.env.entry}`,
+    dest        : `${process.env.npm_package_config_dest_js}/${process.env.entry}`,
     format      : 'umd',
     globals     : {}, // specify globals in .eslintrc to ignore linting errors
     plugins     : [
