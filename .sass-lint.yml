@@ -57,3 +57,6 @@ rules:
   mixin-name-format: 
     - 1
     - convention: hyphenatedlowercase
+  no-color-literals:
+    - 1
+    - allow-rgba: 1
