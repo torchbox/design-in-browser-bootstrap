@@ -32,6 +32,7 @@ rules:
     - 2
     - exclude:
         - media-query
+        - placeholder-text
   no-warn: 0
   no-debug: 0
   indentation:
