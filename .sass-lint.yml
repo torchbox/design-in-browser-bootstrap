@@ -32,6 +32,7 @@ rules:
     - 2
     - exclude:
         - media-query
+        - placeholder-text
   no-warn: 0
   no-debug: 0
   indentation:
@@ -57,3 +58,6 @@ rules:
   mixin-name-format: 
     - 1
     - convention: hyphenatedlowercase
+  no-color-literals:
+    - 1
+    - allow-rgba: 1
