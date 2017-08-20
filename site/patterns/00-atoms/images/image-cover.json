@@ -1,0 +1,10 @@
+{
+	"description" : "Placeholder alt text",
+	"fallback"    : "http://placehold.it/768x432",
+	"srcset"    : [
+		"http://placehold.it/2000x1125 2000w",
+		"http://placehold.it/1200x675 1200w",
+		"http://placehold.it/768x432 768w",
+		"http://placehold.it/480x270 480w"
+	]
+}

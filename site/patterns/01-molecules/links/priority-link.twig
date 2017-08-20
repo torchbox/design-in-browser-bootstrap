@@ -1,0 +1,9 @@
+
+
+<a class="priority-link" href="{{ href|default('#') }}">
+	<span class="f5 fw1 lh-solid sans-serif">
+		{% autoescape false %}
+			{{ title|raw|default('title') }}
+		{% endautoescape %}
+	</span>
+</a>

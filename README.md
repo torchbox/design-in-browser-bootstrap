@@ -17,18 +17,7 @@ It is assumed the developers computer is running OSX or Linux. Depending on your
 * [SASS](http://sass-lang.com/) CSS with [auto-prefixing](https://github.com/postcss/autoprefixer).
 * [Browsersync](https://www.browsersync.io) for autoreloading.
 * [Rollup](https://rollupjs.org) and [Babel](https://babeljs.io) for ES2015 support with module loading.
-* Rollup plugins (`rollup.config.js`):
-  * eslint
-  * uglifyjs with sourcemaps (disabled by default)
-  * support for using any installed node modules on the webiste
-  * display file size information
-* Examples in `/site/javascript/main.js` showing...
-  * how to import ES6 modules (`point.js`)
-  * how to import CommonJS modules (`vendor/jquery.js` via `globals.js`)
-  * how to expose variables like `jQuery` globally (`globals.js`)
-  * how to import plain old javascript files that might depend on global variables (`vendor/jquery-test-plugin.js`)
-  * how to use external global variables without importing them (`main.js` + `.eslintrc`)
-* Consideration for images, currently copying the directory only - to avoid slowdowns and non-essential dependancies. We encourage using SVG for UI vectors and pre-optimised UI photograph assets.
+* Consideration for images, currently copying the directory only. We encourage using SVG for icons and pre-optimised photograph assets.
 * An automated way to upload your site to a staging server using [dploy](https://github.com/LeanMeanFightingMachine/dploy).
 * [Build commands](#build-scripts) for generating testable or deployable assets only
 
@@ -56,7 +45,7 @@ To start a prototype using this bootstrap;
 * Install all packages from `package.json`: `yarn install`
 * Add new packages with yarn: `yarn add --dev package_name` (this will add it to `package.json` and `yarn.lock` too)
 * Upgrade packages: `yarn upgrade-interactive`
-* Keep using `npm` for running npm scripts. Although `yarn run` seems to work as well but `npm-run-all` might not use yarn, so stick to `npm run` for now.
+* You can use `yarn` instead of `npm run` to run tooling scripts, for example `yarn lab` instead of `npm run lab`.
 
 
 ## Deploying it

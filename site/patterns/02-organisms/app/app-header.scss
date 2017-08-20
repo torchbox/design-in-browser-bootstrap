@@ -1,0 +1,21 @@
+
+
+.app-header {
+    @include gutter(1, 2, 1, 2);
+    @include aligner;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // background: $white;
+    border-bottom: solid 1px $orange;
+       
+    &__home-link {
+        @include gutter(0, 0.5, 0, 0.5);
+    }
+    &__navigation {
+        @include gutter(0, 0.5, 0, 0.5);
+    }
+
+}

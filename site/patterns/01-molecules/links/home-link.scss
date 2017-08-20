@@ -1,0 +1,28 @@
+
+
+.home-link {
+    display: block;
+    will-change: transform;
+
+    padding: 0 0 4px;
+
+    @include media-query(tablet-portrait) {
+        padding: 0 0 4px;
+    }
+    @include media-query(tablet-landscape) {
+        padding: 0 0 7px;
+    }
+    @include media-query(desktop) {
+        padding: 0 0 10px;
+    }
+    @include media-query(desktop-wide) {
+        padding: 0 0 13px;
+    }
+    
+    svg {
+	    height: 40px;
+	    width: 165px;
+	    fill: $dark-grey;
+	}
+}
+

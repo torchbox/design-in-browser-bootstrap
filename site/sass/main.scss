@@ -1,28 +1,3 @@
-/*------------------------------------*\
-	$TABLE OF CONTENTS
-\*------------------------------------*/
-
-
-/**
- *
- * Vendor ---------------------------
- * .....Gridle
- * .....Normalize
- *
- * Config ---------------------------
- * .....Variables
- * .....Grid
- *
- * Lib ------------------------------
- * .....Mixins
- *
- * Atoms ----------------------------
- * Molecules ------------------------
- * Organisms ------------------------
- * Templates ------------------------
- * Pages ----------------------------
- *
- */
 
 
 /*------------------------------------*\
@@ -32,51 +7,26 @@
 
 
 /*------------------------------------*\
-	$CONFIG
-\*------------------------------------*/
-@import 'config/variables';
-
-
-/*------------------------------------*\
 	$Abstracts
 \*------------------------------------*/
+@import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'abstracts/base';
-@import 'abstracts/layout';
 
 
 /*------------------------------------*\
-	$Atoms
+	$Tachyons
 \*------------------------------------*/
-@import 'atoms/text/heading';
-@import 'atoms/text/paragraph';
-@import 'atoms/text/introduction';
-@import 'atoms/text/subheading';
-@import 'atoms/text/section-heading';
-@import 'atoms/text/detail';
-@import 'atoms/image/full-width';
-@import 'atoms/image/inline';
-@import 'atoms/image/cover';
+@import 'tachyons/font-style';
+@import 'tachyons/font-weight';
+@import 'tachyons/line-height';
+@import 'tachyons/type-scale';
+@import 'tachyons/font-families';
+@import 'tachyons/skins';
 
 
 /*------------------------------------*\
-	$Components
+	$Patterns
 \*------------------------------------*/
-@import 'components/header';
-@import 'components/header--animated';
-@import 'components/navigation';
-@import 'components/cards';
-// @import 'components/priority-nav';
 
-
-/*------------------------------------*\
-	$TEMPLATES
-\*------------------------------------*/
-@import 'templates/home';
-
-
-/*------------------------------------*\
-	$PAGES
-\*------------------------------------*/
-// @import '04-pages/';
-
+@import '../patterns/**/*.scss';

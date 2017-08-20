@@ -1,0 +1,80 @@
+/*
+
+ SKINS
+ Docs: http://tachyons.io/docs/themes/skins/
+
+ Classes for setting foreground and background colors on elements.
+ If you haven't declared a border color, but set border on an element, it will 
+ be set to the current text color. 
+
+*/
+
+/* Text colors */
+
+.black {            color: $black; }
+.black-90 {         color: $black-90; }
+.black-80 {         color: $black-80; }
+.black-70 {         color: $black-70; }
+.black-60 {         color: $black-60; }
+.black-50 {         color: $black-50; }
+.black-40 {         color: $black-40; }
+.black-30 {         color: $black-30; }
+.black-20 {         color: $black-20; }
+.black-10 {         color: $black-10; }
+.black-05 {         color: $black-05; }
+
+.white {            color: $white; }
+.white-90 {         color: $white-90; }
+.white-80 {         color: $white-80; }
+.white-70 {         color: $white-70; }
+.white-60 {         color: $white-60; }
+.white-50 {         color: $white-50; }
+.white-40 {         color: $white-40; }
+.white-30 {         color: $white-30; }
+.white-20 {         color: $white-20; }
+.white-10 {         color: $white-10; }
+.white-05 {         color: $white-05; }
+
+
+.teal {             color: $teal; }
+.green {            color: $green; }
+.orange {           color: $orange; }
+.yellow {           color: $yellow; }
+.dark-grey {        color: $dark-grey; }
+
+
+/* Background colors */
+
+.bg-black {            background-color: $black; }
+.bg-black-90 {         background-color: $black-90; }
+.bg-black-80 {         background-color: $black-80; }
+.bg-black-70 {         background-color: $black-70; }
+.bg-black-60 {         background-color: $black-60; }
+.bg-black-50 {         background-color: $black-50; }
+.bg-black-40 {         background-color: $black-40; }
+.bg-black-30 {         background-color: $black-30; }
+.bg-black-20 {         background-color: $black-20; }
+.bg-black-10 {         background-color: $black-10; }
+.bg-black-05 {         background-color: $black-05; }
+
+.bg-white {            background-color: $white; }
+.bg-white-90 {         background-color: $white-90; }
+.bg-white-80 {         background-color: $white-80; }
+.bg-white-70 {         background-color: $white-70; }
+.bg-white-60 {         background-color: $white-60; }
+.bg-white-50 {         background-color: $white-50; }
+.bg-white-40 {         background-color: $white-40; }
+.bg-white-30 {         background-color: $white-30; }
+.bg-white-20 {         background-color: $white-20; }
+.bg-white-10 {         background-color: $white-10; }
+.bg-white-05 {         background-color: $white-05; }
+
+.bg-teal {             background-color: $teal; }
+.bg-green {            background-color: $green; }
+.bg-orange {           background-color: $orange; }
+.bg-yellow {           background-color: $yellow; }
+.bg-dark-grey {        background-color: $dark-grey; }
+
+
+
+

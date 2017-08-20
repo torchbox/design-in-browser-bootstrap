@@ -13,7 +13,7 @@ options:
 files:
   ignore:
     - 'site/sass/vendor/**/*.*'
-    - 'site/sass/config/_grid.scss'
+    - 'site/sass/tachyons/**/*.*'
     - 'site/sass/scaffolding.scss'
 #   include:
 #    - 'site/src/_source/sass/**/*.s+(a|c)ss'

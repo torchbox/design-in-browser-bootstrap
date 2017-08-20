@@ -1,0 +1,24 @@
+<img 
+    class="image-inline"
+
+    alt="{{ description }}"
+
+    {# Serve medium size image by default for browsers that do not support srcset #}
+    src="{{ fallback }}"
+
+    {# Provide srcset that matches the (key) breakpoints in _variables.scss #}
+    srcset="
+        {% for src in srcset %}
+            {{ src }}{% if loop.last == false %},{% endif %}
+        {% endfor %}
+    "
+
+    {# Example of sizes implementation #}
+    {# By default, the browser will pick the best matching image based on the viewport width #}
+    {# You can override this and tell the browser to use a different width at specific breakpoints #}
+    sizes="
+        (min-width: 1201px) 33vw,
+        (min-width: 769px) 50vw, 
+        100vw
+    "
+>
