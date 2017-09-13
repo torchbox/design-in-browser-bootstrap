@@ -29,7 +29,7 @@ console.log( 'hello', appHeader, appNav );
 import $ from './globals';
 import positionSticky from './utility/position-sticky';
 
-positionSticky( 
+positionSticky(
 	$('.cards--sticky .cards__title'),
 	$( '.app__page > .content' ),
 	55
@@ -52,5 +52,9 @@ import FastClick from 'fastclick';
 
 let fastclick = new FastClick(document.body);
 
-
-
+/*
+    EU Cookie Warning
+    https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/
+*/
+import CookieWarning from './components/EuCookie';
+new CookieWarning();
