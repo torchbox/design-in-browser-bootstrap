@@ -120,5 +120,8 @@
   },
   "engines": {
     "node": ">=4"
+  },
+  "dependencies": {
+    "js-cookie": "^2.1.4"
   }
 }
