@@ -7,7 +7,7 @@
 */
 
 // import $ from '../../../javascript/globals';
-import $ from '~/site/javascript/globals';
+import $ from "~/site/javascript/globals";
 
 //
 class App {
