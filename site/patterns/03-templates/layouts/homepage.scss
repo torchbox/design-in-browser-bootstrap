@@ -1,7 +1,4 @@
-
-
 .homepage {
-
     &__hero {
         @include gutter(0, 0, 1, 0);
     }
@@ -22,5 +19,4 @@
         @include gutter(0.5, 0.5, 0.5, 0.5);
         @include aligner;
     }
-
 }

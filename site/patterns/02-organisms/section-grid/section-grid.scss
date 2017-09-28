@@ -2,7 +2,6 @@
     $Cards
 \*------------------------------------*/
 
-
 .section-grid {
     $root: &;
     will-change: transform;
@@ -10,7 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
+
     &__header {
         @include gutter(1, 0, 1, 0);
         align-items: center;
@@ -21,8 +20,7 @@
         background: $white;
 
         // sass-lint:disable indentation
-        transition:
-            color $anim--speed $anim--ease 0ms;
+        transition: color $anim--speed $anim--ease 0ms;
         // sass-lint:enable indentation
 
         // sass-lint:disable-all
@@ -40,12 +38,12 @@
     &__links {
         position: relative;
         z-index: 1;
-        
+
         display: flex;
         align-items: stretch;
         // justify-content: center;
         flex-wrap: wrap;
-        
+
         &__item {
             @include gutter(0.5, 0.5, 0.5, 0.5);
             flex-basis: 25%;
@@ -56,7 +54,5 @@
                 min-height: 400px;
             }
         }
-
     }
-
 }

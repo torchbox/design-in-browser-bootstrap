@@ -1,16 +1,12 @@
-
-
 .burger {
-	$root: &;
-	display: flex;
+    $root: &;
+    display: flex;
 
-	&__svg {
-		fill: $black;
+    &__svg {
+        fill: $black;
 
-		#{$root}--orange & {
-			fill: $orange;
-		}
-
-	}
-    
+        #{$root}--orange & {
+            fill: $orange;
+        }
+    }
 }

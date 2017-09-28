@@ -1,8 +1,6 @@
-
 /*------------------------------------*\
     $Card
 \*------------------------------------*/
-
 
 .card {
     $root: &;
@@ -44,8 +42,7 @@
         transform: translate3d(0, 0, $image--depth);
 
         // sass-lint:disable indentation
-        transition:
-            transform $image--speed $image--ease $image--delay;
+        transition: transform $image--speed $image--ease $image--delay;
         // sass-lint:enable indentation
 
         #{$root}:focus &,
@@ -73,8 +70,7 @@
             mix-blend-mode: multiply;
             will-change: opacity;
             // sass-lint:disable indentation
-            transition:
-                transform $overlay--speed $overlay--ease $overlay--delay;
+            transition: transform $overlay--speed $overlay--ease $overlay--delay;
             // sass-lint:enable indentation
             transform: translate3d(0, 20%, 0);
 
@@ -83,7 +79,6 @@
                 transform: translate3d(0, 0%, 0);
             }
         }
-
     }
 
     &__text {
@@ -96,8 +91,7 @@
         color: $white;
 
         // sass-lint:disable indentation
-        transition:
-            transform $text--speed $text--ease $text--delay;
+        transition: transform $text--speed $text--ease $text--delay;
         // sass-lint:enable indentation
 
         transform: translate3d(0, 20px, 0);
@@ -115,9 +109,9 @@
             height: 100%;
 
             // sass-lint:disable indentation
-            transition:
-                transform $credit--speed $credit--ease $credit--delay,
-                opacity $credit--speed $credit--ease ($credit--delay + $credit--delay);
+            transition: transform $credit--speed $credit--ease $credit--delay,
+                opacity $credit--speed $credit--ease ($credit--delay +
+                            $credit--delay);
             // sass-lint:enable indentation
 
             transform: translate3d(0, 100%, 0);
@@ -128,8 +122,6 @@
                 transform: translate3d(0, 0, 0);
                 opacity: 1;
             }
-
         }
     }
-
 }

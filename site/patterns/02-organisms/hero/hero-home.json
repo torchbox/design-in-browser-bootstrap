@@ -1,12 +1,12 @@
 {
-	"image" : {
-		"description"	: "Placeholder alt text",
-		"fallback" 		: "https://unsplash.it/768/432?image=1044",
-		"srcset" 		: [
-			"https://unsplash.it/2000/675?image=1044 2000w",
-	        "https://unsplash.it/1200/675?image=1044 1200w",
-	        "https://unsplash.it/768/432?image=1044 768w",
-	        "https://unsplash.it/480/270?image=1044 480w"
-		]
-	}
+    "image": {
+        "description": "Placeholder alt text",
+        "fallback": "https://unsplash.it/768/432?image=1044",
+        "srcset": [
+            "https://unsplash.it/2000/675?image=1044 2000w",
+            "https://unsplash.it/1200/675?image=1044 1200w",
+            "https://unsplash.it/768/432?image=1044 768w",
+            "https://unsplash.it/480/270?image=1044 480w"
+        ]
+    }
 }

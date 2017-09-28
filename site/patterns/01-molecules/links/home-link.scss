@@ -1,5 +1,3 @@
-
-
 .home-link {
     display: block;
     will-change: transform;
@@ -18,11 +16,10 @@
     @include media-query(desktop-wide) {
         padding: 0 0 13px;
     }
-    
-    svg {
-	    height: 40px;
-	    width: 165px;
-	    fill: $dark-grey;
-	}
-}
 
+    svg {
+        height: 40px;
+        width: 165px;
+        fill: $dark-grey;
+    }
+}

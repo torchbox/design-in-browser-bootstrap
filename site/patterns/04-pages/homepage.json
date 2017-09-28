@@ -1,190 +1,189 @@
 {
-	"title" : "Home Page",
-	"priority" : [
-		{
-			"title" : "link 1",
-			"href" : "http://torchbox.com"
-		},
-		{
-			"title" : "link 2",
-			"href" : "http://wagtail.io"
-		}
-	],
-	"introduction" : "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.",
-	"hero" : {
-		"image" : {
-			"description"	: "Placeholder alt text",
-			"fallback" 		: "https://unsplash.it/768/432?image=1044",
-			"srcset" 		: [
-				"https://unsplash.it/2000/675?image=1044 2000w",
-		        "https://unsplash.it/1200/675?image=1044 1200w",
-		        "https://unsplash.it/768/432?image=1044 768w",
-		        "https://unsplash.it/480/270?image=1044 480w"
-			]
-		}
-	},
-	"blogPosts" : {
-		"title" : "Latest from our blog",
-		"items" : [
-			{
-				"title" : "Consectetur adipiscing elit, sed do eiusmod tempor",
-				"href" : "#",
-				"category" : "news",
-				"author" : "Joe Bloggs",
-				"date" 	: "11 March 2017",
-				"image" : {
-					"description"	: "Placeholder alt text",
-					"fallback" 		: "https://unsplash.it/768/432?image=1072",
-					"srcset" 		: [
-						"https://unsplash.it/2000/675?image=1072 2000w",
-				        "https://unsplash.it/1200/675?image=1072 1200w",
-				        "https://unsplash.it/768/432?image=1072 768w",
-				        "https://unsplash.it/480/270?image=1072 480w"
-					]
-				}
-			},
-			{
-				"title" : "Incididunt ut labore et dolore magna aliqua",
-				"href" : "#",
-				"category" : "news",
-				"author" : "Joe Bloggs",
-				"date" : "01 February 2017",
-				"image" : {
-					"description"	: "Placeholder alt text",
-					"fallback" 		: "https://unsplash.it/768/432?image=1067",
-					"srcset" 		: [
-						"https://unsplash.it/2000/675?image=1067 2000w",
-				        "https://unsplash.it/1200/675?image=1067 1200w",
-				        "https://unsplash.it/768/432?image=1067 768w",
-				        "https://unsplash.it/480/270?image=1067 480w"
-					]
-				}
-			},
-			{
-				"title" : "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
-				"href" : "#",
-				"category" : "news",
-				"author" : "Joe Bloggs",
-				"date" : "11 March 2017",
-				"image" : {
-					"description"	: "Placeholder alt text",
-					"fallback" 		: "https://unsplash.it/768/432?image=1067",
-					"srcset" 		: [
-						"https://unsplash.it/2000/675?image=1063 2000w",
-				        "https://unsplash.it/1200/675?image=1063 1200w",
-				        "https://unsplash.it/768/432?image=1063 768w",
-				        "https://unsplash.it/480/270?image=1063 480w"
-					]
-				}
-			},
-			{
-				"title" : "Duis aute irure dolor in reprehenderit in voluptate velit esse",
-				"href" : "#",
-				"category" : "news",
-				"author" : "Joe Bloggs",
-				"date" : "11 March 2017",
-				"image" : {
-					"description"	: "Placeholder alt text",
-					"fallback" 		: "https://unsplash.it/768/432?image=1060",
-					"srcset" 		: [
-						"https://unsplash.it/2000/675?image=1060 2000w",
-				        "https://unsplash.it/1200/675?image=1060 1200w",
-				        "https://unsplash.it/768/432?image=1060 768w",
-				        "https://unsplash.it/480/270?image=1060 480w"
-					]
-				}
-			},
-			{
-				"title" : "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
-				"href" : "#",
-				"category" : "news",
-				"author" : "Joe Bloggs",
-				"date" : "11 March 2017",
-				"image" : {
-					"description"	: "Placeholder alt text",
-					"fallback" 		: "https://unsplash.it/768/432?image=1051",
-					"srcset" 		: [
-						"https://unsplash.it/2000/675?image=1051 2000w",
-				        "https://unsplash.it/1200/675?image=1051 1200w",
-				        "https://unsplash.it/768/432?image=1051 768w",
-				        "https://unsplash.it/480/270?image=1051 480w"
-					]
-				}
-			},
-			{
-				"title" : "Sunt in culpa qui officia deserunt mollit anim id est laborum",
-				"href" : "#",
-				"category" : "news",
-				"author" : "Joe Bloggs",
-				"date" : "11 March 2017",
-				"image" : {
-					"description"	: "Placeholder alt text",
-					"fallback" 		: "https://unsplash.it/768/432?image=1037",
-					"srcset" 		: [
-						"https://unsplash.it/2000/675?image=1037 2000w",
-				        "https://unsplash.it/1200/675?image=1037 1200w",
-				        "https://unsplash.it/768/432?image=1037 768w",
-				        "https://unsplash.it/480/270?image=1037 480w"
-					]
-				}
-			}
-
-		]
-	},
-	"projects" : {
-		"title" : "Recent projects",
-		"items" : [
-			{
-				"title" : "Consectetur adipiscing elit, sed do eiusmod tempor",
-				"href" : "#",
-				"category" : "news",
-				"author" : "Joe Bloggs",
-				"date" 	: "11 March 2017",
-				"image" : {
-					"description"	: "Placeholder alt text",
-					"fallback" 		: "https://unsplash.it/768/432?image=1072",
-					"srcset" 		: [
-						"https://unsplash.it/2000/675?image=1072 2000w",
-				        "https://unsplash.it/1200/675?image=1072 1200w",
-				        "https://unsplash.it/768/432?image=1072 768w",
-				        "https://unsplash.it/480/270?image=1072 480w"
-					]
-				}
-			},
-			{
-				"title" : "Incididunt ut labore et dolore magna aliqua",
-				"href" : "#",
-				"category" : "news",
-				"author" : "Joe Bloggs",
-				"date" : "01 February 2017",
-				"image" : {
-					"description"	: "Placeholder alt text",
-					"fallback" 		: "https://unsplash.it/768/432?image=1067",
-					"srcset" 		: [
-						"https://unsplash.it/2000/675?image=1067 2000w",
-				        "https://unsplash.it/1200/675?image=1067 1200w",
-				        "https://unsplash.it/768/432?image=1067 768w",
-				        "https://unsplash.it/480/270?image=1067 480w"
-					]
-				}
-			},
-			{
-				"title" : "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
-				"href" : "#",
-				"category" : "news",
-				"author" : "Joe Bloggs",
-				"date" : "11 March 2017",
-				"image" : {
-					"description"	: "Placeholder alt text",
-					"fallback" 		: "https://unsplash.it/768/432?image=1067",
-					"srcset" 		: [
-						"https://unsplash.it/2000/675?image=1063 2000w",
-				        "https://unsplash.it/1200/675?image=1063 1200w",
-				        "https://unsplash.it/768/432?image=1063 768w",
-				        "https://unsplash.it/480/270?image=1063 480w"
-					]
-				}
-			}
-		]
-	}
+    "title": "Home Page",
+    "priority": [
+        {
+            "title": "link 1",
+            "href": "http://torchbox.com"
+        },
+        {
+            "title": "link 2",
+            "href": "http://wagtail.io"
+        }
+    ],
+    "introduction": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.",
+    "hero": {
+        "image": {
+            "description": "Placeholder alt text",
+            "fallback": "https://unsplash.it/768/432?image=1044",
+            "srcset": [
+                "https://unsplash.it/2000/675?image=1044 2000w",
+                "https://unsplash.it/1200/675?image=1044 1200w",
+                "https://unsplash.it/768/432?image=1044 768w",
+                "https://unsplash.it/480/270?image=1044 480w"
+            ]
+        }
+    },
+    "blogPosts": {
+        "title": "Latest from our blog",
+        "items": [
+            {
+                "title": "Consectetur adipiscing elit, sed do eiusmod tempor",
+                "href": "#",
+                "category": "news",
+                "author": "Joe Bloggs",
+                "date": "11 March 2017",
+                "image": {
+                    "description": "Placeholder alt text",
+                    "fallback": "https://unsplash.it/768/432?image=1072",
+                    "srcset": [
+                        "https://unsplash.it/2000/675?image=1072 2000w",
+                        "https://unsplash.it/1200/675?image=1072 1200w",
+                        "https://unsplash.it/768/432?image=1072 768w",
+                        "https://unsplash.it/480/270?image=1072 480w"
+                    ]
+                }
+            },
+            {
+                "title": "Incididunt ut labore et dolore magna aliqua",
+                "href": "#",
+                "category": "news",
+                "author": "Joe Bloggs",
+                "date": "01 February 2017",
+                "image": {
+                    "description": "Placeholder alt text",
+                    "fallback": "https://unsplash.it/768/432?image=1067",
+                    "srcset": [
+                        "https://unsplash.it/2000/675?image=1067 2000w",
+                        "https://unsplash.it/1200/675?image=1067 1200w",
+                        "https://unsplash.it/768/432?image=1067 768w",
+                        "https://unsplash.it/480/270?image=1067 480w"
+                    ]
+                }
+            },
+            {
+                "title": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+                "href": "#",
+                "category": "news",
+                "author": "Joe Bloggs",
+                "date": "11 March 2017",
+                "image": {
+                    "description": "Placeholder alt text",
+                    "fallback": "https://unsplash.it/768/432?image=1067",
+                    "srcset": [
+                        "https://unsplash.it/2000/675?image=1063 2000w",
+                        "https://unsplash.it/1200/675?image=1063 1200w",
+                        "https://unsplash.it/768/432?image=1063 768w",
+                        "https://unsplash.it/480/270?image=1063 480w"
+                    ]
+                }
+            },
+            {
+                "title": "Duis aute irure dolor in reprehenderit in voluptate velit esse",
+                "href": "#",
+                "category": "news",
+                "author": "Joe Bloggs",
+                "date": "11 March 2017",
+                "image": {
+                    "description": "Placeholder alt text",
+                    "fallback": "https://unsplash.it/768/432?image=1060",
+                    "srcset": [
+                        "https://unsplash.it/2000/675?image=1060 2000w",
+                        "https://unsplash.it/1200/675?image=1060 1200w",
+                        "https://unsplash.it/768/432?image=1060 768w",
+                        "https://unsplash.it/480/270?image=1060 480w"
+                    ]
+                }
+            },
+            {
+                "title": "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+                "href": "#",
+                "category": "news",
+                "author": "Joe Bloggs",
+                "date": "11 March 2017",
+                "image": {
+                    "description": "Placeholder alt text",
+                    "fallback": "https://unsplash.it/768/432?image=1051",
+                    "srcset": [
+                        "https://unsplash.it/2000/675?image=1051 2000w",
+                        "https://unsplash.it/1200/675?image=1051 1200w",
+                        "https://unsplash.it/768/432?image=1051 768w",
+                        "https://unsplash.it/480/270?image=1051 480w"
+                    ]
+                }
+            },
+            {
+                "title": "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+                "href": "#",
+                "category": "news",
+                "author": "Joe Bloggs",
+                "date": "11 March 2017",
+                "image": {
+                    "description": "Placeholder alt text",
+                    "fallback": "https://unsplash.it/768/432?image=1037",
+                    "srcset": [
+                        "https://unsplash.it/2000/675?image=1037 2000w",
+                        "https://unsplash.it/1200/675?image=1037 1200w",
+                        "https://unsplash.it/768/432?image=1037 768w",
+                        "https://unsplash.it/480/270?image=1037 480w"
+                    ]
+                }
+            }
+        ]
+    },
+    "projects": {
+        "title": "Recent projects",
+        "items": [
+            {
+                "title": "Consectetur adipiscing elit, sed do eiusmod tempor",
+                "href": "#",
+                "category": "news",
+                "author": "Joe Bloggs",
+                "date": "11 March 2017",
+                "image": {
+                    "description": "Placeholder alt text",
+                    "fallback": "https://unsplash.it/768/432?image=1072",
+                    "srcset": [
+                        "https://unsplash.it/2000/675?image=1072 2000w",
+                        "https://unsplash.it/1200/675?image=1072 1200w",
+                        "https://unsplash.it/768/432?image=1072 768w",
+                        "https://unsplash.it/480/270?image=1072 480w"
+                    ]
+                }
+            },
+            {
+                "title": "Incididunt ut labore et dolore magna aliqua",
+                "href": "#",
+                "category": "news",
+                "author": "Joe Bloggs",
+                "date": "01 February 2017",
+                "image": {
+                    "description": "Placeholder alt text",
+                    "fallback": "https://unsplash.it/768/432?image=1067",
+                    "srcset": [
+                        "https://unsplash.it/2000/675?image=1067 2000w",
+                        "https://unsplash.it/1200/675?image=1067 1200w",
+                        "https://unsplash.it/768/432?image=1067 768w",
+                        "https://unsplash.it/480/270?image=1067 480w"
+                    ]
+                }
+            },
+            {
+                "title": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+                "href": "#",
+                "category": "news",
+                "author": "Joe Bloggs",
+                "date": "11 March 2017",
+                "image": {
+                    "description": "Placeholder alt text",
+                    "fallback": "https://unsplash.it/768/432?image=1067",
+                    "srcset": [
+                        "https://unsplash.it/2000/675?image=1063 2000w",
+                        "https://unsplash.it/1200/675?image=1063 1200w",
+                        "https://unsplash.it/768/432?image=1063 768w",
+                        "https://unsplash.it/480/270?image=1063 480w"
+                    ]
+                }
+            }
+        ]
+    }
 }
