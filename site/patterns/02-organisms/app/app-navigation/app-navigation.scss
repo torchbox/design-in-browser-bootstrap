@@ -1,4 +1,8 @@
 .app-navigation {
     @include gutter;
     background: $white;
+
+    &__item {
+        @include gutter;
+    }
 }
