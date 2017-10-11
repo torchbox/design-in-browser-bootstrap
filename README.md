@@ -92,7 +92,8 @@ npm ERR! Please try running this command again as root/Administrator.
 
 ## Technical Debt
 
- - 30 minute timeout from patternlab is hardcoded and within the vendor directory, a value has been modified in vendor/pattern-lab/core/src/PatternLab/Console/Commands/WatchCommand.php
+ - 30 minute timeout from patternlab is hardcoded and within the vendor directory, a value has been modified in /patternlab/vendor/pattern-lab/core/src/PatternLab/Console/Commands/WatchCommand.php
+ - Missing classes have been added to improve the rendering of titles on the file /patternlab/vendor/pattern-lab/styleguidekit-twig-default/views/partials/patternSectionSubtype.twig
 
 ## License
 
