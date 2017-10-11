@@ -18,21 +18,6 @@
         z-index: 2;
         color: $dark-grey;
         background: $white;
-
-        // sass-lint:disable indentation
-        transition: color $anim--speed $anim--ease 0ms;
-        // sass-lint:enable indentation
-
-        // sass-lint:disable-all
-        #{$root}--sticky & {
-            position: sticky;
-            top: 0;
-
-            &.stuck {
-                color: $orange;
-            }
-        }
-        // sass-lint:enable-all
     }
 
     &__links {
@@ -41,17 +26,24 @@
 
         display: flex;
         align-items: stretch;
-        // justify-content: center;
         flex-wrap: wrap;
 
         &__item {
             @include gutter(0.5, 0.5, 0.5, 0.5);
-            flex-basis: 25%;
+            width: 100%;
 
-            &:nth-of-type(1),
-            &:nth-of-type(6) {
-                flex-basis: 50%;
-                min-height: 400px;
+            @include media-query(tablet-landscape) {
+                width: 50%;
+            }
+
+            @include media-query(desktop) {
+                width: 25%;
+
+                &:nth-of-type(1),
+                &:nth-of-type(6) {
+                    width: 50%;
+                    min-height: 400px;
+                }
             }
         }
     }
