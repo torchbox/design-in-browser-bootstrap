@@ -4,14 +4,14 @@
 
 	<div class="priority-nav__menu">
 		{% for item in priorityNavigation %}
-			<div class="priority-nav__menu__item">				
+			<div class="priority-nav__menu__item">
 				{% include "@molecules/links/priority-link.twig" with item %}
 			</div>
 		{% endfor %}
 	</div>
 
-	<a class="priority-nav__full-link" href="#app__nav">
-		{% include "@atoms/icons/burger.twig" %}
-	</a>
+	<div class="priority-nav__full-link">
+		{% include "@molecules/links/mobile-menu-link/mobile-menu-link.twig" %}
+	</div>
 
 </nav>
