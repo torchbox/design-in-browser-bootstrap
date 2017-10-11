@@ -1,0 +1,9 @@
+.priority-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $dark-grey;
+
+    &:hover {
+        color: $orange;
+    }
+}

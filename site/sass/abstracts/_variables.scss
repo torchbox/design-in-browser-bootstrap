@@ -1,0 +1,89 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+
+/* ============================================
+   Colours
+   https://coolors.co/2eb1b0-68aa6c-fb5a40-f5c157-2b3033
+*/
+
+// Colour vars
+$teal:       #2eb1b0;
+$green:      #68aa6c;
+$orange:     #fb5a40;
+$yellow:     #f5c157;
+$dark-grey:  #2b3033;
+
+$black: #000;
+$black-90: rgba($black, 0.9);
+$black-80: rgba($black, 0.8);
+$black-70: rgba($black, 0.7);
+$black-60: rgba($black, 0.6);
+$black-50: rgba($black, 0.5);
+$black-40: rgba($black, 0.4);
+$black-30: rgba($black, 0.3);
+$black-20: rgba($black, 0.2);
+$black-10: rgba($black, 0.1);
+$black-05: rgba($black, 0.05);
+
+$white: #fff;
+$white-90: rgba($white, 0.9);
+$white-80: rgba($white, 0.8);
+$white-70: rgba($white, 0.7);
+$white-60: rgba($white, 0.6);
+$white-50: rgba($white, 0.5);
+$white-40: rgba($white, 0.4);
+$white-30: rgba($white, 0.3);
+$white-20: rgba($white, 0.2);
+$white-10: rgba($white, 0.1);
+$white-05: rgba($white, 0.05);
+
+
+// Theme colours
+// $primary: $teal;
+// $secondary: $green;
+// $tertiary: $orange;
+// $quaternary: $yellow;
+
+
+/* ============================================
+   Typography
+   :: Default to system font stack
+*/
+$font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$font-serif: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+
+
+/* ============================================
+   Grid Dimentions
+*/
+$gutter--mobile:        10px;
+$gutter--tablet:        20px;
+$gutter--desktop:       26px;
+$gutter--desktop-wide:  40px;
+
+
+/* ============================================
+   Max width
+*/
+$max-width: 1350px;
+
+
+/* ============================================
+   Breakpoints
+*/
+$breakpoints: (
+    'tablet-portrait'   '(min-width: 768px)',
+    'tablet-landscape'  '(min-width: 1024px)',
+    'desktop'           '(min-width: 1280px)',
+    'deskop-wide'       '(min-width: 2556px)'
+);
+
+
+/* ============================================
+   Transition speeds
+*/
+
+$anim--speed: 600ms;
+$anim--ease: ease-in-out;

@@ -67,7 +67,7 @@
 /* ============================================
    Gutter spacing
 */
-@mixin gutter($top: 0.5, $right: 0.5, $bottom: 0.5, $left: 0.5) {
+@mixin gutter($top: 0.5, $right: 0.5, $bottom: 0.5, $left: 0.5, $reset: false) {
 
     @if $top > 0 {
         padding-top: $gutter--mobile * $top;
@@ -79,6 +79,17 @@
         }
         @include media-query(desktop-wide) {
             padding-top: $gutter--desktop-wide * $top;
+        }
+    } @elseif $top == 0 and $reset {
+        padding-top: 0;
+        @include media-query(tablet-portrait) {
+            padding-top: 0;
+        }
+        @include media-query(desktop) {
+            padding-top: 0;
+        }
+        @include media-query(desktop-wide) {
+            padding-top: 0;
         }
     }
 
@@ -93,6 +104,17 @@
         @include media-query(desktop-wide) {
             padding-bottom: $gutter--desktop-wide * $bottom;
         }
+    } @elseif $bottom == 0 and $reset {
+        padding-bottom: 0;
+        @include media-query(tablet-portrait) {
+            padding-bottom: 0;
+        }
+        @include media-query(desktop) {
+            padding-bottom: 0;
+        }
+        @include media-query(desktop-wide) {
+            padding-bottom: 0;
+        }
     }
 
     @if $right > 0 {
@@ -106,6 +128,17 @@
         @include media-query(desktop-wide) {
             padding-right: $gutter--desktop-wide * $right;
         }
+    } @elseif $right == 0 and $reset {
+        padding-right: 0;
+        @include media-query(tablet-portrait) {
+            padding-right: 0;
+        }
+        @include media-query(desktop) {
+            padding-right: 0;
+        }
+        @include media-query(desktop-wide) {
+            padding-right: 0;
+        }
     }
 
     @if $left > 0 {
@@ -118,6 +151,17 @@
         }
         @include media-query(desktop-wide) {
             padding-left: $gutter--desktop-wide * $left;
+        }
+    } @elseif $left == 0 and $reset {
+        padding-left: 0;
+        @include media-query(tablet-portrait) {
+            padding-left: 0;
+        }
+        @include media-query(desktop) {
+            padding-left: 0;
+        }
+        @include media-query(desktop-wide) {
+            padding-left: 0;
         }
     }
 }

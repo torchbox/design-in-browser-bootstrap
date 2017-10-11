@@ -20,3 +20,13 @@ img,
 svg {
     vertical-align: top;
 }
+
+
+// 100% wrapper hight
+html,
+body {
+    // Breaks position sticky
+    height: 100%;
+}
+
+

@@ -1,0 +1,12 @@
+.logo {
+    $root: &;
+    display: flex;
+
+    &__svg {
+        fill: $black;
+
+        #{$root}--orange & {
+            fill: $orange;
+        }
+    }
+}

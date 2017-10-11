@@ -1,0 +1,25 @@
+.priority-nav {
+    @include gutter(0, 0.5, 0, 0.5);
+
+    &__menu {
+        display: none;
+
+        @include media-query(tablet-landscape) {
+            display: block;
+        }
+
+        &__item {
+            @include gutter(0, 0.5, 0, 0.5);
+            display: inline-block;
+        }
+    }
+
+    &__full-link {
+        @include gutter;
+        display: block;
+
+        @include media-query(tablet-landscape) {
+            display: none;
+        }
+    }
+}

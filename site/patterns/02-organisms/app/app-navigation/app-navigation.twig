@@ -1,0 +1,12 @@
+
+
+{# TODO: Add aria role #}
+<nav class="app-navigation">
+
+	{% for item in priorityNavigation %}
+		<div class="app-navigation__item">
+			{% include "@molecules/links/priority-link/priority-link.twig" with item %}
+		</div>
+	{% endfor %}
+
+</nav>

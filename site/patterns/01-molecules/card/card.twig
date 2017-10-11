@@ -1,0 +1,33 @@
+
+
+<a class="card" href="{{ href|default('#') }}">
+	<div class="card__image">
+		{% include "@atoms/images/image-cover/image-cover.twig" with image %}
+	</div>
+	<div class="card__text">
+		
+		<span class="f3 lh-title sans-serif">
+			{% autoescape false %}
+				{{ title|raw|default('title') }}
+			{% endautoescape %}
+		</span>
+
+		<div class="card__text__detail">
+
+			<span class="f6 lh-solid sans-serif orange">
+				{% autoescape false %}
+					{{ author|raw|default('author') }}
+				{% endautoescape %}
+			</span>
+
+			<span class="f6 lh-solid sans-serif">
+				{% autoescape false %}
+					{{ date|raw|default('date') }}
+				{% endautoescape %}
+			</span>
+			
+		</div>
+
+	</div>
+</a>
+

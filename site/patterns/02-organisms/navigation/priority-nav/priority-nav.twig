@@ -1,0 +1,17 @@
+
+
+<nav class="priority-nav">
+
+	<div class="priority-nav__menu">
+		{% for item in priorityNavigation %}
+			<div class="priority-nav__menu__item">
+				{% include "@molecules/links/priority-link/priority-link.twig" with item %}
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class="priority-nav__full-link">
+		{% include "@molecules/links/mobile-menu-link/mobile-menu-link.twig" %}
+	</div>
+
+</nav>

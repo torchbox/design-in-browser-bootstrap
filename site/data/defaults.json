@@ -1,0 +1,24 @@
+{
+	"priorityNavigation" : [
+		{
+			"title" : "work",
+			"href" : "#"
+		},
+		{
+			"title" : "services",
+			"href" : "#"
+		},
+		{
+			"title" : "about",
+			"href" : "#"
+		},
+		{
+			"title" : "blog",
+			"href" : "#"
+		},
+		{
+			"title" : "contact",
+			"href" : "#"
+		}
+	]
+}

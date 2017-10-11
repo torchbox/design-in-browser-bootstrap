@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    $Cards
+\*------------------------------------*/
+
+.section-grid {
+    $root: &;
+    will-change: transform;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__header {
+        @include gutter(1, 0, 1, 0);
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        z-index: 2;
+        color: $dark-grey;
+        background: $white;
+    }
+
+    &__links {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+
+        &__item {
+            @include gutter(0.5, 0.5, 0.5, 0.5);
+            min-width: 100%;
+            min-height: 350px;
+            width: 100%;
+
+            @include media-query(tablet-landscape) {
+                min-width: 50%;
+                width: 50%;
+            }
+
+            @include media-query(desktop) {
+                min-width: 25%;
+                width: 25%;
+
+                &:nth-of-type(1),
+                &:nth-of-type(6) {
+                    width: 50%;
+                    min-width: 50%;
+                }
+            }
+        }
+    }
+}

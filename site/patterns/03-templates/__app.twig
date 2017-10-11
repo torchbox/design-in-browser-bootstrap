@@ -1,0 +1,27 @@
+<div class="app">
+
+	<div class="app__header">
+		{% include "@organisms/app/app-header/app-header.twig" %}
+	</div>
+
+	<div class="app__body">
+
+		<div class="app__navigation">
+			{% include "@organisms/app/app-navigation/app-navigation.twig" %}
+		</div>
+
+		<div class="app__page">
+			<div class="app__page__scroll-container">
+				{% block app__page %}
+
+				{% endblock %}
+			</div>
+		</div>
+
+	</div>
+
+	<div class="app__footer">
+
+	</div>
+
+</div>

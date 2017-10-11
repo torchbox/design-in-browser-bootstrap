@@ -1,0 +1,24 @@
+{
+    "priorityNavigation": [
+        {
+            "title": "lorem",
+            "href": "#"
+        },
+        {
+            "title": "ipsum",
+            "href": "#"
+        },
+        {
+            "title": "dolor",
+            "href": "#"
+        },
+        {
+            "title": "consectetur",
+            "href": "#"
+        },
+        {
+            "title": "sint",
+            "href": "#"
+        }
+    ]
+}
