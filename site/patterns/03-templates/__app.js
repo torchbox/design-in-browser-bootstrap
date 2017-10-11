@@ -11,8 +11,7 @@ import $ from "~/site/javascript/globals";
 
 class App {
     constructor(node) {
-
-    	// Class specific variables
+        // Class specific variables
         this.$node = $(node);
         this.$appNavigation = this.$node.find(".app__navigation");
         this.openClass = "open";
@@ -53,6 +52,6 @@ class App {
     }
 }
 
-$(".app").each(function(){
+$(".app").each(function() {
     new App(this);
 });

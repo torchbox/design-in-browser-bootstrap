@@ -23,6 +23,6 @@ class MobileMenuLink {
     }
 }
 
-$(".mobile-menu-link").each(function(){
+$(".mobile-menu-link").each(function() {
     new MobileMenuLink(this);
 });
