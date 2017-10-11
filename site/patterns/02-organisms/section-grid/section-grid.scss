@@ -30,19 +30,23 @@
 
         &__item {
             @include gutter(0.5, 0.5, 0.5, 0.5);
+            min-width: 100%;
+            min-height: 350px;
             width: 100%;
 
             @include media-query(tablet-landscape) {
+                min-width: 50%;
                 width: 50%;
             }
 
             @include media-query(desktop) {
+                min-width: 25%;
                 width: 25%;
 
                 &:nth-of-type(1),
                 &:nth-of-type(6) {
                     width: 50%;
-                    min-height: 400px;
+                    min-width: 50%;
                 }
             }
         }
