@@ -6,18 +6,15 @@ import commonjs from 'rollup-plugin-commonjs'; // uses UglifyJS2, and works with
 import uglify from 'rollup-plugin-uglify'; // plugins to display the original size of each import, and the final size of the bundle
 import sizes from 'rollup-plugin-sizes';
 import filesize from 'rollup-plugin-filesize';
-// Could do multiple entries
-// const entries = [
-//     'client/scripts/main.js',
-//     'client/scripts/example.js'
-// ];
-// entry: `site/javascript/${entries}`,
+
 // Create default config object
 let config = {
-    entry       : `${process.env.npm_package_config_src_js}/${process.env.entry}`,
-    dest        : `${process.env.npm_package_config_dest_js}/${process.env.entry}`,
-    format      : 'umd',
-    globals     : {}, // specify globals in .eslintrc to ignore linting errors
+    input       : `${process.env.npm_package_config_src_js}/${process.env.input}`,
+    output      : {
+        format  : 'umd',
+        file    : `${process.env.npm_package_config_dest_js}/${process.env.input}`
+    },
+    globals     : {},
     plugins     : [
         resolve({
             jsnext: true,
@@ -31,12 +28,12 @@ let config = {
 
 // Add Production or Development settings to the config object
 if(process.env.production){
-    config.sourceMap = false;
+    config.sourcemap = false;
     config.plugins.push(uglify());
     config.plugins.push(sizes());
     config.plugins.push(filesize());
 } else {
-    config.sourceMap = true;
+    config.sourcemap = true;
 }
 
 export default config;
