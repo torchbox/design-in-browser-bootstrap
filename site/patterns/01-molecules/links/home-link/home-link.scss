@@ -1,7 +1,10 @@
+/*------------------------------------*\
+    $Home link
+\*------------------------------------*/
+
 .home-link {
     display: block;
     will-change: transform;
-
     padding: 0 0 4px;
 
     @include media-query(tablet-portrait) {

@@ -1,15 +1,12 @@
 {% extends "@templates/__app.twig" %}
 
 {% block app__page %}
-
 	<div class="homepage">
-
 		<div class="homepage__hero">
 			{% include "@organisms/hero/hero-home/hero-home.twig" with hero %}
 		</div>
 
 		<div class="homepage__introduction">
-
 			<div class="homepage__introduction__text">
 				<span class="f2 fw1 lh-title sans-serif">
 					{% autoescape false %}
@@ -17,7 +14,6 @@
 					{% endautoescape %}
 				</span>
 			</div>
-
 		</div>
 
 		<div class="homepage__section homepage__section--blog-posts">
@@ -27,8 +23,5 @@
 		<div class="homepage__section homepage__section--projects">
 			{% include "@organisms/section-grid/section-grid.twig" with projects %}
 		</div>
-
 	</div>
-
 {% endblock %}
-
