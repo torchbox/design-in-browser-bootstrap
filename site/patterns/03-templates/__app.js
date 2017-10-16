@@ -7,14 +7,14 @@
 	file and layout.
 */
 
-import $ from "~/site/javascript/globals";
+import $ from '~/site/javascript/globals';
 
 class App {
     constructor(node) {
         // Class specific variables
         this.$node = $(node);
-        this.$appNavigation = this.$node.find(".app__navigation");
-        this.openClass = "open";
+        this.$appNavigation = this.$node.find('.app__navigation');
+        this.openClass = 'open';
 
         // State
         this.state = {
@@ -46,12 +46,12 @@ class App {
     }
 
     bindEvents() {
-        $(window).on("app:MobileMenuLink:toggle", () => {
+        $(window).on('app:MobileMenuLink:toggle', () => {
             this.menuToggle();
         });
     }
 }
 
-$(".app").each(function() {
+$('.app').each(function() {
     new App(this);
 });

@@ -56,7 +56,7 @@
     "lint:js": "eslint $npm_package_config_src_js --ignore-pattern **/vendor/**/*.js || true",
     "lint": "npm-run-all -p lint:js lint:css",
     "//[ Format ]//": "",
-    "format": "prettier --write --tab-width 4 $npm_package_config_src_patterns'/**/{*.json,*.js,*.scss}'",
+    "format": "prettier --write --single-quote --tab-width 4 $npm_package_config_src_patterns'/**/{*.json,*.js,*.scss}'",
     "//[ Watches ]//": "",
     "watch:data": "onchange $npm_package_config_src_data'/**/*.json' -- npm-run-all sync:data reload",
     "watch:data:debug": "onchange $npm_package_config_src_data'/**/*.json' -- npm-run-all sync:data",

@@ -7,7 +7,7 @@
     file and layout.
 */
 
-import $ from "~/site/javascript/globals";
+import $ from '~/site/javascript/globals';
 
 class MobileMenuLink {
     constructor(node) {
@@ -16,13 +16,13 @@ class MobileMenuLink {
     }
 
     bindEvents() {
-        this.$node.on("click", e => {
+        this.$node.on('click', e => {
             e.preventDefault();
-            $(window).trigger("app:MobileMenuLink:toggle");
+            $(window).trigger('app:MobileMenuLink:toggle');
         });
     }
 }
 
-$(".mobile-menu-link").each(function() {
+$('.mobile-menu-link').each(function() {
     new MobileMenuLink(this);
 });

@@ -36,7 +36,8 @@
             }
         },
         {
-            "title": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+            "title":
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
             "href": "#",
             "category": "news",
             "author": "Joe Bloggs",
@@ -53,7 +54,8 @@
             }
         },
         {
-            "title": "Duis aute irure dolor in reprehenderit in voluptate velit esse",
+            "title":
+                "Duis aute irure dolor in reprehenderit in voluptate velit esse",
             "href": "#",
             "category": "news",
             "author": "Joe Bloggs",
@@ -70,7 +72,8 @@
             }
         },
         {
-            "title": "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+            "title":
+                "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
             "href": "#",
             "category": "news",
             "author": "Joe Bloggs",
@@ -87,7 +90,8 @@
             }
         },
         {
-            "title": "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "title":
+                "Sunt in culpa qui officia deserunt mollit anim id est laborum",
             "href": "#",
             "category": "news",
             "author": "Joe Bloggs",

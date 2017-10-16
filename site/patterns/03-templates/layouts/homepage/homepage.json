@@ -10,7 +10,8 @@
             "href": "http://wagtail.io"
         }
     ],
-    "introduction": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.",
+    "introduction":
+        "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.",
     "hero": {
         "image": {
             "description": "Placeholder alt text",
@@ -61,7 +62,8 @@
                 }
             },
             {
-                "title": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+                "title":
+                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
                 "href": "#",
                 "category": "news",
                 "author": "Joe Bloggs",
@@ -78,7 +80,8 @@
                 }
             },
             {
-                "title": "Duis aute irure dolor in reprehenderit in voluptate velit esse",
+                "title":
+                    "Duis aute irure dolor in reprehenderit in voluptate velit esse",
                 "href": "#",
                 "category": "news",
                 "author": "Joe Bloggs",
@@ -95,7 +98,8 @@
                 }
             },
             {
-                "title": "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+                "title":
+                    "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
                 "href": "#",
                 "category": "news",
                 "author": "Joe Bloggs",
@@ -112,7 +116,8 @@
                 }
             },
             {
-                "title": "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+                "title":
+                    "Sunt in culpa qui officia deserunt mollit anim id est laborum",
                 "href": "#",
                 "category": "news",
                 "author": "Joe Bloggs",
@@ -168,7 +173,8 @@
                 }
             },
             {
-                "title": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+                "title":
+                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
                 "href": "#",
                 "category": "news",
                 "author": "Joe Bloggs",
