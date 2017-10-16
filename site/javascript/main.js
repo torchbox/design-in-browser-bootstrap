@@ -1,5 +1,5 @@
 /*
     Inline JS imports
 */
-import 'glob:../patterns/**/*.js';
 
+import 'glob:../patterns/**/*.js';

@@ -1,17 +1,11 @@
-
-
 <nav class="section-grid">
-	
 	<div class="section-grid__header">
-		
 		<span class="f1 fw1 lh-title sans-serif">
 			{% autoescape false %}
 				{{ title|raw|default('title') }}
 			{% endautoescape %}
 		</span>
-		
 	</div>
-
 	<div class="section-grid__links">
 		{% for project in items %}
 			<div class="section-grid__links__item">
@@ -19,5 +13,4 @@
 			</div>
 		{% endfor %}
 	</div>
-
 </nav>

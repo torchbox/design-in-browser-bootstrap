@@ -1,14 +1,11 @@
 /*------------------------------------*\
-    $MIXINS
+    $Mixins
 \*------------------------------------*/
 
 
-
-
 /* ============================================
-    Media Query mixin
+    Media Query
 */
-
 @mixin media-query($queries...) {
     @each $query in $queries {
         @each $breakpoint in $breakpoints {
@@ -28,7 +25,6 @@
 /* ============================================
   Placeholder text
 */
-
 @mixin placeholder-text {
     // sass-lint:disable no-vendor-prefixes
     &.placeholder { @content; }
@@ -43,7 +39,6 @@
 /* ============================================
   iOS Native vertical scroll
 */
-
 @mixin native-vertical-scroll {
     position: relative; // Ensures container is considered the offsetParent() in JS
     overflow-y: scroll;
@@ -57,7 +52,6 @@
    components at the template-level
    For want of a better place to put this I've left it here:
 */
-
 @mixin aligner {
     max-width: $max-width;
     margin: 0 auto;
