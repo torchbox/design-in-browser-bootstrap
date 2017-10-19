@@ -49,6 +49,21 @@ $font-serif: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', G
 
 
 /* ============================================
+   Font sizes
+   :: Define base default sizes
+*/
+$font-sizes: (
+    xxl:   42px,
+    xl:    28px,
+    l:     21px,
+    m:     18px,
+    s:     14px,
+    xs:    12px,
+    xxs:   11px
+);
+
+
+/* ============================================
    Grid Dimentions
 */
 $gutter--mobile:        10px;
