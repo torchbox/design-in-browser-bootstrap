@@ -40,13 +40,6 @@ $white-10: rgba($white, 0.1);
 $white-05: rgba($white, 0.05);
 
 
-// Theme colours
-// $primary: $teal;
-// $secondary: $green;
-// $tertiary: $orange;
-// $quaternary: $yellow;
-
-
 /* ============================================
    Typography
    :: Default to system font stack
@@ -56,7 +49,22 @@ $font-serif: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', G
 
 
 /* ============================================
-   Grid Dimentions
+   Font sizes
+   :: Define base default sizes
+*/
+$font-sizes: (
+    xxl:   42px,
+    xl:    28px,
+    l:     21px,
+    m:     18px,
+    s:     14px,
+    xs:    12px,
+    xxs:   11px
+);
+
+
+/* ============================================
+   Grid Dimensions
 */
 $gutter--mobile:        10px;
 $gutter--tablet:        20px;
