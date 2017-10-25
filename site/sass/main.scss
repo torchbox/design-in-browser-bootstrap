@@ -29,4 +29,6 @@
 	$Patterns
 \*------------------------------------*/
 
+// sass-lint:disable clean-import-paths
 @import '../patterns/**/*.scss';
+// sass-lint:enddisable
