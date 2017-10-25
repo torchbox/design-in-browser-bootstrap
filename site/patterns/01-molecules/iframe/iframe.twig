@@ -1,7 +1,5 @@
 <div class="iframe">
-    <div class="iframe__item">
-        {% for video in items %}
-            {% include "@atoms/video/video.twig" with video %}
-        {% endfor %}
-    </div>
+    {% for video in items %}
+        {% include "@atoms/video/video.twig" with video %}
+    {% endfor %}
 </div>

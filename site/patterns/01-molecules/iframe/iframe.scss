@@ -3,7 +3,7 @@
     height: 0;
     overflow: hidden;
     padding-bottom: 56.25%;
-    margin-bottom: ($grid);
+    margin-bottom: 28px; // Could do with using a grid value
 
     &__item {
         position: absolute;
