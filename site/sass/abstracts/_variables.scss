@@ -39,6 +39,21 @@ $white-20: rgba($white, 0.2);
 $white-10: rgba($white, 0.1);
 $white-05: rgba($white, 0.05);
 
+$color--black: $black;
+$color--white: $white;
+
+// Theme colours
+$color--primary:                $teal;
+$color--secondary:              $green;
+$color--tertiary:               $orange;
+$color--quaternary:             $yellow;
+$color--quinary:                $dark-grey;
+$color--senary:                 $teal;
+$color--septenary:              $green;
+$color--octonary:               $orange;
+$color--nonary:                 $yellow;
+$color--denary:                 $dark-grey;
+
 
 /* ============================================
    Typography
@@ -66,6 +81,7 @@ $font-sizes: (
 /* ============================================
    Grid Dimensions
 */
+
 $gutter--mobile:        10px;
 $gutter--tablet:        20px;
 $gutter--desktop:       26px;
@@ -95,3 +111,10 @@ $breakpoints: (
 
 $anim--speed: 600ms;
 $anim--ease: ease-in-out;
+
+
+/* ============================================
+    Border radius
+*/
+
+$default-border-radius: 3px;
