@@ -4,8 +4,8 @@
         padding: 28px 21px;
         border: 2px solid transparent;
         border-radius: $default-border-radius;
-        background-color: $color--card;
-        margin-bottom: ($grid / 2);
+        background-color: $black-10;
+        margin-bottom: 14px;
     }
 
     &__group-heading {
@@ -80,7 +80,7 @@
     &__checkbox-item {
         flex-basis: 100%;
         min-width: 100%;
-        margin-bottom: ($grid / 4);
+        margin-bottom: 7px;
 
         @include media-query(laptop) {
             flex-basis: 33.333%;
