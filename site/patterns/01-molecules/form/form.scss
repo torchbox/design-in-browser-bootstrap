@@ -1,0 +1,109 @@
+.form {
+
+    &__group {
+        padding: 28px 21px;
+        border: 2px solid transparent;
+        border-radius: $default-border-radius;
+        background-color: $color--card;
+        margin-bottom: ($grid / 2);
+    }
+
+    &__group-heading {
+        @include font-size(xs);
+        color: $color--black;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    &__item {
+        margin-bottom: 14px;
+        clear: both;
+
+        &--heading {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__action {
+        margin-top: 28px;
+        margin-bottom: 56px;
+    }
+
+    &__item-heading {
+        @include font-size(s);
+        margin-bottom: 0;
+    }
+
+    &__input {
+        min-width: 300px;
+
+        &--xsmall {
+            width: 50px;
+        }
+
+        &--small {
+            width: 200px;
+        }
+
+        &--medium {
+            width: 400px;
+        }
+
+        &--large {
+            width: 100%;
+        }
+
+    }
+
+
+    &__checkbox-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__radio-item,
+    &__checkbox-item {
+        @include font-size(xs);
+        display: flex;
+        align-items: center;
+        color: rgba($color--black, 0.7);
+        margin-bottom: 7px;
+
+        [type='radio'],
+        [type='checkbox'] {
+            margin-right: 5px;
+        }
+
+    }
+
+    &__checkbox-item {
+        flex-basis: 100%;
+        min-width: 100%;
+        margin-bottom: ($grid / 4);
+
+        @include media-query(laptop) {
+            flex-basis: 33.333%;
+            min-width: 33.333%;
+            margin-bottom: 7px;
+        }
+
+    }
+
+    &__required {
+        font-weight: 700;
+        color: $color--nonary;
+    }
+
+    &__description {
+        @include font-size(xxs);
+        margin-top: 7px;
+        color: rgba($color--black, 0.5);
+
+        &--important {
+            font-weight: 700;
+        }
+
+    }
+
+}

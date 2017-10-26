@@ -1,0 +1,7 @@
+<input
+    class="form__{{ item.type }}"
+    type="{{ item.specimen }}"
+    {% if item.required %}required{% endif %}
+    {% if item.name %}name="{{ item.name }}"{% endif %}
+    {% if item.placeholder %}placeholder="{{ item.placeholder }}"{% endif %}
+>
