@@ -1,0 +1,9 @@
+{# name and id could do with parent name in #}
+<div class="form__radio-container">
+{% for item in options %}
+    <div class="form__radio-item">
+        <input type="radio" name="" id="-{{ loop.index }}">
+        {{ item.title }}
+    </div>
+{% endfor %}
+</div>
