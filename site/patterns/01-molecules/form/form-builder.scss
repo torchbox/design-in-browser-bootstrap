@@ -1,12 +1,17 @@
 .form {
+    padding: 15px;
+
     &__group {
         padding: 30px;
-        border: 2px solid transparent;
+        border: 0;
         background-color: $black-10;
         margin-bottom: 15px;
     }
 
     &__group-heading {
+        @include font-size(l);
+        margin: 0 0 15px;
+        float: left;
         color: $color--black;
     }
 
