@@ -1,57 +1,59 @@
-{% for fieldset in formbuilder %}
-<div class="form__group">
+<form class="form">
+    {% for fieldset in formbuilder %}
+    <fieldset class="form__group">
 
-    <h2 class="form__group-heading">{{ fieldset.title }}</h2>
+        <legend class="form__group-heading">{{ fieldset.title }}</legend>
 
-    {% for item in fieldset.items %}
+        {% for item in fieldset.items %}
 
-        <div class="form__item {% if item.type %}form__item--{{ item.type }}{% endif %}">
+            <div class="form__item {% if item.type %}form__item--{{ item.type }}{% endif %}">
 
-            {% if item.label %}
-                {% include "@atoms/form-elements/label.twig" %}
-            {% endif %}
+                {% if item.label %}
+                    {% include "@atoms/form-elements/label.twig" %}
+                {% endif %}
 
-            {% if item.type == "input" %}
+                {% if item.type == "input" %}
 
-                {% include "@atoms/form-elements/input.twig" with item %}
+                    {% include "@atoms/form-elements/input.twig" with item %}
 
-            {% elseif item.type == "select" %}
+                {% elseif item.type == "select" %}
 
-                {% include "@atoms/form-elements/select.twig" with item %}
+                    {% include "@atoms/form-elements/select.twig" with item %}
 
-            {% elseif item.type == "radio" %}
+                {% elseif item.type == "radio" %}
 
-                {% include "@atoms/form-elements/radio.twig" with item %}
+                    {% include "@atoms/form-elements/radio.twig" with item %}
 
-            {% elseif item.type == "checkbox" %}
+                {% elseif item.type == "checkbox" %}
 
-                {% include "@atoms/form-elements/checkbox.twig" with item %}
+                    {% include "@atoms/form-elements/checkbox.twig" with item %}
 
-            {% elseif item.type == "heading" %}
+                {% elseif item.type == "heading" %}
 
-                {% include "@atoms/form-elements/form-heading.twig" with item %}
+                    {% include "@atoms/form-elements/form-heading.twig" with item %}
 
-            {% elseif item.type == "textarea" %}
+                {% elseif item.type == "textarea" %}
 
-                {% include "@atoms/form-elements/textarea.twig" with item %}
+                    {% include "@atoms/form-elements/textarea.twig" with item %}
 
-            {% elseif item.type == "submit" %}
+                {% elseif item.type == "submit" %}
 
-                {% include "@atoms/form-elements/form-button.twig" with item %}
+                    {% include "@atoms/form-elements/form-button.twig" with item %}
 
-            {% endif %}
+                {% endif %}
 
-            {% if item.description %}
-                {% include "@atoms/form-elements/description.twig" %}
-            {% endif %}
+                {% if item.description %}
+                    {% include "@atoms/form-elements/description.twig" %}
+                {% endif %}
 
-        </div> <!-- /form--item -->
+            </div>
 
+        {% endfor %}
+
+    </fieldset>
     {% endfor %}
 
-</div>
-{% endfor %}
-
-<div class="form__action">
-    <input class="form__btn btn btn--senary" type="submit" value="{{ formSubmit }}">
-</div>
+    <div class="form__action">
+        <input class="form__btn btn btn--senary" type="submit" value="{{ formSubmit }}">
+    </div>
+</form>
