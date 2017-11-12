@@ -1,5 +1,4 @@
 .form {
-
     &__group {
         padding: 28px 21px;
         border: 2px solid transparent;
@@ -22,7 +21,6 @@
         &--heading {
             margin-bottom: 0;
         }
-
     }
 
     &__action {
@@ -56,7 +54,6 @@
 
     }
 
-
     &__checkbox-container {
         display: flex;
         flex-wrap: wrap;
@@ -74,7 +71,6 @@
         [type='checkbox'] {
             margin-right: 5px;
         }
-
     }
 
     &__checkbox-item {
@@ -87,7 +83,6 @@
             min-width: 33.333%;
             margin-bottom: 7px;
         }
-
     }
 
     &__required {
@@ -103,7 +98,5 @@
         &--important {
             font-weight: 700;
         }
-
     }
-
 }
