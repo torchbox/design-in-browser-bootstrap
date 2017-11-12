@@ -1,0 +1,119 @@
+{
+    "formbuilder" : [
+        {
+            "title" : "Section title 1",
+            "type" : "fieldset",
+            "items" : [
+                {
+                    "type" : "heading",
+                    "title": "Subheading lorem ipsum dolor sit amet"
+                },
+                {
+                    "type" : "input",
+                    "specimen" : "text",
+                    "label" : "Text input",
+                    "placeholder" : "",
+                    "name" : "",
+                    "description" : ""
+                },
+                {
+                    "type" : "input",
+                    "specimen" : "date",
+                    "label" : "Date input",
+                    "placeholder" : "",
+                    "name" : "",
+                    "description" : ""
+                },
+                {
+                    "type" : "input",
+                    "specimen" : "tel",
+                    "label" : "Tel input",
+                    "placeholder" : "",
+                    "name" : "",
+                    "description" : ""
+                },
+                {
+                    "type" : "input",
+                    "specimen" : "email",
+                    "label" : "Email input",
+                    "placeholder" : "",
+                    "name" : "",
+                    "description" : ""
+                },
+                {
+                    "type" : "textarea",
+                    "label" : "Textarea input",
+                    "placeholder" : "",
+                    "name" : "",
+                    "description" : ""
+                }
+            ]
+        },
+        {
+            "title" : "Section title 2",
+            "type" : "fieldset",
+            "items" : [
+                {
+                    "type" : "radio",
+                    "label" : "Radio button selection",
+                    "placeholder" : "",
+                    "name" : "",
+                    "description" : "",
+                    "items" : [
+                        {
+                            "title" : "Yes",
+                            "name" : "yes"
+                        },
+                        {
+                            "title" : "No",
+                            "name" : "no"
+                        },
+                        {
+                            "title" : "Not applicable",
+                            "name" : "na"
+                        }
+                    ]
+                },
+                {
+                    "type" : "checkbox",
+                    "label" : "Checkbox input",
+                    "placeholder" : "",
+                    "name" : "",
+                    "description" : "",
+                    "items" : [
+                        {
+                            "title" : "Item one",
+                            "name" : ""
+                        },
+                        {
+                            "title" : "Item two",
+                            "name" : ""
+                        },
+                        {
+                            "title" : "Item three",
+                            "name" : ""
+                        },
+                        {
+                            "title" : "Item four",
+                            "name" : ""
+                        },
+                        {
+                            "title" : "Item five",
+                            "name" : ""
+                        },
+                        {
+                            "title" : "Item six",
+                            "name" : ""
+                        }
+                    ]
+                },
+                {
+                    "type" : "submit",
+                    "title" : "Submit input",
+                    "description" : ""
+                }
+            ]
+        }
+    ],
+    "formSubmit" : "Submit form"
+}
