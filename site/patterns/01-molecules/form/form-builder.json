@@ -1,13 +1,17 @@
 {
     "formbuilder" : [
         {
-            "title" : "Your details",
+            "title" : "Section title 1",
             "type" : "fieldset",
             "items" : [
                 {
+                    "type" : "heading",
+                    "title": "Subheading lorem ipsum dolor sit amet"
+                },
+                {
                     "type" : "input",
                     "specimen" : "text",
-                    "label" : "Name",
+                    "label" : "Text input",
                     "placeholder" : "",
                     "name" : "",
                     "description" : ""
@@ -15,43 +19,7 @@
                 {
                     "type" : "input",
                     "specimen" : "date",
-                    "label" : "Date of birth",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : ""
-                }
-            ]
-        },
-        {
-            "title" : "GP details",
-            "type" : "fieldset",
-            "items" : [
-                {
-                    "type" : "input",
-                    "specimen" : "text",
-                    "label" : "GP Name",
-                    "placeholder" : "",
-                    "name" : "gp-name",
-                    "description" : ""
-                },
-                {
-                    "type" : "input",
-                    "specimen" : "text",
-                    "label" : "Surgery",
-                    "placeholder" : "",
-                    "name" : "surgery",
-                    "description" : ""
-                }
-            ]
-        },
-        {
-            "title" : "Contact information",
-            "type" : "fieldset",
-            "items" : [
-                {
-                    "type" : "input",
-                    "specimen" : "tel",
-                    "label" : "Home telephone",
+                    "label" : "Date input",
                     "placeholder" : "",
                     "name" : "",
                     "description" : ""
@@ -59,23 +27,7 @@
                 {
                     "type" : "input",
                     "specimen" : "tel",
-                    "label" : "Work telephone",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : ""
-                },
-                {
-                    "type" : "input",
-                    "specimen" : "tel",
-                    "label" : "Mobile telephone",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : ""
-                },
-                {
-                    "type" : "input",
-                    "specimen" : "text",
-                    "label" : "Address",
+                    "label" : "Tel input",
                     "placeholder" : "",
                     "name" : "",
                     "description" : ""
@@ -83,7 +35,14 @@
                 {
                     "type" : "input",
                     "specimen" : "email",
-                    "label" : "Email address",
+                    "label" : "Email input",
+                    "placeholder" : "",
+                    "name" : "",
+                    "description" : ""
+                },
+                {
+                    "type" : "textarea",
+                    "label" : "Textarea input",
                     "placeholder" : "",
                     "name" : "",
                     "description" : ""
@@ -91,52 +50,12 @@
             ]
         },
         {
-            "title" : "About you",
+            "title" : "Section title 2",
             "type" : "fieldset",
             "items" : [
                 {
                     "type" : "radio",
-                    "label" : "If you are female are you pregnant?",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : "",
-                    "items" : [
-                        {
-                            "title" : "Yes",
-                            "name" : "yes"
-                        },
-                        {
-                            "title" : "No",
-                            "name" : "no"
-                        }
-                    ]
-                },
-                {
-                    "type" : "textarea",
-                    "label" : "What is the problem that you are seeking help for?",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : ""
-                },
-                {
-                    "type" : "input",
-                    "specimen" : "text",
-                    "label" : "How long have you had the problem for?",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : ""
-                },
-                {
-                    "type" : "input",
-                    "specimen" : "text",
-                    "label" : "What is your occupation?",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : ""
-                },
-                {
-                    "type" : "radio",
-                    "label" : "Are you able to work despite your current problem?",
+                    "label" : "Radio button selection",
                     "placeholder" : "",
                     "name" : "",
                     "description" : "",
@@ -156,248 +75,45 @@
                     ]
                 },
                 {
-                    "type" : "textarea",
-                    "label" : "List any activities / sports / hobbies that you have difficulty doing in daily life due to this problem?",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : ""
-                },
-                {
-                    "type" : "radio",
-                    "label" : "Does it affect your sleep?",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : "",
-                    "items" : [
-                        {
-                            "title" : "Yes",
-                            "name" : "yes"
-                        },
-                        {
-                            "title" : "No",
-                            "name" : "no"
-                        }
-                    ]
-                },
-                {
-                    "type" : "textarea",
-                    "label" : "Please list all the medication that you are taking, including painkillers",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : ""
-                },
-                {
-                    "type" : "radio",
-                    "label" : "Have you ever taken steroid tablets?",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : "",
-                    "items" : [
-                        {
-                            "title" : "Yes",
-                            "name" : "yes"
-                        },
-                        {
-                            "title" : "No",
-                            "name" : "no"
-                        }
-                    ]
-                },
-                {
-                    "type" : "textarea",
-                    "label" : "What do you feel is causing your symptoms?",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : ""
-                },
-                {
-                    "type" : "textarea",
-                    "label" : "What do you hope to achieve from attending this appointment?",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : ""
-                },
-                {
-                    "type" : "radio",
-                    "label" : "Have you had any X-rays, scans or other test done for this problem?",
-                    "placeholder" : "",
-                    "name" : "",
-                    "description" : "",
-                    "items" : [
-                        {
-                            "title" : "Yes",
-                            "name" : "yes"
-                        },
-                        {
-                            "title" : "No",
-                            "name" : "no"
-                        }
-                    ]
-                },
-                {
-                    "type" : "heading",
-                    "title": "Pain, Numbness, and Pins & Needles Locations"
-                },
-                {
                     "type" : "checkbox",
-                    "label" : "Please select the location where you are experiencing either pain, numbness, or pins & needles",
+                    "label" : "Checkbox input",
                     "placeholder" : "",
                     "name" : "",
                     "description" : "",
                     "items" : [
                         {
-                            "title" : "Ankle (Left)",
+                            "title" : "Item one",
                             "name" : ""
                         },
                         {
-                            "title" : "Ankle (Right)",
+                            "title" : "Item two",
                             "name" : ""
                         },
                         {
-                            "title" : "Back of Head",
+                            "title" : "Item three",
                             "name" : ""
                         },
                         {
-                            "title" : "Back of Knee (Left)",
+                            "title" : "Item four",
                             "name" : ""
                         },
                         {
-                            "title" : "Back of Knee (Right)",
+                            "title" : "Item five",
                             "name" : ""
                         },
                         {
-                            "title" : "Back (Lower)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Back (Middle)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Back (Upper)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Buttock (Left)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Buttock (Right)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Chest",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Elbow (Left)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Elbow (Right)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Face",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Fingers (Left hand)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Fingers (Right hand)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Foot (Left)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Foot (Right)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Forehead",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Hand (Left)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Hand (Right)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Hip (Left)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Hip (Right)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Knee (Left)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Knee (Right)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Neck",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Shin (Left)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Shin (Right)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Shoulder blade (Left)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Shoulder blade (Right)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Shoulder (Left)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Shoulder (Right)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Toes (Left foot)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Toes (Right foot)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Wrist (Left)",
-                            "name" : ""
-                        },
-                        {
-                            "title" : "Wrist (Right)",
+                            "title" : "Item six",
                             "name" : ""
                         }
                     ]
                 },
                 {
                     "type" : "submit",
-                    "title" : "Submit Referral",
+                    "title" : "Submit input",
                     "description" : ""
                 }
             ]
         }
     ],
-    "formSubmit" : "Submit referral"
+    "formSubmit" : "Submit form"
 }
