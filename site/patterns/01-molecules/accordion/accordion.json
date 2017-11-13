@@ -1,0 +1,20 @@
+{
+    "accordion" : [
+        {
+            "title" : "Accordion item one",
+            "text" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>"
+        },
+        {
+            "title" : "Accordion item two",
+            "text" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>"
+        },
+        {
+            "title" : "Accordion item three",
+            "text" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>"
+        },
+        {
+            "title" : "Accordion item four",
+            "text" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>"
+        }
+    ]
+}

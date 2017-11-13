@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    $Accordion
+\*------------------------------------*/
+
+.accordion {
+    $root: &;
+
+    &__item {
+        border-bottom: 1px solid $color--black;
+
+        &:hover {
+            #{$root}__heading {
+                color: lighten($color--black, 10%);
+            }
+        }
+
+        &:first-child {
+            border-top: 1px solid $color--black;
+        }
+
+        &.open {
+            #{$root}__icon {
+                transform: rotate(180deg);
+            }
+
+            #{$root}__content {
+                max-height: 9999px;
+                height: auto;
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            #{$root}__heading {
+                color: $color--black;
+            }
+        }
+    }
+
+    &__content {
+        max-height: 0;
+        pointer-events: none;
+        height: auto;
+        opacity: 0;
+        background-color: $color--white;
+        // sass-lint:disable indentation
+        transition: max-height $anim--speed $anim--ease 0s,
+                    opacity ($anim--speed) ease 0s;
+        // sass-lint:enddisable
+    }
+
+    &__content-container {
+        overflow: hidden;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__heading {
+        @include font-size(m);
+        font-weight: 700;
+        margin: 26px 0 14px;
+        color: $color--black;
+        transition: color $anim--speed $anim--ease 0s;
+    }
+
+    &__heading-meta {
+        font-weight: 500;
+    }
+
+    &__icon {
+        margin: 0 10px;
+        width: 25px;
+        height: 25px;
+        background-color: $color--black;
+    }
+}
