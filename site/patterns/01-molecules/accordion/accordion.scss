@@ -6,20 +6,19 @@
     $root: &;
 
     &__item {
-        border-bottom: 1px dotted $color--black;
+        border-bottom: 1px solid $color--black;
 
         &:hover {
             #{$root}__heading {
-                color: $color--white;
+                color: lighten($color--black, 10%);
             }
         }
 
         &:first-child {
-            border-top: 1px dotted $color--black;
+            border-top: 1px solid $color--black;
         }
 
         &.open {
-
             #{$root}__icon {
                 transform: rotate(180deg);
             }
@@ -72,6 +71,9 @@
     }
 
     &__icon {
-        fill: $color--black;
+        margin: 0 10px;
+        width: 25px;
+        height: 25px;
+        background-color: $color--black;
     }
 }

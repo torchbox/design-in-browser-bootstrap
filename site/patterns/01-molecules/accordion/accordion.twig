@@ -3,9 +3,7 @@
         {% for item in accordion %}
         <div class="accordion__item">
             <div class="accordion__header js-accordion__toggle">
-                <svg class="accordion__icon" width="42px" height="42px">
-                    <use xlink:href="#arrow-down"></use>
-                </svg>
+                <div class="accordion__icon"></div>
                 <h2 class="accordion__heading">{{ item.title|raw }}</h2>
             </div>
             <div class="accordion__content">
@@ -16,4 +14,4 @@
         </div>
         {% endfor %}
     </div>
-</div> <!-- /accordion -->
+</div>
