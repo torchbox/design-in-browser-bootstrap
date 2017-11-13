@@ -1,19 +1,21 @@
+/*------------------------------------*\
+    $Accordion
+\*------------------------------------*/
+
 .accordion {
     $root: &;
 
     &__item {
-        border-bottom: 1px dotted darken($color--border, 20%);
+        border-bottom: 1px dotted $color--black;
 
         &:hover {
-
             #{$root}__heading {
                 color: $color--white;
             }
-
         }
 
         &:first-child {
-            border-top: 1px dotted darken($color--border, 20%);
+            border-top: 1px dotted $color--black;
         }
 
         &.open {
@@ -32,9 +34,7 @@
             #{$root}__heading {
                 color: $color--black;
             }
-
         }
-
     }
 
     &__content {
@@ -44,8 +44,8 @@
         opacity: 0;
         background-color: $color--white;
         // sass-lint:disable indentation
-        transition: max-height $default-transition-speed ease 0s,
-                    opacity ($default-transition-speed) ease 0s;
+        transition: max-height $anim--speed $anim--ease 0s,
+                    opacity ($anim--speed) ease 0s;
         // sass-lint:enddisable
     }
 
@@ -64,7 +64,7 @@
         font-weight: 700;
         margin-bottom: 0;
         color: $color--black;
-        transition: color $default-transition-speed ease 0s;
+        transition: color $anim--speed $anim--ease 0s;
     }
 
     &__heading-meta {
@@ -72,7 +72,6 @@
     }
 
     &__icon {
-        fill: $color--link;
+        fill: $color--black;
     }
-
 }
