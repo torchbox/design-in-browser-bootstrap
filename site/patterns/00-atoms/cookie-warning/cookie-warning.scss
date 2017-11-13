@@ -1,0 +1,52 @@
+.cookie {
+    @include font-size(xs);
+    display: none; // Doesn't display unless there isn't a cookie
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform $default-transition-speed ease 0s;
+
+    // Applied if cookie just added
+    &.inactive {
+        display: block;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    &.active {
+        display: block;
+        transform: translate3d(0, 0, 0);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color--white;
+        background-color: rgba($color--quinary, 0.95);
+    }
+
+    &__message {
+
+        p {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__link {
+        color: $color--white;
+
+        &:hover {
+            color: $color--black;
+        }
+
+    }
+
+    &__btn {
+        @include font-size(xs);
+        padding: 5px ($grid / 2);
+    }
+
+}
