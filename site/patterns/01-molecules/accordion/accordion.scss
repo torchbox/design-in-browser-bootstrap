@@ -61,7 +61,7 @@
     &__heading {
         @include font-size(m);
         font-weight: 700;
-        margin-bottom: 0;
+        margin: 26px 0 14px;
         color: $color--black;
         transition: color $anim--speed $anim--ease 0s;
     }
