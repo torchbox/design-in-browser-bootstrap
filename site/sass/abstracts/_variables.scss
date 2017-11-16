@@ -8,7 +8,6 @@
    https://coolors.co/2eb1b0-68aa6c-fb5a40-f5c157-2b3033
 */
 
-// Colour vars
 $teal:       #2eb1b0;
 $green:      #68aa6c;
 $orange:     #fb5a40;
@@ -43,16 +42,16 @@ $color--black: $black;
 $color--white: $white;
 
 // Theme colours
-$color--primary:                $teal;
-$color--secondary:              $green;
-$color--tertiary:               $orange;
-$color--quaternary:             $yellow;
-$color--quinary:                $dark-grey;
-$color--senary:                 $teal;
-$color--septenary:              $green;
-$color--octonary:               $orange;
-$color--nonary:                 $yellow;
-$color--denary:                 $dark-grey;
+$color--primary:            $teal;
+$color--secondary:          $green;
+$color--tertiary:           $orange;
+$color--quaternary:         $yellow;
+$color--quinary:            $dark-grey;
+$color--senary:             $teal;
+$color--septenary:          $green;
+$color--octonary:           $orange;
+$color--nonary:             $yellow;
+$color--denary:             $dark-grey;
 
 
 /* ============================================
@@ -109,7 +108,6 @@ $breakpoints: (
 /* ============================================
    Transition speeds
 */
-
 $anim--speed: 600ms;
 $anim--ease: ease-in-out;
 

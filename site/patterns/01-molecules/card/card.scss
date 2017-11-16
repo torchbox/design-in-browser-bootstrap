@@ -40,17 +40,14 @@
         width: calc(100% + #{$image--depth});
         height: 100%;
         transform: translate3d(0, 0, $image--depth);
-
-        // sass-lint:disable indentation
         transition: transform $image--speed $image--ease $image--delay;
-        // sass-lint:enable indentation
 
         #{$root}:focus &,
         #{$root}:hover & {
             transform: translate3d(0, 0%, 2px);
         }
 
-        // Gadient overlay
+        // Gradient overlay
         &::after {
             content: '';
             position: absolute;
@@ -58,6 +55,7 @@
             width: 100%;
             left: 0;
             bottom: 0;
+
             // sass-lint:disable indentation no-color-literals
             background: linear-gradient(
                 to bottom,
@@ -66,12 +64,10 @@
                 rgba($dark-grey, 0.5) 72%,
                 rgba($dark-grey, 1) 100%
             );
-            // sass-lint:enable indentation no-color-literals
+
             mix-blend-mode: multiply;
             will-change: opacity;
-            // sass-lint:disable indentation
             transition: transform $overlay--speed $overlay--ease $overlay--delay;
-            // sass-lint:enable indentation
             transform: translate3d(0, 20%, 0);
 
             #{$root}:focus &,
@@ -110,8 +106,7 @@
 
             // sass-lint:disable indentation
             transition: transform $credit--speed $credit--ease $credit--delay,
-                opacity $credit--speed $credit--ease ($credit--delay +
-                            $credit--delay);
+                        opacity $credit--speed $credit--ease ($credit--delay + $credit--delay);
             // sass-lint:enable indentation
 
             transform: translate3d(0, 100%, 0);
