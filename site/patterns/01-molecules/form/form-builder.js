@@ -1,15 +1,31 @@
 import Pikaday from 'pikaday';
 
-class Datepicker {
-    constructor(node) {
-        this.bindEvents();
-    }
+/*
+    Datepicker library
+    https://github.com/dbushell/Pikaday
+    
+    Useful configuration options:
 
-    bindEvents() {
+        Set a date format
+        `format: 'DD-MM-YYYY'`
+
+        Set a theme wrapper class
+        `theme: custom-theme-classname`
+
+        Set a custom container
+        `container: document.getElementById('container')`
+
+        Callbacks
+        `onSelect: function() {}`
+*/
+
+class FormBuilder {
+    constructor(node) {
         let picker = new Pikaday({ 
-            field: document.getElementById('datepicker') 
+            field: document.getElementById('datepicker'),
+            format: 'DD-MM-YYYY'
         });
     }
 }
 
-new Datepicker();
+new FormBuilder();
