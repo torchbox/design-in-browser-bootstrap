@@ -22,8 +22,7 @@ import Pikaday from 'pikaday';
 class FormBuilder {
     constructor(node) {
         let picker = new Pikaday({ 
-            field: document.getElementById('datepicker'),
-            format: 'DD-MM-YYYY'
+            field: document.getElementById('datepicker')
         });
     }
 }
