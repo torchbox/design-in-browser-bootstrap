@@ -124,5 +124,8 @@
   },
   "engines": {
     "node": ">=4"
+  },
+  "dependencies": {
+    "pikaday": "^1.6.1"
   }
 }
