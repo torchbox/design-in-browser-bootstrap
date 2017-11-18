@@ -3,6 +3,8 @@ import Pikaday from 'pikaday';
 /*
     Datepicker library
     https://github.com/dbushell/Pikaday
+
+    Browser support: IE 7+
     
     Useful configuration options:
 
@@ -20,7 +22,7 @@ import Pikaday from 'pikaday';
 */
 
 class FormBuilder {
-    constructor(node) {
+    constructor() {
         let picker = new Pikaday({ 
             field: document.getElementById('datepicker')
         });
