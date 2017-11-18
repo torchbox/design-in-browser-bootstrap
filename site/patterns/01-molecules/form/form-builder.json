@@ -22,7 +22,8 @@
                     "label" : "Date input",
                     "placeholder" : "",
                     "name" : "",
-                    "description" : ""
+                    "description" : "",
+                    "id" : "datepicker"
                 },
                 {
                     "type" : "input",
