@@ -25,7 +25,8 @@ class Carousel {
         this.bindEvents();
     }
 
-    runCarousel() {
+    runCarousel(updatePager) {
+        updatePager = this.updatePager();
 
         // Set carousel config
         this.carousel = new Siema({
@@ -36,23 +37,6 @@ class Carousel {
                 this.updatePager();
             }
         });
-
-        // Pass pager config
-        let pager = this.pagerContainer;
-        let pagerInit = this.pagerContainerInit;
-        let pagerButtonActive = this.pagerButtonActive;
-
-        // Update pager
-        Siema.prototype.updatePager = function() {
-
-            // Remove default first item active state
-            pager.classList.remove(pagerInit);
-
-            for (let i = 0; i < this.innerElements.length; i++) {
-                const addOrRemove = this.currentSlide === i ? 'add' : 'remove';
-                pager.childNodes[i].classList[addOrRemove](pagerButtonActive);
-            }
-        }
     }
 
     addControls() {
@@ -93,6 +77,27 @@ class Carousel {
         }
 
         this.carousel.addPager();
+    }
+
+    
+    updatePager() {
+
+        // Pass pager config
+        let pager = this.pagerContainer;
+        let pagerInit = this.pagerContainerInit;
+        let pagerButtonActive = this.pagerButtonActive;
+
+        // Update pager
+        Siema.prototype.updatePager = function() {
+
+            // Remove default first item active state
+            pager.classList.remove(pagerInit);
+
+            for (let i = 0; i < this.innerElements.length; i++) {
+                const addOrRemove = this.currentSlide === i ? 'add' : 'remove';
+                pager.childNodes[i].classList[addOrRemove](pagerButtonActive);
+            }
+        }
     }
 
     bindEvents() {
