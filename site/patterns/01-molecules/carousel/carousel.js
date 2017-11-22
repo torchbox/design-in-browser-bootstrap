@@ -2,6 +2,13 @@ import Siema from 'siema';
 
 class Carousel {
 
+    /*
+        Carousel library
+        https://github.com/pawelgrzybek/siema#options
+
+        Browser support: IE 10+
+    */
+
     constructor() {
 
         // Set carousel elements
@@ -16,14 +23,6 @@ class Carousel {
     }
 
     runCarousel() {
-
-        /*
-            Carousel library
-            https://github.com/pawelgrzybek/siema#options
-
-            Browser support: IE 10+
-        */
-
         this.carousel = new Siema({
             selector: this.carouselName,
             duration: this.duration,
