@@ -1,6 +1,7 @@
 import Siema from 'siema';
 
 class Carousel {
+
     constructor() {
 
         // Set carousel elements
@@ -20,7 +21,7 @@ class Carousel {
 
             Browser support: IE 10+
         */
-        
+
         this.carousel = new Siema({
             selector: this.carouselName,
             duration: this.duration,
@@ -28,7 +29,7 @@ class Carousel {
         });
     }
 
-    runCarouselControls() {
+    addCarouselControls() {
 
         // Button navigation
         this.prev.addEventListener('click', () => this.carousel.prev());
@@ -49,9 +50,24 @@ class Carousel {
         });
     }
 
+    addCarouselPagination() {
+        Siema.prototype.addPagination = function() {
+          for (let i = 0; i < this.innerElements.length; i++) {
+            let button = document.createElement('button');
+            button.className = 'carousel__button';
+            button.textContent = i;
+            button.addEventListener('click', () => this.goTo(i));
+            document.querySelector('.carousel__pagination').appendChild(button);
+          }
+        }
+
+        this.carousel.addPagination();
+    }
+
     bindEvents() {
         this.runCarousel();
-        this.runCarouselControls();
+        this.addCarouselControls();
+        this.addCarouselPagination();
     }
 }
 
