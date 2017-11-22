@@ -3,27 +3,29 @@ import Siema from 'siema';
 class Carousel {
     constructor() {
 
-        /*
-            Carousel library
-            https://github.com/pawelgrzybek/siema#options
-
-            Browser support: IE 10+
-        */
-
         // Set carousel elements
         this.carouselName = '.carousel';
         this.prev = document.querySelector('.carousel__prev');
         this.next = document.querySelector('.carousel__next');
         this.duration = 500;
 
-        // Set carousel options
+        this.bindEvents();
+    }
+
+    runCarousel() {
+
+        /*
+            Carousel library
+            https://github.com/pawelgrzybek/siema#options
+
+            Browser support: IE 10+
+        */
+        
         this.carousel = new Siema({
             selector: this.carouselName,
             duration: this.duration,
             easing: 'cubic-bezier(0.65, 0.05, 0.35, 1)'
         });
-
-        this.bindEvents();
     }
 
     runCarouselControls() {
@@ -48,6 +50,7 @@ class Carousel {
     }
 
     bindEvents() {
+        this.runCarousel();
         this.runCarouselControls();
     }
 }
