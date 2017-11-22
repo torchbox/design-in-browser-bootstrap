@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    $Carousel
+\*------------------------------------*/
+
+.carousel {
+    max-width: 700px;
+    margin: 20px auto 0;
+
+    &__item {
+        width: 650px;
+        height: 400px;
+        margin: 0 auto;
+        background: {
+            image: url('http://placehold.it/650x400');
+            position: center;
+        }
+    }
+
+    &__pager,
+    &__navigation {
+        margin: 0 auto;
+        padding-top: 10px;
+        text-align: center;
+
+        &-button,
+        &-next,
+        &-prev {
+            background: transparent;
+        }
+    }
+
+    &__pager {
+        &--init {
+            button:first-of-type {
+                background: #000;
+                color: #fff;
+            }
+        }
+
+        &-button--active {
+            background: #000;
+            color: #fff;
+        }
+    }
+}
