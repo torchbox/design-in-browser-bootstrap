@@ -4,7 +4,7 @@ class Carousel {
 
     /*
         Carousel library
-        https://github.com/pawelgrzybek/siema#options
+        https://github.com/pawelgrzybek/siema
 
         Browser support: IE 10+
     */
@@ -16,9 +16,13 @@ class Carousel {
         this.prev = document.querySelector('.carousel__navigation-prev');
         this.next = document.querySelector('.carousel__navigation-next');
         this.pagerContainer = document.querySelector('.carousel__pager');
+
+        // Set carousel element classes
         this.pagerContainerInit = 'carousel__pager--init';
         this.pagerButton = 'carousel__pager-button';
         this.pagerButtonActive = 'carousel__pager-button--active';
+
+        // Set carousel config vars
         this.duration = 500;
         this.easing = 'cubic-bezier(0.65, 0.05, 0.35, 1)';
         
@@ -33,6 +37,8 @@ class Carousel {
             selector: this.carouselClass,
             duration: this.duration,
             easing: this.easing,
+
+            // Callbacks
             onChange: function() {
                 this.updatePager();
             }
@@ -79,7 +85,6 @@ class Carousel {
         this.carousel.addPager();
     }
 
-    
     updatePager() {
 
         // Pass pager config
@@ -89,10 +94,7 @@ class Carousel {
 
         // Update pager
         Siema.prototype.updatePager = function() {
-
-            // Remove default first item active state
             pager.classList.remove(pagerInit);
-
             for (let i = 0; i < this.innerElements.length; i++) {
                 const addOrRemove = this.currentSlide === i ? 'add' : 'remove';
                 pager.childNodes[i].classList[addOrRemove](pagerButtonActive);
