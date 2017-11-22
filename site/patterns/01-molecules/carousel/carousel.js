@@ -8,6 +8,8 @@ class Carousel {
         this.carouselName = '.carousel';
         this.prev = document.querySelector('.carousel__prev');
         this.next = document.querySelector('.carousel__next');
+        this.paginationContainer = document.querySelector('.carousel__pagination');
+        this.paginationButton = 'carousel__button';
         this.duration = 500;
 
         this.bindEvents();
@@ -51,14 +53,17 @@ class Carousel {
     }
 
     addCarouselPagination() {
+        let pagination = this.paginationContainer;
+        let paginationButton = this.paginationButton;
+
         Siema.prototype.addPagination = function() {
-          for (let i = 0; i < this.innerElements.length; i++) {
-            let button = document.createElement('button');
-            button.className = 'carousel__button';
-            button.textContent = i;
-            button.addEventListener('click', () => this.goTo(i));
-            document.querySelector('.carousel__pagination').appendChild(button);
-          }
+            for (let i = 0; i < this.innerElements.length; i++) {
+                let button = document.createElement('button');
+                button.className = paginationButton;
+                button.textContent = i;
+                button.addEventListener('click', () => this.goTo(i));
+                pagination.appendChild(button);
+            }
         }
 
         this.carousel.addPagination();
