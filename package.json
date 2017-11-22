@@ -126,6 +126,7 @@
     "node": ">=4"
   },
   "dependencies": {
-    "pikaday": "^1.6.1"
+    "pikaday": "^1.6.1",
+    "siema": "^1.4.6"
   }
 }
