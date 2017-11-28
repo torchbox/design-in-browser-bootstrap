@@ -32,14 +32,14 @@ class App {
         this.state.menu.open = true;
     }
 
-    menuCose() {
+    menuClose() {
         this.$appNavigation.removeClass(this.openClass);
         this.state.menu.open = false;
     }
 
     menuToggle() {
         if (this.state.menu.open) {
-            this.menuCose();
+            this.menuClose();
         } else {
             this.menuOpen();
         }
