@@ -40,9 +40,21 @@ $carousel-height: 400px;
             }
         }
 
+        &--inner {
+            position: absolute;
+            bottom: 20px;
+            right: 45px;
+        }
+
         &-button--active {
             background: #000;
             color: #fff;
         }
     }
+}
+
+.carousel-wrapper {
+    max-width: $carousel-width;
+    margin: 0 auto;
+    position: relative;
 }
