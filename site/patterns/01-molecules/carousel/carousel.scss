@@ -5,7 +5,7 @@
 $carousel-width: 700px;
 $carousel-height: 400px;
 $carousel-pager-size: 13px;
-$carousel-pager-colour: #fff;
+$carousel-pager-colour: #eee;
 $carousel-pager-active-colour: #000;
 
 .carousel {
@@ -13,7 +13,7 @@ $carousel-pager-active-colour: #000;
     max-width: $carousel-width;
 
     &__item {
-        width: ($carousel-width - 50px);
+        max-width: $carousel-width;
         height: $carousel-height;
         margin: 0 auto;
         background: {
@@ -41,7 +41,7 @@ $carousel-pager-active-colour: #000;
         // Base pager button styles
         &-button {
             cursor: pointer;
-            
+
             &:not(:last-of-type) {
                 margin-right: 5px;
             }
@@ -59,7 +59,7 @@ $carousel-pager-active-colour: #000;
         &--inner {
             position: absolute;
             bottom: 20px;
-            right: 45px;
+            right: 20px;
         }
 
         // Show pager as dots

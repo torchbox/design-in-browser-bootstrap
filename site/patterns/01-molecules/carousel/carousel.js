@@ -9,10 +9,9 @@ class Carousel {
         Browser support: IE 10+
     */
 
-    constructor() {
-
+    constructor(config) {
+        
         // Set carousel elements
-        this.carouselClass = '.carousel';
         this.prev = document.querySelector('.carousel__navigation-prev');
         this.next = document.querySelector('.carousel__navigation-next');
         this.pagerContainer = document.querySelector('.carousel__pager');
@@ -22,9 +21,13 @@ class Carousel {
         this.pagerButton = 'carousel__pager-button';
         this.pagerButtonActive = 'carousel__pager-button--active';
 
-        // Set carousel config vars
-        this.duration = 500;
-        this.easing = 'cubic-bezier(0.65, 0.05, 0.35, 1)';
+        // Get inline config from carousel element
+        this.config = {
+            class: '.' + config.classList[0],
+            duration: config.getAttribute('data-duration') || 500,
+            loop: config.getAttribute('data-loop') || false,
+            easing: config.getAttribute('data-easing') || 'cubic-bezier(0.65, 0.05, 0.35, 1)',
+        },
         
         this.bindEvents();
     }
@@ -34,11 +37,10 @@ class Carousel {
 
         // Set carousel config
         this.carousel = new Siema({
-            selector: this.carouselClass,
-            duration: this.duration,
-            easing: this.easing,
-
-            // Callbacks
+            selector: this.config.class,
+            duration: this.config.duration,
+            loop: this.config.loop,
+            easing: this.config.easing,
             onChange: function() {
                 this.updatePager();
             }
@@ -109,4 +111,4 @@ class Carousel {
     }
 }
 
-new Carousel();
+new Carousel(document.getElementById('carousel'));
