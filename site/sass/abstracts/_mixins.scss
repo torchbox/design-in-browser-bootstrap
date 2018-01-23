@@ -74,23 +74,24 @@
 
     padding: $p-top $p-right $p-bottom $p-left stomp($reset);
 
-    $last-value: 0;
+    $last-pad: 0;
 
     @each $point, $value in $breakpoints {
-        $new-value: map-get($gutters, $point) * $top;
 
-        @if( $new-value != $last-value ){
+        $p-top: map-get($gutters, $point) * $top;
+        $p-right: map-get($gutters, $point) * $right;
+        $p-bottom: map-get($gutters, $point) * $bottom;
+        $p-left: map-get($gutters, $point) * $left;
+
+        $new-pad: $p-top $p-right $p-bottom $p-left;
+
+        @if( $new-pad != $last-pad ){
             @include media-query($point) {
-                $p-top: map-get($gutters, $point) * $top;
-                $p-right: map-get($gutters, $point) * $right;
-                $p-bottom: map-get($gutters, $point) * $bottom;
-                $p-left: map-get($gutters, $point) * $left;
-
-                padding: $p-top $p-right $p-bottom $p-left stomp($reset);
+                padding: $new-pad stomp($reset);
             }
         }
 
-        $last-value: map-get($gutters, $point) * $top;
+        $last-pad: $new-pad;
     }
 }
 
