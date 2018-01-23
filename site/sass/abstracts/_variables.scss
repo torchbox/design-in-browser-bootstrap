@@ -78,15 +78,6 @@ $font-sizes: (
 );
 
 
-/* ============================================
-   Grid Dimensions
-*/
-
-$gutter--mobile:        10px;
-$gutter--tablet:        20px;
-$gutter--desktop:       26px;
-$gutter--desktop-wide:  40px;
-
 
 /* ============================================
    Max width
@@ -95,14 +86,24 @@ $max-width: 1350px;
 
 
 /* ============================================
+   Grid Dimentions
+*/
+$gutters: (
+    'default':  10px,
+    'small':    20px,
+    'medium':   26px,
+    'large':    40px
+) !default;
+
+
+/* ============================================
    Breakpoints
 */
 $breakpoints: (
-    'tablet-portrait'   '(min-width: 768px)',
-    'tablet-landscape'  '(min-width: 1024px)',
-    'desktop'           '(min-width: 1280px)',
-    'deskop-wide'       '(min-width: 2556px)'
-);
+    'small':    (min-width: 768px),
+    'medium':   (min-width: 992px),
+    'large':    (min-width: 1200px)
+) !default;
 
 
 /* ============================================

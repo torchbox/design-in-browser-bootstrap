@@ -63,102 +63,37 @@
 */
 @mixin gutter($top: 0.5, $right: 0.5, $bottom: 0.5, $left: 0.5, $reset: false) {
 
-    @if $top > 0 {
-        padding-top: $gutter--mobile * $top;
-        @include media-query(tablet-portrait) {
-            padding-top: $gutter--tablet * $top;
-        }
-        @include media-query(desktop) {
-            padding-top: $gutter--desktop * $top;
-        }
-        @include media-query(desktop-wide) {
-            padding-top: $gutter--desktop-wide * $top;
-        }
-    } @elseif $top == 0 and $reset {
-        padding-top: 0;
-        @include media-query(tablet-portrait) {
-            padding-top: 0;
-        }
-        @include media-query(desktop) {
-            padding-top: 0;
-        }
-        @include media-query(desktop-wide) {
-            padding-top: 0;
-        }
+    @function stomp($value) {
+        @return if($value, !important, null); // sass-lint:disable-line no-important
     }
 
-    @if $bottom > 0 {
-        padding-bottom: $gutter--mobile * $bottom;
-        @include media-query(tablet-portrait) {
-            padding-bottom: $gutter--tablet * $bottom;
-        }
-        @include media-query(desktop) {
-            padding-bottom: $gutter--desktop * $bottom;
-        }
-        @include media-query(desktop-wide) {
-            padding-bottom: $gutter--desktop-wide * $bottom;
-        }
-    } @elseif $bottom == 0 and $reset {
-        padding-bottom: 0;
-        @include media-query(tablet-portrait) {
-            padding-bottom: 0;
-        }
-        @include media-query(desktop) {
-            padding-bottom: 0;
-        }
-        @include media-query(desktop-wide) {
-            padding-bottom: 0;
-        }
-    }
+    $p-top: map-get($gutters, 'default') * $top;
+    $p-right: map-get($gutters, 'default') * $right;
+    $p-bottom: map-get($gutters, 'default') * $bottom;
+    $p-left: map-get($gutters, 'default') * $left;
 
-    @if $right > 0 {
-        padding-right: $gutter--mobile * $right;
-        @include media-query(tablet-portrait) {
-            padding-right: $gutter--tablet * $right;
-        }
-        @include media-query(desktop) {
-            padding-right: $gutter--desktop * $right;
-        }
-        @include media-query(desktop-wide) {
-            padding-right: $gutter--desktop-wide * $right;
-        }
-    } @elseif $right == 0 and $reset {
-        padding-right: 0;
-        @include media-query(tablet-portrait) {
-            padding-right: 0;
-        }
-        @include media-query(desktop) {
-            padding-right: 0;
-        }
-        @include media-query(desktop-wide) {
-            padding-right: 0;
-        }
-    }
+    padding: $p-top $p-right $p-bottom $p-left stomp($reset);
 
-    @if $left > 0 {
-        padding-left: $gutter--mobile * $left;
-        @include media-query(tablet-portrait) {
-            padding-left: $gutter--tablet * $left;
+    $last-value: 0;
+
+    @each $point, $value in $breakpoints {
+        $new-value: map-get($gutters, $point) * $top;
+
+        @if( $new-value != $last-value ){
+            @include media-query($point) {
+                $p-top: map-get($gutters, $point) * $top;
+                $p-right: map-get($gutters, $point) * $right;
+                $p-bottom: map-get($gutters, $point) * $bottom;
+                $p-left: map-get($gutters, $point) * $left;
+
+                padding: $p-top $p-right $p-bottom $p-left stomp($reset);
+            }
         }
-        @include media-query(desktop) {
-            padding-left: $gutter--desktop * $left;
-        }
-        @include media-query(desktop-wide) {
-            padding-left: $gutter--desktop-wide * $left;
-        }
-    } @elseif $left == 0 and $reset {
-        padding-left: 0;
-        @include media-query(tablet-portrait) {
-            padding-left: 0;
-        }
-        @include media-query(desktop) {
-            padding-left: 0;
-        }
-        @include media-query(desktop-wide) {
-            padding-left: 0;
-        }
+
+        $last-value: map-get($gutters, $point) * $top;
     }
 }
+
 
 
 /* ============================================
