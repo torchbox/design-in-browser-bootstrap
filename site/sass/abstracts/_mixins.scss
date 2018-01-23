@@ -63,19 +63,26 @@
 */
 @mixin gutter($top: 0.5, $right: 0.5, $bottom: 0.5, $left: 0.5, $reset: false) {
 
+    // Adds !important to an outputted padding rule if a value needs to be set to 0
     @function stomp($value) {
         @return if($value, !important, null); // sass-lint:disable-line no-important
     }
 
+    // Create default padding values
     $p-top: map-get($gutters, 'default') * $top;
     $p-right: map-get($gutters, 'default') * $right;
     $p-bottom: map-get($gutters, 'default') * $bottom;
     $p-left: map-get($gutters, 'default') * $left;
 
-    padding: $p-top $p-right $p-bottom $p-left stomp($reset);
+    $default-pad: $p-top $p-right $p-bottom $p-left;
 
-    $last-pad: 0;
+    // Output default padding
+    padding: $default-pad;
 
+    // Set last-pad for comparison when looping through breakpoints 
+    $last-pad: $default-pad;
+
+    // Loop through breakpoints and output a padding rule if it is required by keeping track of the last rule defined
     @each $point, $value in $breakpoints {
 
         $p-top: map-get($gutters, $point) * $top;
