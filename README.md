@@ -1,6 +1,8 @@
 
 # Design In The Browser Bootstrap, Patternlab edition!
 
+**Please don't make any further changes to this project, as wagtail-kit is going to be the base for our tooling, pattern library and components from now on. Readme retained below for reference.**
+
 This project provides a starting point for prototypes, with tooling and an opinion on CSS and JS structure to allow for rapid development utilising Patternlab ensuring all work is as transferable and as maintainable as possible.
 
 ## What's required
