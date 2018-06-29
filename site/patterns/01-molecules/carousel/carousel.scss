@@ -4,13 +4,16 @@
 
 $carousel-width: 700px;
 $carousel-height: 400px;
+$carousel-pager-size: 13px;
+$carousel-pager-colour: #eee;
+$carousel-pager-active-colour: #000;
 
 .carousel {
     margin: 20px auto 0;
     max-width: $carousel-width;
 
     &__item {
-        width: ($carousel-width - 50px);
+        max-width: $carousel-width;
         height: $carousel-height;
         margin: 0 auto;
         background: {
@@ -33,6 +36,18 @@ $carousel-height: 400px;
     }
 
     &__pager {
+        $root: &;
+
+        // Base pager button styles
+        &-button {
+            cursor: pointer;
+
+            &:not(:last-of-type) {
+                margin-right: 5px;
+            }
+        }
+
+        // On load, show first pager item as active
         &--init {
             button:first-of-type {
                 background: #000;
@@ -40,9 +55,51 @@ $carousel-height: 400px;
             }
         }
 
-        &-button--active {
-            background: #000;
-            color: #fff;
+        // Overlay pager
+        &--inner {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        // Show pager as dots
+        &--dots {
+            #{$root}-button {
+                padding: 0;
+                font-size: 0;
+                width: $carousel-pager-size;
+                height: $carousel-pager-size;
+                border-radius: 50%;
+                border: 0;
+                background: $carousel-pager-colour;
+                transition: background $anim--speed $anim--ease, color $anim--speed $anim--ease;
+
+                &--active,
+                &:hover,
+                &:focus {
+                    outline: 0;
+                    background: $carousel-pager-active-colour;
+                }
+            }
+        }
+
+        // Show pager as numbers (default)
+        &--numbers {
+            #{$root}-button {
+                &--active,
+                &:hover,
+                &:focus {
+                    outline: 0;
+                    background: $carousel-pager-active-colour;
+                    color: #fff;
+                }
+            }
         }
     }
+}
+
+.carousel-wrapper {
+    max-width: $carousel-width;
+    margin: 0 auto;
+    position: relative;
 }
